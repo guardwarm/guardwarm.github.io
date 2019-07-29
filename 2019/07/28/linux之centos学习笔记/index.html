@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="guardwarm的小站">
 <meta property="og:description" content="常用命令 文件和目录管理 绝对路径与相对路径：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径 cd cd 路径   . 当前目录 .. 上级目录 什么都不加默认跳转到当前用户根目录下 只能跳转到目录，不可以跳转到文件，会报错 mkdir -m   指定文件权限，不常用 -p    创建一串级联目录，已存在时不报错">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-28T14:42:56.931Z">
+<meta property="og:updated_time" content="2019-07-28T14:53:21.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux之centos学习笔记">
 <meta name="twitter:description" content="常用命令 文件和目录管理 绝对路径与相对路径：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径 cd cd 路径   . 当前目录 .. 上级目录 什么都不加默认跳转到当前用户根目录下 只能跳转到目录，不可以跳转到文件，会报错 mkdir -m   指定文件权限，不常用 -p    创建一串级联目录，已存在时不报错">
@@ -320,6 +320,12 @@
 <p><strong>rmdir</strong>  不常用，仅用于删除目录</p>
 <p>-p    级联删除，如果目录非空时报错</p>
 <p><strong>rm</strong></p>
+<p>-r    删除目录时必须加</p>
+<p>-f    强制删除，不再询问是否删除</p>
+<p><strong>PATH变量</strong></p>
+<p>一串用：分隔的路径，执行命令时会默认从PATH中找</p>
+<p>修改    PATH=$PATH:新路径</p>
+<p><strong>cp</strong></p>
 
       
     </div>
