@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="常用命令 文件和目录管理 绝对路径与相对路径：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径 cd cd 路径   . 当前目录 .. 上级目录 什么都不加默认跳转到当前用户根目录下 只能跳转到目录，不可以跳转到文件，会报错 mkdir -m   指定文件权限，不常用 -p    创建一串级联目录，已存在时不报错">
+<meta name="description" content="[TOC] 常用命令 文件和目录管理绝对路径与相对路径：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径 cd cd 路径   . 当前目录 .. 上级目录 什么都不加默认跳转到当前用户根目录下只能跳转到目录，不可以跳转到文件，会报错 mkdir -m   指定文件权限，不常用-p    创建一串级联目录，已存在时不报错">
 <meta name="keywords" content="linux,运维">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux之centos学习笔记">
 <meta property="og:url" content="http://yoursite.com/2019/07/28/linux之centos学习笔记/index.html">
 <meta property="og:site_name" content="guardwarm的小站">
-<meta property="og:description" content="常用命令 文件和目录管理 绝对路径与相对路径：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径 cd cd 路径   . 当前目录 .. 上级目录 什么都不加默认跳转到当前用户根目录下 只能跳转到目录，不可以跳转到文件，会报错 mkdir -m   指定文件权限，不常用 -p    创建一串级联目录，已存在时不报错">
+<meta property="og:description" content="[TOC] 常用命令 文件和目录管理绝对路径与相对路径：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径 cd cd 路径   . 当前目录 .. 上级目录 什么都不加默认跳转到当前用户根目录下只能跳转到目录，不可以跳转到文件，会报错 mkdir -m   指定文件权限，不常用-p    创建一串级联目录，已存在时不报错">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-28T14:53:21.939Z">
+<meta property="og:updated_time" content="2019-07-29T15:09:23.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux之centos学习笔记">
-<meta name="twitter:description" content="常用命令 文件和目录管理 绝对路径与相对路径：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径 cd cd 路径   . 当前目录 .. 上级目录 什么都不加默认跳转到当前用户根目录下 只能跳转到目录，不可以跳转到文件，会报错 mkdir -m   指定文件权限，不常用 -p    创建一串级联目录，已存在时不报错">
+<meta name="twitter:description" content="[TOC] 常用命令 文件和目录管理绝对路径与相对路径：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径 cd cd 路径   . 当前目录 .. 上级目录 什么都不加默认跳转到当前用户根目录下只能跳转到目录，不可以跳转到文件，会报错 mkdir -m   指定文件权限，不常用-p    创建一串级联目录，已存在时不报错">
 
 
 
@@ -300,32 +300,66 @@
       
 
       
-        <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><hr>
-<p><strong>文件和目录管理</strong></p>
-<p><strong>绝对路径与相对路径</strong>：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径</p>
+        <p>[TOC]</p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><hr>
+<h5 id="文件和目录管理"><a href="#文件和目录管理" class="headerlink" title="文件和目录管理"></a>文件和目录管理</h5><p><strong>绝对路径与相对路径</strong>：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径</p>
 <p><strong>cd</strong></p>
 <p><code>cd 路径</code>   . 当前目录 .. 上级目录</p>
-<p>什么都不加默认跳转到当前用户根目录下</p>
-<p>只能跳转到目录，不可以跳转到文件，会报错</p>
+<p>什么都不加默认跳转到当前用户根目录下<br>只能跳转到目录，不可以跳转到文件，会报错</p>
 <p><strong>mkdir</strong></p>
-<p>-m   指定文件权限，不常用</p>
-<p>-p    创建一串级联目录，已存在时不报错 </p>
+<p>-m   指定文件权限，不常用<br>-p    创建一串级联目录，已存在时不报错 </p>
 <a id="more"></a>
 
 <p><strong>ls</strong></p>
-<p>-l    详细信息</p>
-<p>-d    查看指定目录属性</p>
-<p>-h    人性化显示大小</p>
+<p>-l    详细信息<br>-d    查看指定目录属性<br>-h    人性化显示大小</p>
 <p>ll=ls -l</p>
 <p><strong>rmdir</strong>  不常用，仅用于删除目录</p>
 <p>-p    级联删除，如果目录非空时报错</p>
 <p><strong>rm</strong></p>
-<p>-r    删除目录时必须加</p>
-<p>-f    强制删除，不再询问是否删除</p>
+<p>-r    删除目录时必须加<br>-f    强制删除，不再询问是否删除</p>
 <p><strong>PATH变量</strong></p>
-<p>一串用：分隔的路径，执行命令时会默认从PATH中找</p>
-<p>修改    PATH=$PATH:新路径</p>
-<p><strong>cp</strong></p>
+<p>一串用：分隔的路径，执行命令时会默认从PATH中找<br>修改:    PATH=$PATH:新路径</p>
+<p><strong>cp 【选项】 【源文件】 【目标文件】</strong></p>
+<p>-r    复制目录时加<br>-i    安全选项，覆盖时会询问，默认alise cp=“cp -i”</p>
+<p><strong>mv 【选项】 【源文件或目录】 【目标文件或目录】</strong></p>
+<p>目标文件是目录，若存在，则将源文件或目录移动到目标目录下；若不存在，则将原目录重命名为给定文件名<br>目标文件是文件，若存在，则询问是否覆盖，若不存在，则将源文件重命名为给定的目标文件</p>
+<p><strong>cat</strong></p>
+<p>-n    显示行号<br>-A    显示所有内容，包括特殊字符</p>
+<p><strong>tac</strong>    与命令tac一样，倒叙查看</p>
+<p><strong>more    文件内容较多时使用</strong></p>
+<p>Ctrl+D    向上翻屏<br>Ctrl+F    向下翻屏，同空格<br>空格    向下翻屏<br>q    退出<br>/字符串    从当前行向下查找字符串，按n定位下一个<br>？字符串    从当前行向上查找字符串，按n定位下一个（可以使用通配符）</p>
+<p><strong>less    作用同more，但命令更多</strong></p>
+<p>j    向上移动一行<br>k    向上移动</p>
+<p><strong>head</strong>    默认显示文件前十行</p>
+<p>-n 1/-n1/-1    显示指定行数，三种方式皆可</p>
+<p><strong>tail</strong>    同head，倒叙查看</p>
+<p><strong>文件属性</strong></p>
+<ul>
+<li>第一列<pre><code>第一位
+  d    目录
+  -    普通文件
+      l    链接文件
+      b    块设备
+      c    串行端口设备文件
+      s    套接字文件，socket</code></pre>  后九位<br>  每三位为一组，分别为user，group，others权限<br>  最后一位<br>  使用了SElinux context为点<br>  设置了acl属性为+号</li>
+<li>第二列<br>  该文件占用的节点（inode），有几种访问方式</li>
+<li>第三列<br>  所有者</li>
+<li>第四列<br>  所属组</li>
+<li>第五列<br>  该文件大小    </li>
+<li>第六七八列<br>  分别为月日及时间</li>
+<li>第九列<br>  文件名</li>
+</ul>
+<p><strong>chgrp</strong>    不常用<br>更改文件所属组<br>chgrp 【组名】 【文件名】<br>-R    级联更改子目录名或文件名</p>
+<p><strong>chown</strong><br>更改文件所有者<br>chown 【-R】 账户名：组名    文件名<br>-R    仅用于目录，作用是级联更改</p>
+<p><strong>chmod</strong><br>更改用户权限，目录默认为755，文件默认为644<br>chmod  750  文件或目录名<br>chmod  u=rwx，og=rw  文件或目录名   u，g，o，a（all）<br>chmod  a-x  文件或目录名</p>
+<p><strong>umask</strong><br>修改文件默认权限<br>umask  xxx    xxx=默认值-所需默认值（文件默认为666，目录默认为777）<br>特例：666-333=444（333代表去了可写和可执行权限，但本来就没有可执行）</p>
+<p><strong>chattr</strong><br>修改文件特殊属性<br>chattr 【+-=】【Asaci】 【文件或目录名】  分别是增加，减少和设定<br><strong><em>存疑：=还不清楚</em></strong><br>-A    文件或目录的atime将不可修改<br>-s    将数据同步写入磁盘<br>-a    只能追加不能删除，非root不可设定该属性（常用）<br>-c    自动压缩文件，读取时自动解压<br>-i    文件不能删除，重命名，设定链接，以及写入数据（常用）</p>
+<p><strong>lsattr  文件或目录名</strong><br>该命令用于读取文件或者目录的特殊权限<br>-a    列出所有文件，包括隐藏文件<br>-R    连同子目录数据列出</p>
+<p><strong>set uid，set gid，sticky bit</strong><br>权限其实共四位，第一位由这三个决定，分别为4,2,1，具体表现在第三位，若为小写则原本有x，大写则无，例如rwsrwsrwt为7777<br>set uid    针对二进制可执行文件，使文件在执行阶段拥有该文件所有者权限    passwd命令<br>set gid    作用在二进制文件上时，同上，作用在目录上时，任何用户在此目录下创建的文件都具有和该目录所属组相同的组<br>sticky bit    设置该权限后，就算用户拥有写权限，也只可以添加而不可删除文件    /tmp/</p>
+<h5 id="在linux下搜索文件"><a href="#在linux下搜索文件" class="headerlink" title="在linux下搜索文件"></a>在linux下搜索文件</h5><p><strong>which</strong><br>查找可执行文件绝对路径<br>which vi</p>
+<p><strong>whereis</strong><br>通过预先生成的文件列表库查找<br>whereis 【-bms】 【文件名称】<br>-b    只查找二级制文件<br>-m    只查找帮助文件<br>-s    只查找源代码文件</p>
+<p><strong>locate</strong>    不常用<br>类似于whereis，包含所搜索关键词的目录和文件都会列出，所以不适合精确搜索</p>
+<p><strong>find    重要</strong><br>find 【路径】 【参数】<br>-atime +n/-n    访问或执行时间大于或小于n天<br>-ctime +n/-n    写入、更改inode属性的时间大于或小于n天<br>-mtime +n/-n    写入时间大于或小于n天        <strong>用得最多</strong></p>
 
       
     </div>
@@ -447,7 +481,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -469,7 +503,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -502,7 +536,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#文件和目录管理"><span class="nav-number">1.1.</span> <span class="nav-text">文件和目录管理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在linux下搜索文件"><span class="nav-number">1.2.</span> <span class="nav-text">在linux下搜索文件</span></a></li></ol></li></ol></div>
             
 
           </div>
