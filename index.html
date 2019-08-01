@@ -302,16 +302,25 @@
 
       
         
-          
-            <h5 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h5><p>Java开发主流工具是Eclipse（IBM开发）和intellij IDEA（jetbrains）。目前intellij IDEA明显使用人数增加。</p>
+          <p>[TOC]</p>
+<h5 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h5><p>Java开发主流工具是Eclipse（IBM开发）和intellij IDEA（jetbrains）。目前intellij IDEA明显使用人数增加。</p>
 <h5 id="主要优势"><a href="#主要优势" class="headerlink" title="主要优势"></a>主要优势</h5><p>强大的整合能力，比如git，Maven，Spring等</p>
 <p>提示功能的快速，便捷，范围广</p>
 <p>好用的快捷键和代码模板</p>
 <p>精确搜索</p>
 <h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><p><a href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank" rel="noopener">下载地址</a></p>
-<p><img src="../img/1.png" alt="微信二维吗" title="打赏"></p>
-
-          
+<h5 id="安装目录"><a href="#安装目录" class="headerlink" title="安装目录"></a>安装目录</h5><p><img src="../img/%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95.JPG" alt="安装目录"></p>
+<p>第一个目录存的是配置信息，比如字体，快捷键设置，插件</p>
+<p>第二个存的是索引，缓存等（刚启动时会自动生成索引，这段时间最好安静等待，不然可能会报一些莫名其妙的错）</p>
+<p>如果出了什么问题，可以把第二个目录干掉，一般重启一下就好了</p>
+<p>程序主体安装在自己安装时选择的目录下</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/30/java开发工具之intelliJ-IDEA/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -431,7 +440,7 @@
           <h3 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h3><hr>
 <h4 id="汇编语言基础教程-James-T-Streib"><a href="#汇编语言基础教程-James-T-Streib" class="headerlink" title="汇编语言基础教程         James T.Streib"></a>汇编语言基础教程         James T.Streib</h4><p>整体讲解不够深入，用了很多高级汇编指令，与最初想了解底层如何实现的初衷相违背，并且很多话说的不清楚，很绕。整体学到了一些东西，算是入门了，但整体感觉不好，不推荐。</p>
 <h3 id="运维"><a href="#运维" class="headerlink" title="运维"></a>运维</h3><hr>
-<h4 id="跟阿铭学linux（第三版）"><a href="#跟阿铭学linux（第三版）" class="headerlink" title="跟阿铭学linux（第三版）"></a>跟阿铭学linux（第三版）</h4><p>学linux最初的各种命令是看的网课。那几个明明运用及理解都不难的命令，反反复复讲了好长时间，白白浪费了不少时间。我感觉看书来学习linux的各种命令更高效，这本书整体节奏不错，难度感觉略高一点，但认着看，感觉看的很舒服，收货很多。</p>
+<h4 id="跟阿铭学linux（第三版）"><a href="#跟阿铭学linux（第三版）" class="headerlink" title="跟阿铭学linux（第三版）"></a>跟阿铭学linux（第三版）</h4><p>学linux最初的各种命令是看的网课。那几个明明运用及理解都不难的命令，反反复复讲了好长时间，白白浪费了不少时间。我感觉看书来学习linux的各种命令更高效，这本书整体节奏不错，难度感觉略高一点，但认着看，感觉看的很舒服，收货很多。勉强算适合小白吧，我感觉还是有一些对新手不怎么友好的点。</p>
 <p>（这本书学习笔记参见）</p>
           <!--noindex-->
           <div class="post-button text-center">
@@ -688,7 +697,8 @@
       
         
           
-            <h3 id="与git相关"><a href="#与git相关" class="headerlink" title="与git相关"></a>与git相关</h3><p>​    fatal: Not a git repository (or any of the parent directories): .git</p>
+            <p>[TOC]</p>
+<h3 id="与git相关"><a href="#与git相关" class="headerlink" title="与git相关"></a>与git相关</h3><p>​    fatal: Not a git repository (or any of the parent directories): .git</p>
 <p>​    <code>git init</code></p>
 <p>​    生成子项目</p>
 <p>​    <code>git submodule add 项目路径  文件路径</code></p>
@@ -698,6 +708,20 @@
 <p>​    生成静态文件   <code>hexo g</code>（-w 监视文件变动）</p>
 <p>​    部署   <code>hexo d</code></p>
 <p>​    (<code>hexo clean &amp;&amp; hexo g -d</code>)</p>
+<h3 id="与Markdown相关"><a href="#与Markdown相关" class="headerlink" title="与Markdown相关"></a>与Markdown相关</h3><ul>
+<li>感觉没有光标移动很不舒服，暂时没找到解决办法</li>
+<li>默认开启了拼写检查，很多编程的英文下面都是红线，很难受</li>
+</ul>
+<p>文件 -&gt; 偏好设置，下拉就可以找到钱拼写检查</p>
+<p><img src="../img/%E6%8B%BC%E5%86%99%E6%A3%80%E6%9F%A5.JPG" alt="拼写检查"></p>
+<ul>
+<li><p>不喜欢默认主题的可以在偏好设置中获取主题</p>
+<p><img src="../img/typora%E4%B8%BB%E9%A2%98.JPG" alt="typora themes"></p>
+<p>选择自己喜欢的点击download，会给出css源码（有时也会直接给一个压缩文件），自己ctrl A,ctrl C存为一个css文件，导入主题文件夹即可</p>
+<p>（从偏好设置中打开主题文件夹，导入即可）</p>
+</li>
+</ul>
+<p>与intellij IDEA相关</p>
 
           
         
