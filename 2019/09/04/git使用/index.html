@@ -89,10 +89,16 @@
 <meta property="og:site_name" content="guard warm">
 <meta property="og:description" content="Git版本控制系统 记录版本信息（记录每一次的修改） 方便团队相互之间协作，共同开发  常用版本控制系统  svn/cvs：集中式版本控制系统 git：分布式版本控制系统  Git安装这个网上很常见，自行参考网上教程 使用GitHub目的：托管项目代码工作区 -&amp;gt; 暂存区 -&amp;gt; 历史区 1.Git的全局配置123456第一次安装完成git后，要在全局环境下配置基本信息：我是谁？$ gi">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-06T05:02:57.459Z">
+<meta property="og:image" content="http://yoursite.com/.com//git5.jpg">
+<meta property="og:image" content="http://yoursite.com/.com//git4.jpg">
+<meta property="og:image" content="http://yoursite.com/.com//git3.jpg">
+<meta property="og:image" content="http://yoursite.com/.com//git2.jpg">
+<meta property="og:image" content="http://yoursite.com/.com//git1.jpg">
+<meta property="og:updated_time" content="2019-09-06T05:16:36.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git使用">
 <meta name="twitter:description" content="Git版本控制系统 记录版本信息（记录每一次的修改） 方便团队相互之间协作，共同开发  常用版本控制系统  svn/cvs：集中式版本控制系统 git：分布式版本控制系统  Git安装这个网上很常见，自行参考网上教程 使用GitHub目的：托管项目代码工作区 -&amp;gt; 暂存区 -&amp;gt; 历史区 1.Git的全局配置123456第一次安装完成git后，要在全局环境下配置基本信息：我是谁？$ gi">
+<meta name="twitter:image" content="http://yoursite.com/.com//git5.jpg">
 
 
 
@@ -400,7 +406,10 @@
 
 <h5 id="2-创建仓库完成版本控制"><a href="#2-创建仓库完成版本控制" class="headerlink" title="2.创建仓库完成版本控制"></a>2.创建仓库完成版本控制</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">创建本地git仓库</span><br><span class="line"><span class="meta">$</span> git init</span><br><span class="line">会生成一个隐藏文件夹“.git”（这个文件夹很重要，暂存区和历史区以及一些其他数据都在里面存着）</span><br><span class="line"></span><br><span class="line">在本地编写完成代码后（在工作区），把一些文件提交到暂存区</span><br><span class="line"><span class="meta">$</span> git add xxx	把某一个文件或者文件夹提交到暂存区</span><br><span class="line"><span class="meta">$</span> git add .	|| git add A		把当前仓库中所有最新修改的文件都提交到暂存区</span><br><span class="line"><span class="meta">$</span> git status	查看当前文件的状态（红色代表工作区，绿色代表暂存区，看不见东西代表所有东西都已提交到历史区）</span><br><span class="line"></span><br><span class="line">把暂存区内容提交到历史区</span><br><span class="line"><span class="meta">$</span> git commit -m'描述信息'</span><br><span class="line">查看历史版本信息（历史记录）</span><br><span class="line"><span class="meta">$</span> git log</span><br><span class="line"><span class="meta">$</span> git reflog	包含回滚的信息</span><br></pre></td></tr></table></figure>
 
-<h4 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h4><p>一个网站（开源的代码管理平台），用户注册号，可以在自己账户下创建仓库，用来管理项目的源代码（源代码基于git传到仓库中）</p>
+<p><img src="/.com//git5.jpg" alt></p>
+<p><img src="/.com//git4.jpg" alt></p>
+<p><img src="/.com//git3.jpg" alt></p>
+<h4 id><a href="#" class="headerlink" title></a><img src="/.com//git2.jpg" alt></h4><h4 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h4><p>一个网站（开源的代码管理平台），用户注册号，可以在自己账户下创建仓库，用来管理项目的源代码（源代码基于git传到仓库中）</p>
 <p>我们所熟知的插件，类库，框架等都在这个平台上有托管，我们可以下载观看和研究源码等</p>
 <p><strong>settings用户设置</strong></p>
 <ul>
@@ -420,6 +429,7 @@
 <p>code可以查看历史版本和分支信息</p>
 <h5 id="3-把本地仓库信息提交到远程仓库"><a href="#3-把本地仓库信息提交到远程仓库" class="headerlink" title="3.把本地仓库信息提交到远程仓库"></a>3.把本地仓库信息提交到远程仓库</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">查看本地仓库和哪些远程仓库保持连接</span><br><span class="line"><span class="meta">$</span> git remote -v</span><br><span class="line">让本地仓库和远程仓库创建一个连接	origin是随便起的一个名字，但一般都用这个</span><br><span class="line"><span class="meta">$</span> git remote add origin [仓库地址]</span><br><span class="line">解除关联信息</span><br><span class="line"><span class="meta">$</span> git remote rm origin</span><br><span class="line">提交之前最好先拉取</span><br><span class="line"><span class="meta">$</span> git pull origin master</span><br><span class="line">将本地代码提交到远程仓库（第一次需要输入用户名和密码）</span><br><span class="line"><span class="meta">$</span> git push origin master</span><br><span class="line">将远程仓库代码拉取到本地</span><br><span class="line"><span class="meta">$</span> git clone [远程仓库git地址] [别名，默认为仓库名，也可以起一个作为拉取后的文件夹名]</span><br><span class="line">/*</span><br><span class="line"> *真实项目开发流程：</span><br><span class="line"> *	1.组长或者负责人先创建中央仓库</span><br><span class="line"> *	2.小组成员基于$ git clone 把远程仓库及默认的内容克隆到本地（解决了三个事情：初始化一个</span><br><span class="line"> 本地仓库“git init”，和对应的远程仓库也保持了关联“git remote add”，把远程仓库默认内人拉取到本地</span><br><span class="line"> “git pull”</span><br><span class="line"> *	3.每个组员写自己的程序后，基于“git add/git commit”把自己修改的内容存放到历史区，然后通过</span><br><span class="line"> “git pull/git push”把本地信息和远程仓库信息保持同步即可（可能涉及冲突处理）</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
 
+<p><img src="/.com//git1.jpg" alt></p>
 <h4 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h4><p>node package manger:NODE模块管理工具，根据NPM我们可快速安装、卸载所需要的资源文件</p>
 <p>区NODE官网：下载NODE重启支持版，安装NODE后，NPM也跟着安装了</p>
 <p>基于npm是从<a href>npmjs.com</a>平台下下载安装</p>
@@ -616,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Git版本控制系统"><span class="nav-number">1.</span> <span class="nav-text">Git版本控制系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git安装"><span class="nav-number">2.</span> <span class="nav-text">Git安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用GitHub"><span class="nav-number">3.</span> <span class="nav-text">使用GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#目的：托管项目代码"><span class="nav-number">3.1.</span> <span class="nav-text">目的：托管项目代码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Git的全局配置"><span class="nav-number">3.2.</span> <span class="nav-text">1.Git的全局配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-创建仓库完成版本控制"><span class="nav-number">3.3.</span> <span class="nav-text">2.创建仓库完成版本控制</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub"><span class="nav-number">4.</span> <span class="nav-text">GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-把本地仓库信息提交到远程仓库"><span class="nav-number">4.1.</span> <span class="nav-text">3.把本地仓库信息提交到远程仓库</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NPM"><span class="nav-number">5.</span> <span class="nav-text">NPM</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Git版本控制系统"><span class="nav-number">1.</span> <span class="nav-text">Git版本控制系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git安装"><span class="nav-number">2.</span> <span class="nav-text">Git安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用GitHub"><span class="nav-number">3.</span> <span class="nav-text">使用GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#目的：托管项目代码"><span class="nav-number">3.1.</span> <span class="nav-text">目的：托管项目代码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Git的全局配置"><span class="nav-number">3.2.</span> <span class="nav-text">1.Git的全局配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-创建仓库完成版本控制"><span class="nav-number">3.3.</span> <span class="nav-text">2.创建仓库完成版本控制</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub"><span class="nav-number">5.</span> <span class="nav-text">GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-把本地仓库信息提交到远程仓库"><span class="nav-number">5.1.</span> <span class="nav-text">3.把本地仓库信息提交到远程仓库</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NPM"><span class="nav-number">6.</span> <span class="nav-text">NPM</span></a></li></ol></div>
             
 
           </div>
