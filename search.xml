@@ -26,21 +26,12 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[java学习]]></title>
-    <url>%2F2019%2F08%2F03%2Fjava%E5%AD%A6%E4%B9%A0%2F</url>
-    <content type="text"><![CDATA[[TOC] java基础入门及环境搭建下载JDK进入Oracle官网，下载相应版本，最近下载好像都得注册个账号 下完按到所需目录，一般默认，一直下一步即可，完了设置一下环境变量 在cmd中，输入java -version检查是否安装成功 javac 文件路径（编译，生成。class文件） java 文件名，不加后缀，运行 IDE选择 目前比较流行的是eclipse和IDEA，我更喜欢IDEA，熟练了快捷键和各种模板之后会用得很舒服 IDEA教程 语言特点通过编译成统一的字节码，不同平台下载对应JVM来实现跨平台 完全面向对象，简单，高性能，分布式，多线程，健壮 JDK（用于开发）-&gt;JRE（运行环境）-&gt;JVM(依次包含) java SE 标准版，定位于个人计算机用户 java EE 企业版，定位于服务器端领域 java ME 微型版，定位于消费电子产品的应用 越高级语言越容易入门，但要精通还需沉下心来 数据类型和运算符注释单行，多行，文档注释 标识符的命名规则虽然不同语言之间会有细微区别，但为了便于编写，感觉大多数语言都推荐采用比较大众的规范 不可以是java关键字，并且大小写敏感 类名 大驼峰命名法 方法和变量 小驼峰命名法 常亮 大写 数据类型 基本数据类型 整形：byte short int long 浮点型：float double 字符型：char 布尔型：boolean（大小为一位，不可用数字赋值） 引用数据类型 数据类型向上隐士转换，向下需要显示加括号强转]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>编程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[java开发工具之intelliJ IDEA]]></title>
     <url>%2F2019%2F07%2F30%2Fjava%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B9%8BintelliJ-IDEA%2F</url>
     <content type="text"><![CDATA[[TOC] 简介Java开发主流工具是Eclipse（IBM开发）和intellij IDEA（jetbrains）。目前intellij IDEA明显使用人数增加。 主要优势强大的整合能力，比如git，Maven，Spring等 提示功能的快速，便捷，范围广 好用的快捷键和代码模板 精确搜索 下载下载地址 安装目录 第一个目录存的是配置信息，比如字体，快捷键设置，插件 第二个存的是索引，缓存等（刚启动时会自动生成索引，这段时间最好安静等待，不然可能会报一些莫名其妙的错） 如果出了什么问题，可以把第二个目录干掉，一般重启一下就好了 程序主体安装在自己安装时选择的目录下 创建项目 自己导入一下SDK，其余看需求勾选，只是java的话下一步就好 起个名字，选个存储路径就结束了 创建一个moudle-&gt;package-&gt;再在内部创建java类 删除Module：右击，F4，减掉，再右击，就可以找到delete 右上角文件夹图标，点击可以查看项目属性 调试行号旁边单击可以添加断点，右击断点可以改为条件断点 单步，跳出之类的与大多数IDE一致 取消自动更新 安装插件可以直接在设置中查找插件 Plugins 生成javadoctool -&gt; generate javadoc 选择要生成的文件，位置 locate zh_CN other command line arguments: -encoding UTF-8 -charset UTF-8 切换主题具体自行百度 常用设置setting -&gt; editor -&gt; General -&gt;Ctrl+鼠标滚轮改变字体大小/显示快速文档提示，可更改悬停时间/auto import自动导包（展开General）/显示方法间分隔符（apperance）/忽略大小写（code completion）/取消单行显示标签（editor tabs） font修改字体大小及样式 editor内可以单独修改编辑器和控制台样式 language default -&gt; comments 修改注释颜色 editor -&gt; code style -&gt; file and code template -&gt; include -&gt; file header(编写头部信息) editor -&gt; encoding -&gt; 可以将编码格式都改为utf-8（右下角显示了当前文件编码格式） （reload 改变当前文件显示方式 convert 彻底转变） build -&gt; compiler(设置自动编译) file -&gt; power save module(省电模式，关闭代码提示等功能) 右击别的文件标签可以设置显示方式，同时打开多个文件 快捷键setting -&gt;keymap -&gt; 在搜索框中输入功能，会提示对应快捷键/点击搜索图标，可以输入快捷键，提示对应功能 run Ctrl+f5、shift+f10 提示补全 Ctrl+Alt+空格 单行注释 Ctrl+/ 多行注释 Ctrl+shift+/ 向下复制一行 Ctrl+d 删除选中行 Ctrl+y 向上移动一行 Ctrl+shift+向上箭头 向下移动一行 Ctrl+shift+向下箭头 向下开始新的一行 Ctrl+enter 向上开始新的一行 Ctrl+shift+enter 查看源码 按住Ctrl，点击要查看的/还有一种暂时没找见快捷键 查看继承关系 光标位于想查看元素上，ctrl+h 万能解错/生成返回值 alt+enter 返回到前一个编辑的页面 alt+right 进入到下一个编辑的页面 alt+left 格式化代码 Ctrl+alt+l 提示方法参数类型 Ctrl+p 复制，剪切，粘贴，全选与Windows一致 撤销 Ctrl+z 反撤销 ctrl+shift+z 选中数行，整体后移 tab 选中数行，整体前移 shift+tab 查看类的结构 ctrl+o 重构：修改变量名和方法名 shift+f6 大小写转化 Ctrl+shift+u 生成构造函数 alt+fn+insert 查看文档说明 Ctrl+q 收起所有方法 Ctrl+shift+减号 打开所有方法 Ctrl+shift+等号 打开代码所在硬盘文件夹 Ctrl+shift+x（我在设置中自己设置的） 生成try—catch等 alt+ctrl 查看方法在那些地方被调用过 Ctrl+h]]></content>
       <tags>
-        <tag>java</tag>
         <tag>开发工具</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
