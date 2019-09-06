@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="git,">
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="这些年学习路上踩得坑">
-<meta property="og:type" content="website">
-<meta property="og:title" content="guard warm">
-<meta property="og:url" content="http://yoursite.com/tags/linux/index.html">
+<meta name="description" content="Git版本控制系统 记录版本信息（记录每一次的修改） 方便团队相互之间协作，共同开发  常用版本控制系统  svn/cvs：集中式版本控制系统 git：分布式版本控制系统  Git安装这个网上很常见，自行参考网上教程 使用GitHub目的：托管项目代码工作区 -&amp;gt; 暂存区 -&amp;gt; 历史区 1.Git的全局配置123456第一次安装完成git后，要在全局环境下配置基本信息：我是谁？$ gi">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git使用">
+<meta property="og:url" content="http://yoursite.com/2019/09/04/git使用/index.html">
 <meta property="og:site_name" content="guard warm">
-<meta property="og:description" content="这些年学习路上踩得坑">
+<meta property="og:description" content="Git版本控制系统 记录版本信息（记录每一次的修改） 方便团队相互之间协作，共同开发  常用版本控制系统  svn/cvs：集中式版本控制系统 git：分布式版本控制系统  Git安装这个网上很常见，自行参考网上教程 使用GitHub目的：托管项目代码工作区 -&amp;gt; 暂存区 -&amp;gt; 历史区 1.Git的全局配置123456第一次安装完成git后，要在全局环境下配置基本信息：我是谁？$ gi">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-09-06T05:02:57.459Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="guard warm">
-<meta name="twitter:description" content="这些年学习路上踩得坑">
+<meta name="twitter:title" content="git使用">
+<meta name="twitter:description" content="Git版本控制系统 记录版本信息（记录每一次的修改） 方便团队相互之间协作，共同开发  常用版本控制系统  svn/cvs：集中式版本控制系统 git：分布式版本控制系统  Git安装这个网上很常见，自行参考网上教程 使用GitHub目的：托管项目代码工作区 -&amp;gt; 暂存区 -&amp;gt; 历史区 1.Git的全局配置123456第一次安装完成git后，要在全局环境下配置基本信息：我是谁？$ gi">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/linux/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/04/git使用/">
 
 
 
 
 
-  <title>Tag: linux | guard warm</title>
+  <title>git使用 | guard warm</title>
   
 
 
@@ -145,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://github.com/guardwarm?tab=repositories" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -271,52 +273,229 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>linux<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/04/git使用/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="grandwarm">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="guard warm">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/07/28/linux之centos学习笔记/" itemprop="url">
-              
-                <span itemprop="name">linux之centos学习笔记</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">git使用</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-28T22:06:43+08:00" content="2019-07-28">
-          07-28
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-04T23:43:18+08:00">
+                2019-09-04
+              </time>
+            
 
-    </header>
-  </article>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="Git版本控制系统"><a href="#Git版本控制系统" class="headerlink" title="Git版本控制系统"></a>Git版本控制系统</h4><ul>
+<li>记录版本信息（记录每一次的修改）</li>
+<li>方便团队相互之间协作，共同开发</li>
+</ul>
+<p>常用版本控制系统</p>
+<ul>
+<li>svn/cvs：集中式版本控制系统</li>
+<li>git：分布式版本控制系统</li>
+</ul>
+<h4 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h4><p>这个网上很常见，自行参考网上教程</p>
+<h4 id="使用GitHub"><a href="#使用GitHub" class="headerlink" title="使用GitHub"></a>使用GitHub</h4><h5 id="目的：托管项目代码"><a href="#目的：托管项目代码" class="headerlink" title="目的：托管项目代码"></a>目的：托管项目代码</h5><p>工作区 -&gt; 暂存区 -&gt; 历史区</p>
+<h5 id="1-Git的全局配置"><a href="#1-Git的全局配置" class="headerlink" title="1.Git的全局配置"></a>1.Git的全局配置</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">第一次安装完成git后，要在全局环境下配置基本信息：我是谁？</span><br><span class="line"><span class="meta">$</span> git config -l		查看配置信息</span><br><span class="line"><span class="meta">$</span> git config --global -l		查看全局配置信息</span><br><span class="line">配置全局信息，用户名和邮箱</span><br><span class="line"><span class="meta">$</span> git config --global user.name 'xxx'</span><br><span class="line"><span class="meta">$</span> git config --global user.email 'xxx@xx.xx'</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-创建仓库完成版本控制"><a href="#2-创建仓库完成版本控制" class="headerlink" title="2.创建仓库完成版本控制"></a>2.创建仓库完成版本控制</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">创建本地git仓库</span><br><span class="line"><span class="meta">$</span> git init</span><br><span class="line">会生成一个隐藏文件夹“.git”（这个文件夹很重要，暂存区和历史区以及一些其他数据都在里面存着）</span><br><span class="line"></span><br><span class="line">在本地编写完成代码后（在工作区），把一些文件提交到暂存区</span><br><span class="line"><span class="meta">$</span> git add xxx	把某一个文件或者文件夹提交到暂存区</span><br><span class="line"><span class="meta">$</span> git add .	|| git add A		把当前仓库中所有最新修改的文件都提交到暂存区</span><br><span class="line"><span class="meta">$</span> git status	查看当前文件的状态（红色代表工作区，绿色代表暂存区，看不见东西代表所有东西都已提交到历史区）</span><br><span class="line"></span><br><span class="line">把暂存区内容提交到历史区</span><br><span class="line"><span class="meta">$</span> git commit -m'描述信息'</span><br><span class="line">查看历史版本信息（历史记录）</span><br><span class="line"><span class="meta">$</span> git log</span><br><span class="line"><span class="meta">$</span> git reflog	包含回滚的信息</span><br></pre></td></tr></table></figure>
+
+<h4 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h4><p>一个网站（开源的代码管理平台），用户注册号，可以在自己账户下创建仓库，用来管理项目的源代码（源代码基于git传到仓库中）</p>
+<p>我们所熟知的插件，类库，框架等都在这个平台上有托管，我们可以下载观看和研究源码等</p>
+<p><strong>settings用户设置</strong></p>
+<ul>
+<li>profile    修改自己的基本信息</li>
+<li>account    作用修改用户名</li>
+<li>security    可以改自己的密码</li>
+<li>emails    私有仓库作为内部团队协作管理的项目</li>
+<li>……</li>
+</ul>
+<p>new  repository -&gt; 填写信息，公私有都免费 -&gt; create repository</p>
+<ul>
+<li>public    公共开源</li>
+<li>private    私有，作为内部团队项目</li>
+</ul>
+<p>settings -&gt; 删除仓库</p>
+<p>​               -&gt; collaborators 设置协助开发人员，需对方同意邀请</p>
+<p>code可以查看历史版本和分支信息</p>
+<h5 id="3-把本地仓库信息提交到远程仓库"><a href="#3-把本地仓库信息提交到远程仓库" class="headerlink" title="3.把本地仓库信息提交到远程仓库"></a>3.把本地仓库信息提交到远程仓库</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">查看本地仓库和哪些远程仓库保持连接</span><br><span class="line"><span class="meta">$</span> git remote -v</span><br><span class="line">让本地仓库和远程仓库创建一个连接	origin是随便起的一个名字，但一般都用这个</span><br><span class="line"><span class="meta">$</span> git remote add origin [仓库地址]</span><br><span class="line">解除关联信息</span><br><span class="line"><span class="meta">$</span> git remote rm origin</span><br><span class="line">提交之前最好先拉取</span><br><span class="line"><span class="meta">$</span> git pull origin master</span><br><span class="line">将本地代码提交到远程仓库（第一次需要输入用户名和密码）</span><br><span class="line"><span class="meta">$</span> git push origin master</span><br><span class="line">将远程仓库代码拉取到本地</span><br><span class="line"><span class="meta">$</span> git clone [远程仓库git地址] [别名，默认为仓库名，也可以起一个作为拉取后的文件夹名]</span><br><span class="line">/*</span><br><span class="line"> *真实项目开发流程：</span><br><span class="line"> *	1.组长或者负责人先创建中央仓库</span><br><span class="line"> *	2.小组成员基于$ git clone 把远程仓库及默认的内容克隆到本地（解决了三个事情：初始化一个</span><br><span class="line"> 本地仓库“git init”，和对应的远程仓库也保持了关联“git remote add”，把远程仓库默认内人拉取到本地</span><br><span class="line"> “git pull”</span><br><span class="line"> *	3.每个组员写自己的程序后，基于“git add/git commit”把自己修改的内容存放到历史区，然后通过</span><br><span class="line"> “git pull/git push”把本地信息和远程仓库信息保持同步即可（可能涉及冲突处理）</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+
+<h4 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h4><p>node package manger:NODE模块管理工具，根据NPM我们可快速安装、卸载所需要的资源文件</p>
+<p>区NODE官网：下载NODE重启支持版，安装NODE后，NPM也跟着安装了</p>
+<p>基于npm是从<a href>npmjs.com</a>平台下下载安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//在终端中检测安装是否成功，出现版本号即成功了</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ npm install xxx	把模块安装在当前项目中（node_modules）</span><br><span class="line">$ npm install xxx -g	把模块安装在全局环境中</span><br><span class="line">$ npm i xxx@<span class="number">1.0</span>.<span class="number">0</span>	安装指定版本号的模块</span><br><span class="line">$ npm view xx version &gt; xxx.version.json	查看某个模块的版本信息（输出到指定json文件中）</span><br><span class="line"></span><br><span class="line">$ npm init -y	初始化当前项目的配置依赖清单</span><br><span class="line">$ npm i xxx -save	把模块保存在清单生产依赖中</span><br><span class="line">$ npm i xxx --save-dev	把模块保存在清单开发依赖中</span><br><span class="line">$ npm install	跑环境，按照清单安装所需模块</span><br><span class="line"></span><br><span class="line">$ npm root -g	查看全局安装模块的目录</span><br><span class="line">$ npm -uninstall xxx</span><br><span class="line">$ npm -uninstall xxx -g		卸载安装过的模块</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
+    
+    
+    
 
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+    
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/16/黑马java教程/" rel="next" title="黑马java教程">
+                <i class="fa fa-chevron-left"></i> 黑马java教程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -324,6 +503,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -344,8 +527,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -414,6 +606,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Git版本控制系统"><span class="nav-number">1.</span> <span class="nav-text">Git版本控制系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Git安装"><span class="nav-number">2.</span> <span class="nav-text">Git安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用GitHub"><span class="nav-number">3.</span> <span class="nav-text">使用GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#目的：托管项目代码"><span class="nav-number">3.1.</span> <span class="nav-text">目的：托管项目代码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Git的全局配置"><span class="nav-number">3.2.</span> <span class="nav-text">1.Git的全局配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-创建仓库完成版本控制"><span class="nav-number">3.3.</span> <span class="nav-text">2.创建仓库完成版本控制</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub"><span class="nav-number">4.</span> <span class="nav-text">GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-把本地仓库信息提交到远程仓库"><span class="nav-number">4.1.</span> <span class="nav-text">3.把本地仓库信息提交到远程仓库</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NPM"><span class="nav-number">5.</span> <span class="nav-text">NPM</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -582,6 +790,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
