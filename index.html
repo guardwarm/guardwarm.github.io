@@ -476,7 +476,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/黑马java教程/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/java/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="grandwarm">
@@ -495,7 +495,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/08/16/黑马java教程/" itemprop="url">黑马java教程</a></h1>
+                <a class="post-title-link" href="/2019/08/16/java/" itemprop="url">java</a></h1>
         
 
         <div class="post-meta">
@@ -539,7 +539,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  5.1k
+                  9.8k
                 </span>
               
 
@@ -555,7 +555,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  19
+                  37
                 </span>
               
             </div>
@@ -603,36 +603,9 @@
 <p>数据类型向上隐士转换，向下需要显示加括号强转</p>
 <h5 id="基本数据类型（四类八种）"><a href="#基本数据类型（四类八种）" class="headerlink" title="基本数据类型（四类八种）"></a>基本数据类型（四类八种）</h5><p>byte(1)  boolean(1)  short(2)  char(2)unicode字符集  int()4  float(4)  long(8)  double(8)</p>
 <h5 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h5><p>string，数组，集合ArrayList，Scanner，Random，自定义类型</p>
-<h4 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h4><p>面向对象是一种编程思想，是相当于面向过程的</p>
-<p>面向过程：遇到问题，亲力亲为一步一步解决</p>
-<p>面向对象：遇到一个问题，找具有解决这个问题能力的对象，调用它的方法</p>
-<p>类的格式</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line">	<span class="comment">//构造方法</span></span><br><span class="line">	<span class="comment">//成员类名</span></span><br><span class="line">	<span class="comment">//成员方法</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//一个标准的类	封装：隐藏细节，对外暴露公共防蚊1方式		构造：无参必须有，全参最好有</span></span><br><span class="line"><span class="comment">//类名作为方法参数或返回值时需要传入或返回的应该是该类的对象</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="/.com//java%E8%BF%9B%E9%98%B6/javase1.JPG" alt></p>
-<h5 id="this关键字"><a href="#this关键字" class="headerlink" title="this关键字"></a>this关键字</h5><p>区分局部变量和成员变量同名的情况</p>
-<p>this的本质：实际上是个对象    谁调用的方法，this指的就是谁</p>
-<p>匿名对象：（可用可不用）    没有名字的对象</p>
-<p>只创建对象，但不用变量接收</p>
-<p>在一些用来传参后续不调用时使用</p>
-<p>特点：匿名对象也是一个对象，具有对象所有功能</p>
-<p>​            每次调用都是一个新的对象，所一每个对象只能使用一次</p>
-<h5 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h5><p>区分子类和父类成员同名的情况，但默认优先调用子类</p>
-<h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><p>继承是两个类之间的关系，子类继承父类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 子类 <span class="keyword">extends</span> 父类</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//继承必须合理	人是人他妈生的，妖是妖他妈生的</span></span><br><span class="line"><span class="comment">//继承中的成员抽取了子类中的共性内容</span></span><br><span class="line"><span class="comment">//子类会自动继承父类中所有成员，但private不可访问</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//继承后成员变量不同时，没有任何问题，相同时优先访问子类</span></span><br><span class="line"><span class="comment">//继承后成员方法不同时，没有任何问题，相同时(子类重写了父类方法时)优先访问子类，但可以通过super.方法名访问</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//只能单继承，但可以多层继承（直接父类唯一，但可以有多个间接父类）</span></span><br><span class="line"><span class="comment">//多继承的话调用方法时会产生不确定性，同名父类成员不知道该掉哪个</span></span><br></pre></td></tr></table></figure>
-
-<p>继承大大提高代码重用性</p>
-<p><img src="/.com//java%E8%BF%9B%E9%98%B6/javase3.JPG" alt></p>
-<h4 id="String中的方法（4532）"><a href="#String中的方法（4532）" class="headerlink" title="String中的方法（4532）"></a>String中的方法（4532）</h4><h5 id="判断方法"><a href="#判断方法" class="headerlink" title="判断方法"></a>判断方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(String str)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">equalsIngoreCase</span><span class="params">(String str)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">startsWith</span><span class="params">(String str)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">endsWith</span><span class="params">(String str)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h5 id="获取方法"><a href="#获取方法" class="headerlink" title="获取方法"></a>获取方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">length</span><span class="params">(String str)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">char</span> <span class="title">charAt</span><span class="params">(<span class="keyword">int</span> index)</span></span>;</span><br><span class="line"><span class="function">String <span class="title">substring</span><span class="params">(<span class="keyword">int</span> startIndex)</span></span>;</span><br><span class="line"><span class="function">String <span class="title">substring</span><span class="params">(<span class="keyword">int</span> startIndex,<span class="keyword">int</span> endIndex)</span></span>;	<span class="comment">//左闭右开</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">indexof</span><span class="params">(String subStr)</span></span>;	<span class="comment">//少用</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="转换方法"><a href="#转换方法" class="headerlink" title="转换方法"></a>转换方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">toLowerCase</span><span class="params">()</span>；</span></span><br><span class="line"><span class="function">String <span class="title">toUpperCase</span><span class="params">()</span>；</span></span><br><span class="line"><span class="function"><span class="keyword">char</span>[] <span class="title">toCharArray</span><span class="params">()</span>；</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="其它方法"><a href="#其它方法" class="headerlink" title="其它方法"></a>其它方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">trim</span><span class="params">()</span></span>;	<span class="comment">//去掉两端空格</span></span><br><span class="line">String[] split(String str);	<span class="comment">//一某一个字符串来分割字符串</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/08/16/黑马java教程/#more" rel="contents">
+            <a class="btn" href="/2019/08/16/java/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2005,7 +1978,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.6k</span>
+    <span title="Site words total count">14.3k</span>
   
 </div>
 
@@ -2031,7 +2004,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共9.6k字</span>
+  <span class="post-count">博客全站共14.3k字</span>
 </div>
 -->
         
