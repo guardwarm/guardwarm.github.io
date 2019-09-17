@@ -276,6 +276,214 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/17/正则表达式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="grandwarm">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="guard warm">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/17/正则表达式/" itemprop="url">正则表达式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-17T22:47:12+08:00">
+                2019-09-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  498
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h5><p>正则表达式（regular expression，简称regex）：是一些用来匹配和处理文本的字符串</p>
+<p>正则表达式通常被简称为模式，其实是一些由字符构成的字符串</p>
+<p>这些字符可以是普通字符（纯文本）或元字符（有特殊含义的特殊字符）</p>
+<h5 id="匹配单个字符"><a href="#匹配单个字符" class="headerlink" title="匹配单个字符"></a>匹配单个字符</h5><p> .    匹配任何单个的字符</p>
+<p>\    对特殊字符进行转义</p>
+<h5 id="匹配一组字符"><a href="#匹配一组字符" class="headerlink" title="匹配一组字符"></a>匹配一组字符</h5><p>[和]    定义字符集合    [0-9a-zA-Z]</p>
+<p>-    定义字符区间    0-9 a-z</p>
+<p>^    对字符集合进行取非匹配    [^0-9a-zA-Z]</p>
+<h5 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h5><ul>
+<li>空白字符</li>
+</ul>
+<p>[\b]    回退（删除）一个字符</p>
+<p>\f    换页符</p>
+<p>\n    换行符</p>
+<p>\r    回车符</p>
+<p>\t    制表符（tab）</p>
+<p>\v    垂直制表符</p>
+<p>\s    任何一个空白字符    [\f\n\r\t\v]</p>
+<p>\S    任何一个非空白字符</p>
+<ul>
+<li>匹配数字</li>
+</ul>
+<p>\d    任何一个数字</p>
+<p>\D    任何一个非数字</p>
+<ul>
+<li>匹配字母和数字</li>
+</ul>
+<p>\w    任何一个字母，数字和下划线</p>
+<p>\W    任何一个非字母，数字和下划线</p>
+<ul>
+<li>进制</li>
+</ul>
+<p>\x    十六进制</p>
+<p>\0    八进制</p>
+<ul>
+<li>POSIX字符串</li>
+</ul>
+<p>[[:alnum:]]                 数字字符</p>
+<p>[[:alpha:]]                  字母字符</p>
+<p>[[:lower:]]                  小写字母字符</p>
+<p>[[:print:]]                    可显示的字符</p>
+<p>[[:blank:]]                   空格(space)与定位字符</p>
+<p>[[:punct:]]                   除[[:cntrl:]]和[[:alnum:]]外</p>
+<p>[[:cntrl:]]                     ASCII控制字符(0-31和127)</p>
+<p>[[:space:]]                   空白(whitespace)字符</p>
+<p>[[:upper:]]                   大写字母字符</p>
+<p>[[:digit:]]                      数字字符</p>
+<p>[[:graph:]]                   非空格(nonspace)字符</p>
+<p>[[:xdigit:]]                    十六进制数字字符</p>
+<h5 id="重复匹配"><a href="#重复匹配" class="headerlink" title="重复匹配"></a>重复匹配</h5><p>+    给字符或字符集合作为后缀，表示匹配一个或多个字符或字符合集</p>
+<p>*    给字符或字符集合作为后缀，表示匹配零个或多个字符或字符合集</p>
+<p>{num1，num2}    精确重复次数    {6} {1,4}  {3,}</p>
+<p>?    给字符或字符集合作为后缀，表示匹配零个或一个字符或字符合集</p>
+<p>前三个为贪婪型元字符，为了防止过度匹配，会在其后加个？变为懒惰型元字符</p>
+<h5 id="位置匹配"><a href="#位置匹配" class="headerlink" title="位置匹配"></a>位置匹配</h5>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+    
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/04/git使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -547,7 +755,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  17.8k
+                  18.8k
                 </span>
               
 
@@ -563,7 +771,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  70
+                  74
                 </span>
               
             </div>
@@ -1905,7 +2113,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1927,7 +2135,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1986,7 +2194,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">22.6k</span>
+    <span title="Site words total count">24.2k</span>
   
 </div>
 
@@ -2012,7 +2220,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共22.6k字</span>
+  <span class="post-count">博客全站共24.2k字</span>
 </div>
 -->
         
