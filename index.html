@@ -276,6 +276,160 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/31/requests/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="grandwarm">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="guard warm">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/31/requests/" itemprop="url">requests</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-31T21:04:33+08:00">
+                2020-01-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  0
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+    
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/31/爬虫踩得坑/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -377,18 +531,15 @@
 
       
         
-          
-            <h5 id="百度最近更新，需要过安检"><a href="#百度最近更新，需要过安检" class="headerlink" title="百度最近更新，需要过安检"></a>百度最近更新，需要过安检</h5><p>默认情况 下先请求一次百度获取这些参数，然后每次请求带上即可 </p>
+          <h5 id="百度最近更新，需要过安检"><a href="#百度最近更新，需要过安检" class="headerlink" title="百度最近更新，需要过安检"></a>百度最近更新，需要过安检</h5><p>默认情况 下先请求一次百度获取这些参数，然后每次请求带上即可 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">item.Header.Add(&quot;Bdpagetype&quot;, &quot; 3&quot;);//设置请求头信息（Header） </span><br><span class="line">item.Header.Add(&quot;Bdqid&quot;, &quot; 0xd30b86920004fb3f&quot;);//设置请求头信息（Header） </span><br><span class="line">item.Header.Add(&quot;Cache-Control&quot;, &quot; private&quot;);//设置请求头信息（Header） </span><br><span class="line">item.Header.Add(&quot;Ckpacknum&quot;, &quot; 2&quot;);//设置请求头信息（Header） </span><br><span class="line">item.Header.Add(&quot;Ckrndstr&quot;, &quot; 20004fb3f&quot;);//设置请求头信息（Header） </span><br><span class="line">item.Header.Add(&quot;Strict-Transport-Security&quot;, &quot; max-age=172800&quot;);//设置请求头信息（Header） </span><br><span class="line">item.Header.Add(&quot;Traceid&quot;, &quot; 1574759518274850689015207396528370285375&quot;);//设置请求头信息（Header）</span><br></pre></td></tr></table></figure>
-
-<h5 id="抓取简书登录cookie"><a href="#抓取简书登录cookie" class="headerlink" title="抓取简书登录cookie"></a>抓取简书登录cookie</h5><p>登录发现post需要包含参数</p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/20200131201546.png" alt></p>
-<p>检查页面，发现在这儿，但不知如何取值</p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/20200131201659.png" alt></p>
-<p>authenticity_token应该每个页面动态生成</p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/20200131201905.png" alt></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/01/31/爬虫踩得坑/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -502,7 +653,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.1k
+                  1.2k
                 </span>
               
 
@@ -540,55 +691,14 @@
 
       
         
-          
-            <h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/http.png" alt></p>
-<h3 id="爬虫入门"><a href="#爬虫入门" class="headerlink" title="爬虫入门"></a>爬虫入门</h3><h4 id="爬虫简介"><a href="#爬虫简介" class="headerlink" title="爬虫简介"></a>爬虫简介</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E7%88%AC%E8%99%AB%E7%9A%84%E7%AE%80%E4%BB%8B1.png" alt></p>
-<h4 id="urllib-request"><a href="#urllib-request" class="headerlink" title="urllib.request"></a>urllib.request</h4><p>python3内置的包</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_data</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 用https时拿不到数据</span></span><br><span class="line">    url = <span class="string">"http://www.baidu.com/"</span></span><br><span class="line">    response = urllib.request.urlopen(url)</span><br><span class="line">    <span class="comment"># print(response)</span></span><br><span class="line">    data = response.read().decode(<span class="string">"utf-8"</span>)</span><br><span class="line">    <span class="comment"># print(data)</span></span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"baidu.html"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data)</span><br><span class="line">    <span class="comment"># python爬取到的多为str,bytes</span></span><br><span class="line">    <span class="comment"># str通过对应encode("编码")转为bytes，同理bytes通过decode转为str</span></span><br><span class="line">    <span class="comment"># 具体编码格式见html页面head头信息中</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">load_data()</span><br></pre></td></tr></table></figure>
-
-<p><strong>get传参要注意转成url编码</strong></p>
-<p>由于百度更新，以下过不了安检，实际上拿不到数据了</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_param</span><span class="params">()</span>:</span></span><br><span class="line">    url = <span class="string">"http://www.baidu.com/s?wd="</span></span><br><span class="line">    param = <span class="string">"美女"</span></span><br><span class="line">    final_url = url + param</span><br><span class="line">    <span class="comment"># python解释器只支持ASCII码，所以必须转码</span></span><br><span class="line">    final_url = urllib.parse.quote(final_url, safe=string.printable)</span><br><span class="line">    response = urllib.request.urlopen(final_url)</span><br><span class="line">    data_str = response.read().decode(<span class="string">"utf-8"</span>)</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"meinv.html"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data_str)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">get_param()</span><br></pre></td></tr></table></figure>
-
-<p>字典传参时,这样得到字符串参数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">params = &#123;</span><br><span class="line">    <span class="string">"wd"</span>: <span class="string">"中文"</span>,</span><br><span class="line">    <span class="string">"key"</span>: <span class="string">"zhang"</span>,</span><br><span class="line">    <span class="string">"value"</span>: <span class="string">"san"</span></span><br><span class="line">&#125;</span><br><span class="line">params_str = urllib.parse.urlencode(params)</span><br></pre></td></tr></table></figure>
-
-<p>绑定请求头</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">"https://www.baidu.com/s?wd=%E7%BE%8E%E5%A5%B3"</span></span><br><span class="line">header = &#123;</span><br><span class="line">    <span class="comment"># 浏览器版本</span></span><br><span class="line">    <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 创建时绑定请求头，也可以requset.add_header()来动态绑定</span></span><br><span class="line">request = urllib.request.Request(url, headers=header)</span><br><span class="line">response = urllib.request.urlopen(request)</span><br></pre></td></tr></table></figure>
-
-<p>获取随机的User-Agent(第三方包)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> fake_useragent <span class="keyword">import</span> UserAgent</span><br><span class="line">    print(UserAgent().chrome)</span><br><span class="line">    print(UserAgent().ie)</span><br><span class="line">    print(UserAgent().firefox)</span><br><span class="line">    print(UserAgent().opera)</span><br><span class="line">    print(UserAgent().safari)</span><br><span class="line">    print(UserAgent().random)</span><br></pre></td></tr></table></figure>
-
-<h5 id="Handler"><a href="#Handler" class="headerlink" title="Handler"></a>Handler</h5><p>对urlopen进行扩展</p>
-<p>urlopen源码如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">global</span> _opener</span><br><span class="line"><span class="keyword">if</span> cafile <span class="keyword">or</span> capath <span class="keyword">or</span> cadefault:</span><br><span class="line">    <span class="keyword">import</span> warnings</span><br><span class="line">    warnings.warn(<span class="string">"cafile, capath and cadefault are deprecated, use a "</span></span><br><span class="line">                  <span class="string">"custom context instead."</span>, DeprecationWarning, <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">if</span> context <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(</span><br><span class="line">            <span class="string">"You can't pass both context and any of cafile, capath, and "</span></span><br><span class="line">            <span class="string">"cadefault"</span></span><br><span class="line">        )</span><br><span class="line">  <span class="comment"># 安全套阶层，第三方CA数字证书</span></span><br><span class="line">	<span class="keyword">if</span> <span class="keyword">not</span> _have_ssl:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">'SSL support not available'</span>)</span><br><span class="line">    context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH,</span><br><span class="line">                                         cafile=cafile,</span><br><span class="line">                                         capath=capath)</span><br><span class="line">    <span class="comment"># 默认用HTTPSHandler，可以用别的Handler来实现功能扩展</span></span><br><span class="line">    https_handler = HTTPSHandler(context=context)</span><br><span class="line">    opener = build_opener(https_handler)</span><br><span class="line"><span class="keyword">elif</span> context:</span><br><span class="line">    https_handler = HTTPSHandler(context=context)</span><br><span class="line">    opener = build_opener(https_handler)</span><br><span class="line"><span class="keyword">elif</span> _opener <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">    _opener = opener = build_opener()</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    opener = _opener</span><br><span class="line"><span class="keyword">return</span> opener.open(url, data, timeout)</span><br></pre></td></tr></table></figure>
-
-<h6 id="HTTPHandler演示"><a href="#HTTPHandler演示" class="headerlink" title="HTTPHandler演示"></a>HTTPHandler演示</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">"https://www.baidu.com/"</span></span><br><span class="line">header = &#123;</span><br><span class="line">    <span class="comment"># 浏览器版本</span></span><br><span class="line">    <span class="string">"User-Agent"</span>: UserAgent().random</span><br><span class="line">&#125;</span><br><span class="line">request = urllib.request.Request(url, headers=header)</span><br><span class="line">handler = urllib.request.HTTPHandler()</span><br><span class="line">opener = urllib.request.build_opener(handler)</span><br><span class="line">response = opener.open(request)</span><br><span class="line">data = response.read().decode(<span class="string">"utf-8"</span>)</span><br></pre></td></tr></table></figure>
-
-<h6 id="ProxyHandler"><a href="#ProxyHandler" class="headerlink" title="ProxyHandler"></a>ProxyHandler</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">from</span> fake_useragent <span class="keyword">import</span> UserAgent</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_proxy_handler</span><span class="params">()</span>:</span></span><br><span class="line">    url = <span class="string">"https://blog.csdn.net/willsnowdev/article/details/90140266"</span></span><br><span class="line">    header = &#123;</span><br><span class="line">        <span class="comment"># 浏览器版本</span></span><br><span class="line">        <span class="string">"User-Agent"</span>: UserAgent().random</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># 可以用多个IP，到时候随机选取</span></span><br><span class="line">    <span class="comment"># "http": "163.204.247.20:9999"也可</span></span><br><span class="line">    proxy = &#123;</span><br><span class="line">        <span class="string">"http"</span>: <span class="string">"http://163.204.247.20:9999"</span></span><br><span class="line">    &#125;</span><br><span class="line">    request = urllib.request.Request(url, headers=header)</span><br><span class="line">    proxy_handler = urllib.request.ProxyHandler(proxy)</span><br><span class="line">    opener = urllib.request.build_opener(proxy_handler)</span><br><span class="line">    response = opener.open(request)</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"requset_header.html"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(response.read().decode())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">create_proxy_handler()</span><br></pre></td></tr></table></figure>
-
-<p>多个免费代理</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">proxy_list = [</span><br><span class="line">        &#123;<span class="string">"https"</span>:<span class="string">"106.75.226.36:808"</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"https"</span>:<span class="string">"61.135.217.7:80"</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"https"</span>:<span class="string">"125.70.13.77:8080"</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"https"</span>:<span class="string">"118.190.95.35:9001"</span>&#125;</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
-
-<p>付费代理</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一种方式</span></span><br><span class="line">proxy = &#123;</span><br><span class="line">    <span class="string">"http"</span>: <span class="string">"username:pwd@163.204.247.20:9999"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 第二种方式</span></span><br><span class="line">username = <span class="string">"xunzhao"</span></span><br><span class="line">pwd = <span class="string">"173hjgew8"</span></span><br><span class="line">money_proxy1 = <span class="string">"163.204.247.20:9999"</span></span><br><span class="line"><span class="comment"># 创建密码管理器</span></span><br><span class="line">password_manger = urllib.request.HTTPPasswordMgr()</span><br><span class="line">password_manger.add_password(<span class="literal">None</span>, money_proxy1, username, pwd)</span><br><span class="line">handle_auth = urllib.request.ProxyBasicAuthHandler(password_manger)</span><br><span class="line">opener_auth = urllib.request.build_opener(handle_auth)</span><br><span class="line">response = opener_auth.open(url)</span><br></pre></td></tr></table></figure>
-
-<p>用公司内网爬数据</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">auth_nei_wang</span><span class="params">()</span>:</span></span><br><span class="line">    nei_url = <span class="string">"https://www.jianshu.com/p/325bdc0ae92f"</span></span><br><span class="line">    header = &#123;</span><br><span class="line">        <span class="string">"User-Agent"</span>: UserAgent().random</span><br><span class="line">    &#125;</span><br><span class="line">    username = <span class="string">"admin"</span></span><br><span class="line">    pwd = <span class="string">"admin007"</span></span><br><span class="line">    password_manger = urllib.request.HTTPPasswordMgrWithDefaultRealm()</span><br><span class="line">    password_manger.add_password(<span class="literal">None</span>, nei_url, username, pwd)</span><br><span class="line">    <span class="comment"># handle不同，其他和付费代理很像</span></span><br><span class="line">    handle_nei = urllib.request.HTTPBasicAuthHandler(password_manger)</span><br><span class="line">    opener_nei = urllib.request.build_opener(handle_nei)</span><br><span class="line">    response = opener_nei.open(nei_url)</span><br><span class="line">    print(response.read().decode(<span class="string">"utf-8"</span>))</span><br></pre></td></tr></table></figure>
-
-<h5 id="cookie认证"><a href="#cookie认证" class="headerlink" title="cookie认证"></a>cookie认证</h5><p>手动获取cookie，添加到header中</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">header = &#123;</span><br><span class="line">    <span class="string">"User-Agent"</span>: UserAgent().random,</span><br><span class="line">    <span class="string">"Cookie"</span>: <span class="string">"__yadk_uid=e2gl8vcNK8DLVH2eQd6vHpvH1QvuStkO; web_login_version=MTU4MDA5MDc3OQ%3D%3D--366eb244926d0d504aa444afc85df5e80948cee6; remember_user_token=W1syMTAxNzY3NV0sIiQyYSQxMSRUVGNQenhyZjFtMzdiN3Mxc0xzT25lIiwiMTU4MDQ2MzkzNy42MjQ5NjA0Il0%3D--2fd8938f7291d2405e0c23b0f267c631fad3fd9b; read_mode=day; default_font=font2; locale=zh-CN; _m7e_session_core=ad86ea9fddf5bd5d6969bc414a322298; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%2221017675%22%2C%22%24device_id%22%3A%2216bea6ca2e9365-067bb910973608-e343166-1049088-16bea6ca2ea5c2%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E8%87%AA%E7%84%B6%E6%90%9C%E7%B4%A2%E6%B5%81%E9%87%8F%22%2C%22%24latest_referrer%22%3A%22https%3A%2F%2Fwww.baidu.com%2Fs%22%2C%22%24latest_search_keyword%22%3A%22%E7%AE%80%E4%B9%A6%22%2C%22%24latest_utm_source%22%3A%22desktop%22%2C%22%24latest_utm_medium%22%3A%22not-signed-in-like-note-btn-in-bottom%22%2C%22%24latest_referrer_host%22%3A%22www.baidu.com%22%7D%2C%22first_id%22%3A%2216bea6ca2e9365-067bb910973608-e343166-1049088-16bea6ca2ea5c2%22%7D; Hm_lvt_0c0e9d9b1e7d617b3e6842e85b9fb068=1580090858,1580277385,1580463938,1580466286; Hm_lpvt_0c0e9d9b1e7d617b3e6842e85b9fb068=1580466310"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>自动获取，用cookiejar来保存cookie</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">获取 个人中心的页面</span><br><span class="line"></span><br><span class="line">1. 代码登录  登录成功 cookie(有效)</span><br><span class="line">2. 自动带着cookie 去请求个人中心</span><br><span class="line"></span><br><span class="line">cookiejar 自动保存这个cookie</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">header = &#123;</span><br><span class="line">        <span class="string">"User-Agent"</span>: UserAgent().random,</span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">'https://www.yaozh.com/login'</span></span><br><span class="line">    <span class="comment"># 1.2 登录的参数</span></span><br><span class="line">    login_form_data = &#123;</span><br><span class="line">        <span class="string">"username"</span>: <span class="string">"xiaomaoera12"</span>,</span><br><span class="line">        <span class="string">"pwd"</span>: <span class="string">"lina081012"</span>,</span><br><span class="line">        <span class="string">"formhash"</span>: <span class="string">"CE3ADF28C5"</span>,</span><br><span class="line">        <span class="string">"backurl"</span>: <span class="string">"https%3A%2F%2Fwww.yaozh.com%2F"</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    login_form_data_str = urllib.parse.urlencode(login_form_data).encode(<span class="string">"utf-8"</span>)</span><br><span class="line">    cookie_jar = cookiejar.CookieJar()</span><br><span class="line">    cookie_handle = urllib.request.HTTPCookieProcessor(cookie_jar)</span><br><span class="line">    cookie_opener = urllib.request.build_opener(cookie_handle)</span><br><span class="line">    requset = urllib.request.Request(url, headers=header, data=login_form_data_str)</span><br><span class="line">    cookie_opener.open(requset)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 2. 代码带着cooke去访问 个人中心</span></span><br><span class="line">    center_url = <span class="string">'https://www.yaozh.com/member/'</span></span><br><span class="line">    center_request = urllib.request.Request(center_url, headers=header)</span><br><span class="line">    response = cookie_opener.open(center_url)</span><br><span class="line">    data = response.read().decode(<span class="string">"utf-8"</span>)</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"jianshu.html"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data)</span><br></pre></td></tr></table></figure>
-
-<h6 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h6><p>cookiejar原理和urlencode中safe=string.printable作用</p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/python3(urlib.request).png" alt></p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/handler%E5%A4%84%E7%90%86%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89.png" alt></p>
-
-          
+          <h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/http.png" alt></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/01/30/爬虫入门/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1328,8 +1438,7 @@
 
       
         
-          
-            <h5 id="XML介绍"><a href="#XML介绍" class="headerlink" title="XML介绍"></a>XML介绍</h5><p>XML:可扩展的标记语言。</p>
+          <h5 id="XML介绍"><a href="#XML介绍" class="headerlink" title="XML介绍"></a>XML介绍</h5><p>XML:可扩展的标记语言。</p>
 <p>可扩展的:扩展性特别强,语法上比较松</p>
 <p>标记: <dog> </dog></p>
 <p>我们用的是1.0的版本</p>
@@ -1349,59 +1458,13 @@
 <p>必须有开始和结束标签组成  &lt;dan&gt; &lt;/dan&gt;</p>
 <p>一般只有一个跟标签，可以相互嵌套</p>
 </blockquote>
-<p>d.属性:attribute</p>
-<blockquote>
-<p>属性名=“属性值”</p>
-<p>必须写在开始标签中</p>
-<p>必须以字母开头</p>
-</blockquote>
-<p>e.转义字符</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; <span class="attr">---</span> &amp;<span class="attr">lt</span>;</span></span><br><span class="line"><span class="tag">&gt;</span> --- &amp;gt;</span><br><span class="line">" --- &amp;quot;</span><br><span class="line">' --- &amp;apos;</span><br><span class="line">&amp; --- &amp;amp</span><br></pre></td></tr></table></figure>
-
-<p>f.CDATA区</p>
-<p>当内容中出现大量的需要转译的字符<br>    XML提供了CDATA区</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">abc</span>&gt;</span></span><br><span class="line">	&lt;![CDATA[</span><br><span class="line">		String s = "abc";</span><br><span class="line">		int count = 0;</span><br><span class="line">		for(int i = 0;i &lt; s.length() ; i++)&#123;</span><br><span class="line">			char c = s.charAt(i);</span><br><span class="line">			if(c &gt;= 'a' &amp;&amp; c &lt;= 'z')&#123;</span><br><span class="line">			count++;]]&gt;</span><br><span class="line">			<span class="comment">&lt;!--  特例：里面还包含了]]&gt;,需要分开成两个CDATA区 --&gt;</span></span><br><span class="line">    		]]&amp;gt;</span><br><span class="line">		&lt;![CDATA[</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println("count = " + count);</span><br><span class="line">		]]&gt;	</span><br><span class="line"><span class="tag">&lt;/<span class="name">abc</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="XML约束"><a href="#XML约束" class="headerlink" title="XML约束"></a>XML约束</h5><ul>
-<li>DTD约束</li>
-</ul>
-<p>文档开始注释会提示在xml文档前添加&lt;!DOCTYPE beans SYSTEM “bean.dtd”&gt;</p>
-<p>第一个值为跟标签名字</p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/javase31.JPG" alt></p>
-<p>根据智能提示编写即可</p>
-<p>三种引入方式</p>
-<blockquote>
-<p>内部DTD</p>
-<p>外部DTD</p>
-<blockquote>
-<p>SYSTEM    本地DTD,后面一般跟个文件名</p>
-<p>PUBLIC    公共DTD，后面一般跟个网址</p>
-</blockquote>
-</blockquote>
-<ul>
-<li>Schema约束</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/javase32.JPG" alt></p>
-<p>文档开头注释会提示应在xml中1导入的信息</p>
-<p>&lt;beans xmlns=”<a href="http://www.itcast.cn/bean&quot;" target="_blank" rel="noopener">http://www.itcast.cn/bean&quot;</a>   xmlns:xsi=”<a href="http://www.w3.org/2001/XMLSchema-instance&quot;" target="_blank" rel="noopener">http://www.w3.org/2001/XMLSchema-instance&quot;</a>   xsi:schemaLocation=”<a href="http://www.itcast.cn/bean" target="_blank" rel="noopener">http://www.itcast.cn/bean</a> bean-schema.xsd”&gt;</p>
-<p>注意这是一个开始标签，添加一下结束标签即可，其余使用方法和DTD差不多</p>
-<p>如果有多个schema约束文件名字冲突时，需使用targetname来指定，但显得很冗长，可以给其起个别名</p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/javase33.JPG" alt></p>
-<h5 id="XML解析"><a href="#XML解析" class="headerlink" title="XML解析"></a>XML解析</h5><p>用io流来解析太过繁琐，一般使用第三方提供的解析开发包</p>
-<p><strong>三种解析方式</strong></p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/javase34.JPG" alt></p>
-<p><strong>常用解析开发包</strong></p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/javase35.JPG" alt></p>
-<h5 id="dom4j"><a href="#dom4j" class="headerlink" title="dom4j"></a>dom4j</h5><p>1.核心类 SAXReader:加载XML文件</p>
-<p>2.Document对象,表示整个XML文件对象</p>
-<p>3.元素:Element</p>
-<p>获取根元素: document.getRootElement();</p>
-<p>获取属性: element.attributeValue(“属性名”)</p>
-<p>获取子元素:List<element> element.elements();//好几个重载</element></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//被解析文件</span></span><br><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</span><br><span class="line">&lt;beans&gt;</span><br><span class="line">	&lt;bean id=<span class="string">"001"</span> className=<span class="string">"cn.itcast.demo.User"</span>&gt;</span><br><span class="line">		&lt;property name="username" value="jack"&gt;&lt;/property&gt;</span><br><span class="line">		&lt;property name="password" value="123"&gt;&lt;/property&gt;</span><br><span class="line">	&lt;/bean&gt;</span><br><span class="line"></span><br><span class="line">	&lt;bean id=<span class="string">"002"</span> className=<span class="string">"cn.itcast.demo.Admin"</span>&gt;</span><br><span class="line">		&lt;property name="username" value="admin"&gt;&lt;/property&gt;</span><br><span class="line">		&lt;property name="password" value="123321"&gt;&lt;/property&gt;</span><br><span class="line">	&lt;/bean&gt;</span><br><span class="line">&lt;/beans&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dom4JDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> DocumentException </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="comment">//1.把整个要解析的XML文件加载到内存</span></span><br><span class="line">		SAXReader reader = <span class="keyword">new</span> SAXReader();</span><br><span class="line">		<span class="comment">//2.会生产一个Documnet对象</span></span><br><span class="line">		Document document =reader.read(<span class="keyword">new</span> File(<span class="string">"beans.xml"</span>));</span><br><span class="line">		<span class="comment">//3.获取根标签</span></span><br><span class="line">		Element rootEle = document.getRootElement();</span><br><span class="line">		<span class="comment">//4.获取根标签的子标签</span></span><br><span class="line">		List&lt;Element&gt; beanElements = rootEle.elements();</span><br><span class="line">		<span class="comment">//5.遍历elements集合</span></span><br><span class="line">		<span class="keyword">for</span> (Element beanElement : beanElements) &#123;</span><br><span class="line">			<span class="comment">//6.获取子标签bean的属性</span></span><br><span class="line">			String idValue = beanElement.attributeValue(<span class="string">"id"</span>);</span><br><span class="line">			String classNameValue = beanElement.attributeValue(<span class="string">"className"</span>);</span><br><span class="line">			System.out.println(idValue+<span class="string">".."</span>+classNameValue);</span><br><span class="line">			<span class="comment">//获取bean的子标签</span></span><br><span class="line">			List&lt;Element&gt; propertyElements = beanElement.elements();</span><br><span class="line">			<span class="comment">//遍历property标签</span></span><br><span class="line">			<span class="keyword">for</span> (Element propertyElement : propertyElements) &#123;</span><br><span class="line">				<span class="comment">//propertyElement Property标签</span></span><br><span class="line">				<span class="comment">//获取Property的属性</span></span><br><span class="line">				String nameValue = propertyElement.attributeValue(<span class="string">"name"</span>);</span><br><span class="line">				String valuevalue = propertyElement.attributeValue(<span class="string">"value"</span>);</span><br><span class="line">				System.out.println(nameValue+<span class="string">"==="</span>+valuevalue);</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/21/XML/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1553,201 +1616,20 @@
 
       
         
-          
-            <h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><h4 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h4><p>去MySQL官网下社区版，根据网上教程配置属性</p>
+          <h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><h4 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h4><p>去MySQL官网下社区版，根据网上教程配置属性</p>
 <p>还下了SQLyog，可以图形化界面写mysql（注册码百度一下很好找）</p>
 <h4 id="数据库（DB）和数据库管理系统（DBMS）"><a href="#数据库（DB）和数据库管理系统（DBMS）" class="headerlink" title="数据库（DB）和数据库管理系统（DBMS）"></a>数据库（DB）和数据库管理系统（DBMS）</h4><p>数据库：存储数据的仓库，本质是一个文件管理系统</p>
 <p>数据库管理系统：是一个软件，用来管理文件</p>
 <p>我们常说的数据库，实际上是数据库管理系统，一般习惯称为数据库</p>
 <p>一般不直接操作DB，而是通过DBMS来操作DB</p>
 <p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E6%95%B0%E6%8D%AE%E5%BA%931.JPG" alt></p>
-<h4 id="表（java中一个类）"><a href="#表（java中一个类）" class="headerlink" title="表（java中一个类）"></a>表（java中一个类）</h4><p>行：一条记录    类的一个对象</p>
-<p>列：一个字段    java中一个属性</p>
-<h4 id="常见数据库"><a href="#常见数据库" class="headerlink" title="常见数据库"></a>常见数据库</h4><p>MySQL：开源免费，小型的数据库，已经被Oracle收购，开始收费（6.x之后）</p>
-<p>Oracle：收费的大型数据库，收购了SUN,MySQL</p>
-<p>DB2：IBM的数据库，常用在银行，效率差，安全性高</p>
-<p>SQLSever：Microsoft的，常用于c#，.net</p>
-<p>SyBase：已经淡出历史舞台，提供了一个专业的数据建模工具——PowerDesigner</p>
-<p>SQLite：嵌入式的小型数据库，用于手机端</p>
-<p>MySQL开启和关闭</p>
-<p>法一：此电脑-&gt;管理-&gt;服务-&gt;找到MySQL即可</p>
-<p>法二：以管理员权限打开command</p>
-<p>net start mysql</p>
-<p>net stop mysql</p>
-<p>mysql -u root -p(直接跟密码或回车然后会提示输入密码)</p>
-<p>法三：用SQLyog</p>
-<h4 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E6%95%B0%E6%8D%AE%E5%BA%932.JPG" alt></p>
-<p>DDL：数据库定义语言    defination</p>
-<p>主要是对数据库数据库表进行创建删除等维护操作</p>
-<p>create 创建  drop  删除  alter  修改  show  查看</p>
-<p>DCL：数据库操纵/控制语言    control</p>
-<p>控制数据库访问权限</p>
-<p>DML：数据库操作语言    manager</p>
-<p>主要是对表中数据进行增删改</p>
-<p>insert  增加  delete  删除  update  修改</p>
-<p>DQL：数据库查询语言    query</p>
-<p>主要是对表中数据进行查询</p>
-<p>select  查询  from  从  where  条件</p>
-<h4 id="SQL通用语法"><a href="#SQL通用语法" class="headerlink" title="SQL通用语法"></a>SQL通用语法</h4><ul>
-<li><p>SQL语句可以单行或多行书写，以分号结尾</p>
-</li>
-<li><p>可使用空格和缩进来增强可读性</p>
-</li>
-<li><p>语句不区分大小写，关键字建议使用大写</p>
-</li>
-<li><p>/**/ 块注释</p>
-<p># 单行注释</p>
-</li>
-<li><p>常用数据类型（还有很多，但不常用）</p>
-<ul>
-<li>int 整形</li>
-<li>double 浮点型</li>
-<li>varchar 字符串型</li>
-<li>date 日期型 yyyy-mm-dd，没有时分秒</li>
-</ul>
-</li>
-</ul>
-<h4 id="DDL"><a href="#DDL" class="headerlink" title="DDL"></a>DDL</h4><h5 id="操作数据库"><a href="#操作数据库" class="headerlink" title="操作数据库"></a>操作数据库</h5><p>​    增</p>
-<p>​    create database 数据库名   采用默认编码，安装时选的</p>
-<p>​    create database 数据库名 charset utf8</p>
-<p>​    删</p>
-<p>​    drop database 数据库名</p>
-<p>​    改</p>
-<p>​    修改数据库名字很麻烦</p>
-<p>​    use 数据库名    修改正在使用的数据库</p>
-<p>​    查</p>
-<p>​    select database()    查询正在使用的数据库</p>
-<p>​    show database    查询所有数据库</p>
-<p>​    show create database 数据库名    查询某个数据库详细信息</p>
-<h5 id="操作数据库表"><a href="#操作数据库表" class="headerlink" title="操作数据库表"></a>操作数据库表</h5><p>​    增</p>
-<p>​    create table 表名（</p>
-<p>​    字段名1 数据类型1（长度） [约束]，</p>
-<p>​    字段名2 数据类型2（长度） [约束]</p>
-<p>​    字段名2 数据类型2（长度） [约束]</p>
-<p>​    ）；</p>
-<p>​    删</p>
-<p>​    drop table 表名</p>
-<p>​    查</p>
-<p>​    desc 表名 查看一个表的详细信息    description</p>
-<p>​    show tables 查看所有的表</p>
-<p>​    改</p>
-<p>​    rename table 表名 to 新表名    改名字</p>
-<h5 id="操作数据库表中的列"><a href="#操作数据库表中的列" class="headerlink" title="操作数据库表中的列"></a>操作数据库表中的列</h5><p>​    增</p>
-<p>​    alter table 表名 add 列名 类型（长度） [约束]</p>
-<p>​    删</p>
-<p>​    alter table 表名 drop 列名</p>
-<p>​    查（同查看表的信息）</p>
-<p>​    desc 表名 查看一个表的详细信息</p>
-<p>​    改    可以修改列的名字，类型，约束等等</p>
-<p>​    alter table 表名 change 旧列名 新列名 类型(长度) 约束   修改列名,实际上类型和约束也可以一起改了</p>
-<p>​    alter table 表名 modify 列名 类型（长度） 约束    修改类型和约束</p>
-<p>​    alter table 表名 character set 字符集   一般不修改</p>
-<h4 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h4><p><strong>增</strong></p>
-<p>insert into 表名 (列名1，列名2) values (value1，value2)    插入一条记录</p>
-<p>列名可以选择一列或几列，前后必须一一对应</p>
-<p>除了int，double，其它数据必须用””或’’引起来，推荐使用单引号</p>
-<p>如果要插入的记录所有字段都有，则(列名1，列名2)可省略</p>
-<p><strong>删</strong></p>
-<p>delete from 表名    删除所有记录</p>
-<p>delete from 表名 where 条件</p>
-<p>改</p>
-<p>update 表名 set 字段名=值 把该字段内所有的值都改了</p>
-<p>update 表名 set 字段名=值 where 条件</p>
-<h4 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h4><h5 id="基本查询"><a href="#基本查询" class="headerlink" title="基本查询"></a>基本查询</h5><p>select [distinct] *|列名1，列名2 from 表名    查询表中所有行数据</p>
-<p>distinct    去重查询</p>
-<p>字段名+10    查询结果是表达式    运算查询</p>
-<p>字段名+10 as 新名字    别名查询</p>
-<h5 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h5><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E6%95%B0%E6%8D%AE%E5%BA%933.JPG" alt></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">where price &lt;&gt; 60;</span><br><span class="line"></span><br><span class="line">where not (price=60);</span><br><span class="line"></span><br><span class="line">where price &gt;= 400 and price &lt;= 600;</span><br><span class="line"></span><br><span class="line">where price between 400 and 600;</span><br><span class="line"></span><br><span class="line">where price in (400,600);	价格是400和600的</span><br><span class="line"></span><br><span class="line">where price &gt;1000 or price &lt; 300;</span><br><span class="line"></span><br><span class="line">where pname like &apos;%霸%&apos;	名字中含&apos;霸&apos;的商品</span><br><span class="line"></span><br><span class="line">where pname like &apos;_霸%&apos;	名字中第二个字为&apos;霸&apos;的商品</span><br><span class="line"></span><br><span class="line">where pname is null;	没有名字的，不可以用pname=null</span><br><span class="line"></span><br><span class="line">where price &gt;2000 and category_id in (&apos;c002&apos;,&apos;c003&apos;);</span><br><span class="line"></span><br><span class="line">where (price &gt;2000 and category_id=&apos;c002&apos;)</span><br><span class="line"></span><br><span class="line">		or(price &gt;2000 and category_id=&apos;c003&apos;);</span><br></pre></td></tr></table></figure>
-
-<h5 id="排序查询"><a href="#排序查询" class="headerlink" title="排序查询"></a>排序查询</h5><p>对查询结果进行排序，关键字order by</p>
-<p>格式：查询语句 order by 字段名 [ASC|DESC]</p>
-<p>ASC 升序，从小到大，默认</p>
-<p>DESC 降序，从大到小</p>
-<h5 id="聚合查询"><a href="#聚合查询" class="headerlink" title="聚合查询"></a>聚合查询</h5><p>以前的查询都是横向记录查询，该查询是纵向个数查询</p>
-<p>查询特点：查询到的是单一值</p>
-<p>聚合函数：求记录数的聚合函数    </p>
-<p>格式：聚合函数（字段名）</p>
-<p>​    count函数会自动忽略空值</p>
-<p>​    max：求最大值</p>
-<p>​    min：求最小值</p>
-<p>​    avg：求平均值</p>
-<p>​    sum：求和</p>
-<h5 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h5><p>把查询到的结果分成几个组，先分组再查询，具体查询到的结果数，取决于分成几个组</p>
-<p>若分组后还有条件需要判断，用having关键字</p>
-<p>where写在基本查询语句后，且后面不可以写聚合函数</p>
-<p>having写在分组查询后，且后面可以写聚合函数</p>
-<p>格式：查询语句 group by 字段</p>
-<p>select count(<em>) from product group by categroy_id having count(\</em>)&gt;1    </p>
-<p>只显示个数大于1的商品分类，<strong>注意条件用having</strong></p>
-<h5 id="完整查询过程"><a href="#完整查询过程" class="headerlink" title="完整查询过程"></a>完整查询过程</h5><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E6%95%B0%E6%8D%AE%E5%BA%934.JPG" alt></p>
-<h5 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h5><p>只查询记录的一部分</p>
-<p>格式：limit 数值一（开始下标，从0开始计数），数值二（需要查出的记录数）</p>
-<p>查询公式：假设每次查n条</p>
-<p>第m页  limit (m-1)*n,n</p>
-<h5 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h5><p><strong>交叉查询</strong></p>
-<p>格式：select * from 表一，表二</p>
-<p>总字段=表一字段+表二字段</p>
-<p>总记录数=表一记录数*表二记录数</p>
-<p>但交叉查询无实际意义，实际上是一个矩阵（坐标）的笛卡尔，是另外两个查询的基础</p>
-<p><strong>内连接查询    inner join</strong></p>
-<p>隐式内连接查询：不写关键字inner join</p>
-<p>select * from 表一，表二 where 表一.主键=表二.外键</p>
-<p>显式内连接查询：写关键字inner join</p>
-<p>select * from 表一 inner join 表二 on 表一.主键=表二.外键</p>
-<p><strong>外连接查询    outer join</strong></p>
-<p>左外连接：left outer join</p>
-<p>select * from 表一 left outer join 表二 on 表一.主键=表二.外键</p>
-<p>左外连接，以左表为主，左表中数据都会有</p>
-<p>右外连接：right outer join</p>
-<p>select * from 表一 right outer join 表二 on 表一.主键=表二.外键</p>
-<p>右外连接，以右表为主，右表中数据都会有</p>
-<h5 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h5><p>一个查询的结果，做另一个查询的一部分</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> products <span class="keyword">WHERE</span> category_id <span class="keyword">IN</span></span><br><span class="line">	(<span class="keyword">SELECT</span> cid <span class="keyword">FROM</span> <span class="keyword">category</span> <span class="keyword">WHERE</span> cname <span class="keyword">IN</span>(<span class="string">'化妆品'</span>，<span class="string">'家电'</span>))；</span><br></pre></td></tr></table></figure>
-
-<h4 id="SQL备份和恢复"><a href="#SQL备份和恢复" class="headerlink" title="SQL备份和恢复"></a>SQL备份和恢复</h4><p>在SQLyog中，右击数据库进行导入和导出</p>
-<h4 id="三个知识点"><a href="#三个知识点" class="headerlink" title="三个知识点"></a>三个知识点</h4><h5 id="两个约束"><a href="#两个约束" class="headerlink" title="两个约束"></a>两个约束</h5><p>主键约束(primary key):只能有一个，值必须唯一且不能为空</p>
-<p>自动增长约束（auto_increment):初始值唯一，若被设置为一个值后，下一个值从这个的基础上增加</p>
-<p>删除表所有数据的两种方式</p>
-<p>delete from 表名    所有记录被删除，但自增值不会重置</p>
-<p>truncate table 表名    删除所有记录，并重置自增值 底层是先摧毁表，再重建</p>
-<p>乱码问题</p>
-<p>在DOS中查看utf8编码的数据库数据时会出现乱码问题，因为DOS默认的是gbk</p>
-<p>解决方法</p>
-<p>临时方案：set names gbk    临时的确告诉数据库我们用gbk来查询</p>
-<p>永久方案：修改my.ini的配置文件，不建议</p>
-<h4 id="数据完整性"><a href="#数据完整性" class="headerlink" title="数据完整性"></a>数据完整性</h4><p>添加数据完整性==添加表约束</p>
-<p>实体完整性：对数据行的约束，比如主键约束，唯一约束</p>
-<p>域完整性：对数据列的约束</p>
-<p>引用完整性：外键约束（多表关系）</p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E6%95%B0%E6%8D%AE%E5%BA%936.JPG" alt></p>
-<h4 id="各种约束"><a href="#各种约束" class="headerlink" title="各种约束"></a>各种约束</h4><p>主键约束：primary key    保证该字段唯一并且不为空</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 在创建表的时候直接在字段后面添加</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> books &#123;</span><br><span class="line">	bid <span class="built_in">INT</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">	bname <span class="built_in">VARCHAR</span>(<span class="number">30</span>),</span><br><span class="line">	bprice <span class="keyword">DOUBLE</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">-- 在创建表的时候，不直接在字段后添加，而是在表的约束区域添加</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> books &#123;</span><br><span class="line">	bid <span class="built_in">INT</span>,</span><br><span class="line">	bname <span class="built_in">VARCHAR</span>(<span class="number">30</span>),</span><br><span class="line">	bprice <span class="keyword">DOUBLE</span>，<span class="comment">-- 此处为约束区域</span></span><br><span class="line">	<span class="keyword">CONSTRAINT</span> pk_bid PRIMARY <span class="keyword">KEY</span>(bid)</span><br><span class="line">&#125;;</span><br><span class="line">//创建表后，通过修改表的结构，给某个字段添加主键</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> books <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> pk_bid PRIMARY <span class="keyword">KEY</span>(bid)</span><br><span class="line"></span><br><span class="line">//删除主键约束</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> books <span class="keyword">DROP</span> PRIMARY <span class="keyword">KEY</span>;		<span class="comment">-- 因为只能有一个主键，所以无需加字段名</span></span><br></pre></td></tr></table></figure>
-
-<p>唯一约束：unique    保证该字段唯一，可以为null</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 在创建表的时候直接在字段后面添加</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> books &#123;</span><br><span class="line">	bid <span class="built_in">INT</span> <span class="keyword">UNIQUE</span>,</span><br><span class="line">	bname <span class="built_in">VARCHAR</span>(<span class="number">30</span>),</span><br><span class="line">	bprice <span class="keyword">DOUBLE</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 在创建表的时候，不直接在字段后添加，而是在表的约束区域添加</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> books &#123;</span><br><span class="line">	bid <span class="built_in">INT</span>,</span><br><span class="line">	bname <span class="built_in">VARCHAR</span>(<span class="number">30</span>),</span><br><span class="line">	bprice <span class="keyword">DOUBLE</span>，</span><br><span class="line">	<span class="comment">-- 此处为约束区域</span></span><br><span class="line">	<span class="keyword">CONSTRAINT</span> unique_bid <span class="keyword">UNIQUE</span>(bid)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建表后，通过修改表的结构，给某个字段添加主键</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> books <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> pk_bid PRIMARY <span class="keyword">KEY</span>(bid);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 删除主键约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> books <span class="keyword">DROP</span> <span class="keyword">UNIQUE</span>(约束名);	<span class="comment">-- /如果添加唯一约束时没起名字，默认是字段名</span></span><br></pre></td></tr></table></figure>
-
-<p>自动增长约束：auto_increment    把该字段的值交给数据库去维护，默认每次加一（这个字段必须是建，多为主键）</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 在创建表的时候直接在字段后面添加</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> books &#123;</span><br><span class="line">	bid <span class="built_in">INT</span> PRIMARY <span class="keyword">KEY</span> AUTO_INCREMENT,</span><br><span class="line">	bname <span class="built_in">VARCHAR</span>(<span class="number">30</span>),</span><br><span class="line">	bprice <span class="keyword">DOUBLE</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 在创建表的时候，不直接在字段后添加，而是在表的约束区域添加</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> books &#123;</span><br><span class="line">	bid <span class="built_in">INT</span>,</span><br><span class="line">	bname <span class="built_in">VARCHAR</span>(<span class="number">30</span>),</span><br><span class="line">	bprice <span class="keyword">DOUBLE</span>，</span><br><span class="line">	<span class="comment">-- 此处为约束区域</span></span><br><span class="line">	<span class="keyword">CONSTRAINT</span> pk_bid PRIMARY <span class="keyword">KEY</span>(bid)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建表后，通过修改表的结构，给某个字段添加主键</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> books <span class="keyword">MODIFY</span> bid <span class="built_in">INT</span> AUTO_CREMENT<span class="comment">-- /字段名 类型 约束</span></span><br><span class="line"><span class="comment">-- 删除主键约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> books <span class="keyword">MODIFY</span> bid <span class="built_in">INT</span>;</span><br></pre></td></tr></table></figure>
-
-<p>非空约束：not null    被约束字段不可为空值</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 在创建表的时候直接在字段后面添加</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> books &#123;</span><br><span class="line">	bid <span class="built_in">INT</span>,</span><br><span class="line">	bname <span class="built_in">VARCHAR</span>(<span class="number">30</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">	bprice <span class="keyword">DOUBLE</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建表后，通过修改表的结构，给某个字段添加主键</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> books <span class="keyword">MODIFY</span> 字段 属性,		<span class="comment">-- 类似auto_increment</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 删除主键约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> books <span class="keyword">MODIFY</span> 字段 属性;</span><br></pre></td></tr></table></figure>
-
-<p>默认约束：default    给字段添加一个默认值，如果添加记录时没赋值的话用默认值</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 在创建表的时候直接在字段后面添加</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> books &#123;</span><br><span class="line">	bid <span class="built_in">INT</span>,</span><br><span class="line">	bname <span class="built_in">VARCHAR</span>(<span class="number">30</span>) <span class="keyword">DEFAULT</span> <span class="string">'JAVA 入门'</span>,</span><br><span class="line">	bprice <span class="keyword">DOUBLE</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建表后，通过修改表的结构，给某个字段添加主键</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> books <span class="keyword">MODIFY</span> 字段 属性,		<span class="comment">-- 类似auto_increment</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 删除主键约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> books <span class="keyword">MODIFY</span> 字段 属性;</span><br></pre></td></tr></table></figure>
-
-<h4 id="多表操作"><a href="#多表操作" class="headerlink" title="多表操作"></a>多表操作</h4><p>双向看，两边都是一个记录对另一边多个记录，这是多对多，否则为一对多</p>
-<p>一对多：两张表即可，多个外键字段关联起来</p>
-<p>多对多：需要一张中间表</p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E6%95%B0%E6%8D%AE%E5%BA%939.JPG" alt></p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E6%95%B0%E6%8D%AE%E5%BA%937.JPG" alt></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 多对多建表，一张学生表，一张课程表，一张中间表，至少两个字段</span></span><br><span class="line"><span class="comment">-- 创建三张表</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> student&#123;</span><br><span class="line">	<span class="keyword">sid</span> <span class="built_in">INT</span> PRIMARY <span class="keyword">KEY</span> AUTO_INCREMENT,</span><br><span class="line">	sname <span class="built_in">VARCHAR</span>(<span class="number">20</span>),</span><br><span class="line">	sage <span class="built_in">INT</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> course&#123;</span><br><span class="line">	cid <span class="built_in">INT</span> PRIMARY <span class="keyword">KEY</span> AUTO_INCREMENT,</span><br><span class="line">	cname <span class="built_in">VARCHAR</span>(<span class="number">20</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> student_course_item&#123;</span><br><span class="line">	student_id <span class="built_in">INT</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">-- 添加外键约束	核心</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> student_course_item <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> item_student_fk</span><br><span class="line">		<span class="keyword">FOREIGN</span> <span class="keyword">KEY</span>(student_id) REFENRENCE student (<span class="keyword">sid</span>);</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> student_course_item <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> item_course_fk</span><br><span class="line">		<span class="keyword">FOREIGN</span> <span class="keyword">KEY</span>(course_id) REFENRENCE course (cid);</span><br></pre></td></tr></table></figure>
-
-<p>特例：有时候两张表内记录一对一，但字段过多，也会分成两张表</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 一.SQL语句</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * 1.分类:</span></span><br><span class="line"><span class="comment"> * 		DDL:数据库定义语言,主要对数据库,表,列,进行增删改查</span></span><br><span class="line"><span class="comment"> * 			a.创建数据库</span></span><br><span class="line"><span class="comment"> * 			create database 数据名   [charset 字符集名];</span></span><br><span class="line"><span class="comment"> * 			***b.创建表</span></span><br><span class="line"><span class="comment"> * 			create table 表名(</span></span><br><span class="line"><span class="comment"> * 				字段名 数据类型(长度) [约束],</span></span><br><span class="line"><span class="comment"> * 				字段名 数据类型(长度) [约束]</span></span><br><span class="line"><span class="comment"> * 			);</span></span><br><span class="line"><span class="comment"> * 			SQL中的数据类型:</span></span><br><span class="line"><span class="comment"> * 			整数:int</span></span><br><span class="line"><span class="comment"> * 			小数:double</span></span><br><span class="line"><span class="comment"> * 			字符串:varchar(长度),建议 用2的整数倍</span></span><br><span class="line"><span class="comment"> * 			日期:date  格式: 'YYYY-MM-DD'</span></span><br><span class="line"><span class="comment"> * 			SQL中的约束:</span></span><br><span class="line"><span class="comment"> * 			a.主键约束:primary key, 唯一且非空</span></span><br><span class="line"><span class="comment"> * 			b.自动增长列约束:auto_increment,必须是数值类型,而且一般我们会给主键加上自增长约束</span></span><br><span class="line"><span class="comment"> * 			c.唯一约束:Unique, 多个记录的该列的值不能相同</span></span><br><span class="line"><span class="comment"> * 			d.非空约束: Not Null,不能为null</span></span><br><span class="line"><span class="comment"> * 			e.默认约束: default 默认值,为某一个字段设置默认值</span></span><br><span class="line"><span class="comment"> * 			f.外键约束: foreign key  多表查询</span></span><br><span class="line"><span class="comment"> * 		DCL:数据库控制语言</span></span><br><span class="line"><span class="comment"> * 			了解(Oracle时说讲述)</span></span><br><span class="line"><span class="comment"> * 		**DML:数据库操作语言 : 对数据库中表中的数据进行增删改</span></span><br><span class="line"><span class="comment"> * 			增:</span></span><br><span class="line"><span class="comment"> * 			insert into 表名  (字段1,字段2...) values (值1,值2,值3);</span></span><br><span class="line"><span class="comment"> * 			注意事项:</span></span><br><span class="line"><span class="comment"> * 			1.字段和值要一一对应</span></span><br><span class="line"><span class="comment"> * 			2.如果是全字段,表名后面可以不写,但是values必须写上全部字段的值</span></span><br><span class="line"><span class="comment"> * 			3.值的写法: 除了数值类型的值,其他值必须用''或者""括起来</span></span><br><span class="line"><span class="comment"> * 			删:</span></span><br><span class="line"><span class="comment"> * 			delete from 表名 [where条件];</span></span><br><span class="line"><span class="comment"> * 			trancate table 表名:</span></span><br><span class="line"><span class="comment"> * 			以上两种删除表中数据的区别:</span></span><br><span class="line"><span class="comment"> * 			delete from 表名:只会删除记录,不会重置自动增长值,下次插入数据时,接着增加自动增长值</span></span><br><span class="line"><span class="comment"> * 			trancate table 表名: 摧毁表,再重建,即会删除所有记录,也会重置自动增长值(重置为1)</span></span><br><span class="line"><span class="comment"> * 			改:</span></span><br><span class="line"><span class="comment"> * 			update 表名 set 字段=值,字段=值 [where 条件]</span></span><br><span class="line"><span class="comment"> * 			</span></span><br><span class="line"><span class="comment"> * 		**DQL:数据库查询语言: 对数据库中表中的数据进行花式查询</span></span><br><span class="line"><span class="comment"> * 		单表查询:</span></span><br><span class="line"><span class="comment"> * 			a.条件查询:</span></span><br><span class="line"><span class="comment"> * 				select * from 表名  where 条件:</span></span><br><span class="line"><span class="comment"> * 				条件: </span></span><br><span class="line"><span class="comment"> * 					大小: &gt; &lt; &gt;= &lt;= = != &lt;&gt;</span></span><br><span class="line"><span class="comment"> * 				区间:</span></span><br><span class="line"><span class="comment"> * 					between .. and .. 注意:只能判断数值和日期</span></span><br><span class="line"><span class="comment"> * 					比如: between '1990-05-30' and '2000-10-10'</span></span><br><span class="line"><span class="comment"> * 					age in (10,20)===&gt; age=10 or age = 20;</span></span><br><span class="line"><span class="comment"> * 				为空:</span></span><br><span class="line"><span class="comment"> * 					is null;</span></span><br><span class="line"><span class="comment"> * 					is not null</span></span><br><span class="line"><span class="comment"> * 				模糊查询:</span></span><br><span class="line"><span class="comment"> * 					like '表达式',  符号_表示任意一个字符  符号%表示任意个任意字符</span></span><br><span class="line"><span class="comment"> * 			b.排序查询</span></span><br><span class="line"><span class="comment"> * 				select * from 表名 order by 字段  ASC(默认,升序)|DESC(降序);</span></span><br><span class="line"><span class="comment"> * 			c.聚合查询:</span></span><br><span class="line"><span class="comment"> * 				select count(*)|max(数值字段)|min(数值字段)|sum(数值字段)|avg(数值字段)	from 表名</span></span><br><span class="line"><span class="comment"> * 				注意事项:聚合函数查询出来的只有一个值,会忽略null值</span></span><br><span class="line"><span class="comment"> * 			d.分组查询:</span></span><br><span class="line"><span class="comment"> * 				select 分组字段,聚合函数 from 表名 group by 某个字段;</span></span><br><span class="line"><span class="comment"> * 				在分组查询中,要查询的字段必须是分组字段,也可以是聚合函数</span></span><br><span class="line"><span class="comment"> * 			e.分页查询</span></span><br><span class="line"><span class="comment"> * 				select * from 表名 limit 第几条记录,要查询第三条记录</span></span><br><span class="line"><span class="comment"> * 				比如: 我要查询第m页,每页有n条记录</span></span><br><span class="line"><span class="comment"> * 				第一页: limit (1-1)*n,n;</span></span><br><span class="line"><span class="comment"> * 				第二页: limit (2-1)*n,n;</span></span><br><span class="line"><span class="comment"> * 				第m页:  limit  (m-1)*n;n</span></span><br><span class="line"><span class="comment"> * 			f.去重复查询</span></span><br><span class="line"><span class="comment"> * 				select distinct 字段 from 表名;</span></span><br><span class="line"><span class="comment"> * 				查询出所有该字段,并且去掉重复值</span></span><br><span class="line"><span class="comment"> * 			多表:</span></span><br><span class="line"><span class="comment"> * 				1.为什么使用多表? 回顾第二天视频</span></span><br><span class="line"><span class="comment"> * 				2.表与表之间的关系:</span></span><br><span class="line"><span class="comment"> * 					一对多:商品分类 和 商品信息, 学生和考试成绩,省和市</span></span><br><span class="line"><span class="comment"> * 							必须两张表,一张主表,一张从表,</span></span><br><span class="line"><span class="comment"> * 							原则:从表必须有一个外键,这个外键 引用 主表的主键</span></span><br><span class="line"><span class="comment"> * 							如何给从表添加外键约束</span></span><br><span class="line"><span class="comment"> * 							Alter table 从表 add constraint 主表_从表_fk</span></span><br><span class="line"><span class="comment"> * 							foreign key (从表外键名) references 主表 (主键名);</span></span><br><span class="line"><span class="comment"> * 					多对多: 学生和课程, 演员和角色 , 老师和学生</span></span><br><span class="line"><span class="comment"> * 						   必须有三张表,两张正常表,一张中间表</span></span><br><span class="line"><span class="comment"> * 						 原则: 中间表,至少有两个字段,分别是外键,引用两张的主键</span></span><br><span class="line"><span class="comment"> * 						Alter table 中间表  add constraint _fk</span></span><br><span class="line"><span class="comment"> * 							foreign key (第一个外键名) references 第一张表 (主键名);</span></span><br><span class="line"><span class="comment"> * 						Alter table 中间表  add constraint _fk</span></span><br><span class="line"><span class="comment"> * 							foreign key (第二个外键名) references 第二张表 (主键名);</span></span><br><span class="line"><span class="comment"> * 					一对一: QQ号码,和QQ详细信息</span></span><br><span class="line"><span class="comment"> * 							可以用一张表示</span></span><br><span class="line"><span class="comment"> * 				多表查询语句:</span></span><br><span class="line"><span class="comment"> * 				1.交叉查询: 本身有错误的 ,实际上是一个叫做笛卡尔积的东西</span></span><br><span class="line"><span class="comment"> * 					select * from 表1,表2;</span></span><br><span class="line"><span class="comment"> * 				2.内连接:在交叉连接的基础上 添加条件(一般是主表.主键=从表.外键)</span></span><br><span class="line"><span class="comment"> * 					隐式内连接: 不写inner join 后面的条件用where判断</span></span><br><span class="line"><span class="comment"> * 						select * from 表A,表B where 表A.主键=表B.外键</span></span><br><span class="line"><span class="comment"> * 					显示内连接: 写上inner join 后面的条件用on判断</span></span><br><span class="line"><span class="comment"> * 						select * from 表A inner join 表B on 表A.主键=表B.外键</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * 				3.外链接:关键字 outer join</span></span><br><span class="line"><span class="comment"> * 					左外连接: left outer join,以左表作为,如果右表中没有和左表匹配的那条记录</span></span><br><span class="line"><span class="comment"> * 						那么也会将这条记录查询出来,没有值的地方填充null;</span></span><br><span class="line"><span class="comment"> * 					右外连接: right outer join</span></span><br><span class="line"><span class="comment"> * 						以右表作为,如果左表中没有和右表匹配的那条记录</span></span><br><span class="line"><span class="comment"> * 						那么也会将这条记录查询出来,没有值的地方填充null;</span></span><br><span class="line"><span class="comment"> * 				4.子查询:</span></span><br><span class="line"><span class="comment"> * 					一条select语句的结果,作为另外一条select语句的一部分</span></span><br><span class="line"><span class="comment"> * 					比如: 商品分类表和 商品详情表为例</span></span><br><span class="line"><span class="comment"> * 					查询 商品名字为 "霸王" 的商品的分类名</span></span><br><span class="line"><span class="comment"> * 					select cname from 商品分类表 where 分类id = </span></span><br><span class="line"><span class="comment"> * 							(select 商品分类id from 商品详情表 where 商品名="霸王");</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/20/MySQL/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1899,8 +1781,7 @@
 
       
         
-          
-            <h5 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h5><p>正则表达式（regular expression，简称regex）：是一些用来匹配和处理文本的字符串</p>
+          <h5 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h5><p>正则表达式（regular expression，简称regex）：是一些用来匹配和处理文本的字符串</p>
 <p>正则表达式通常被简称为模式，其实是一些由字符构成的字符串</p>
 <p>这些字符可以是普通字符（纯文本）或元字符（有特殊含义的特殊字符）</p>
 <h5 id="匹配单个字符"><a href="#匹配单个字符" class="headerlink" title="匹配单个字符"></a>匹配单个字符</h5><p> .    匹配任何单个的字符</p>
@@ -1908,77 +1789,13 @@
 <h5 id="匹配一组字符"><a href="#匹配一组字符" class="headerlink" title="匹配一组字符"></a>匹配一组字符</h5><p>[和]    定义字符集合    [0-9a-zA-Z]</p>
 <p>-    定义字符区间    0-9 a-z</p>
 <p>^    对字符集合进行取非匹配    [^0-9a-zA-Z]</p>
-<h5 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h5><ul>
-<li>空白字符</li>
-</ul>
-<p>[\b]    回退（删除）一个字符</p>
-<p>\f    换页符</p>
-<p>\n    换行符</p>
-<p>\r    回车符</p>
-<p>\t    制表符（tab）</p>
-<p>\v    垂直制表符</p>
-<p>\s    任何一个空白字符    [\f\n\r\t\v]</p>
-<p>\S    任何一个非空白字符</p>
-<ul>
-<li>匹配数字</li>
-</ul>
-<p>\d    任何一个数字</p>
-<p>\D    任何一个非数字</p>
-<ul>
-<li>匹配字母和数字</li>
-</ul>
-<p>\w    任何一个字母，数字和下划线</p>
-<p>\W    任何一个非字母，数字和下划线</p>
-<ul>
-<li>进制</li>
-</ul>
-<p>\x    十六进制</p>
-<p>\0    八进制</p>
-<ul>
-<li>POSIX字符串</li>
-</ul>
-<p>[[:alnum:]]                 数字字符</p>
-<p>[[:alpha:]]                  字母字符</p>
-<p>[[:lower:]]                  小写字母字符</p>
-<p>[[:print:]]                    可显示的字符</p>
-<p>[[:blank:]]                   空格(space)与定位字符</p>
-<p>[[:punct:]]                   除[[:cntrl:]]和[[:alnum:]]外</p>
-<p>[[:cntrl:]]                     ASCII控制字符(0-31和127)</p>
-<p>[[:space:]]                   空白(whitespace)字符</p>
-<p>[[:upper:]]                   大写字母字符</p>
-<p>[[:digit:]]                      数字字符</p>
-<p>[[:graph:]]                   非空格(nonspace)字符</p>
-<p>[[:xdigit:]]                    十六进制数字字符</p>
-<h5 id="重复匹配"><a href="#重复匹配" class="headerlink" title="重复匹配"></a>重复匹配</h5><p>+    给字符或字符集合作为后缀，表示匹配一个或多个字符或字符合集</p>
-<p>*    给字符或字符集合作为后缀，表示匹配零个或多个字符或字符合集</p>
-<p>{num1，num2}    精确重复次数    {6} {1,4}  {3,}</p>
-<p>?    给字符或字符集合作为后缀，表示匹配零个或一个字符或字符合集</p>
-<p>前三个为贪婪型元字符，为了防止过度匹配，会在其后加个？变为懒惰型元字符</p>
-<h5 id="位置匹配"><a href="#位置匹配" class="headerlink" title="位置匹配"></a>位置匹配</h5><p>\b    用来匹配单词的开始或结束（\w与非\w之间）    只匹配一个位置，而不匹配任何字符</p>
-<p>\B    匹配一个前后都不是单词边界</p>
-<p>\&lt;    单词开始    \&gt;    单词结束</p>
-<p>^    字符串开始    $    字符串结束</p>
-<p>(?m)    分行匹配模式，必须写在模式最前面</p>
-<h5 id="子表达式"><a href="#子表达式" class="headerlink" title="子表达式"></a>子表达式</h5><p>(和)    字表达式可以多层嵌套</p>
-<h5 id="回溯引用：前后一致匹配"><a href="#回溯引用：前后一致匹配" class="headerlink" title="回溯引用：前后一致匹配"></a>回溯引用：前后一致匹配</h5><p>\n    匹配前面第n个子表达式</p>
-<p>$n    替换时使用匹配上一条查询中的第n个子表达式匹配到的内容</p>
-<ul>
-<li>大小写转换（替换时使用）</li>
-</ul>
-<p>\E    结束\L或\U转换</p>
-<p>\I    把下一个字符转换为小写</p>
-<p>\L    把后面的字符转换为小写</p>
-<p>\u    把下一个字符转换为大写</p>
-<p>\U    把后面的字符转换为大写</p>
-<h5 id="前后查找"><a href="#前后查找" class="headerlink" title="前后查找"></a>前后查找</h5><p>都是只匹配但不消费</p>
-<p>(?=字符)    正向前查找，匹配到指定字符，停止匹配</p>
-<p>(?!字符)    正向前查找，匹配到不是指定字符的，停止匹配</p>
-<p>(?&lt;=字符)    正向后查找，匹配到指定字符，停止匹配</p>
-<p>(&lt;=字符)    负向后查找，匹配到不是指定字符，停止匹配</p>
-<h5 id="嵌入条件"><a href="#嵌入条件" class="headerlink" title="嵌入条件"></a>嵌入条件</h5><p>(?(n)regex)    如果前一个子表达式匹配到了则执行该正则</p>
-<p>(?(前后查找)regex)    如果前后查找成功了则执行该正则</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/17/正则表达式/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2130,8 +1947,7 @@
 
       
         
-          
-            <h4 id="Git版本控制系统"><a href="#Git版本控制系统" class="headerlink" title="Git版本控制系统"></a>Git版本控制系统</h4><ul>
+          <h4 id="Git版本控制系统"><a href="#Git版本控制系统" class="headerlink" title="Git版本控制系统"></a>Git版本控制系统</h4><ul>
 <li>记录版本信息（记录每一次的修改）</li>
 <li>方便团队相互之间协作，共同开发</li>
 </ul>
@@ -2145,233 +1961,9 @@
 <h5 id="1-Git的全局配置"><a href="#1-Git的全局配置" class="headerlink" title="1.Git的全局配置"></a>1.Git的全局配置</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">第一次安装完成git后，要在全局环境下配置基本信息：我是谁？</span><br><span class="line"><span class="meta">$</span> git config -l		查看配置信息</span><br><span class="line"><span class="meta">$</span> git config --global -l		查看全局配置信息</span><br><span class="line">配置全局信息，用户名和邮箱</span><br><span class="line"><span class="meta">$</span> git config --global user.name 'xxx'</span><br><span class="line"><span class="meta">$</span> git config --global user.email 'xxx@xx.xx'</span><br><span class="line">初始化ssh</span><br><span class="line"><span class="meta">$</span> ssh-Keygon	先是确定保存路径，再是密码，三次回车即可</span><br><span class="line">在C:\Users\asus\.ssh用记事本打开id_ssh.pub,复制其中内容</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/git6.JPG" alt></p>
-<h5 id="2-创建仓库完成版本控制"><a href="#2-创建仓库完成版本控制" class="headerlink" title="2.创建仓库完成版本控制"></a>2.创建仓库完成版本控制</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">创建本地git仓库</span><br><span class="line"><span class="meta">$</span> git init</span><br><span class="line">会生成一个隐藏文件夹“.git”（这个文件夹很重要，暂存区和历史区以及一些其他数据都在里面存着）</span><br><span class="line"></span><br><span class="line">在本地编写完成代码后（在工作区），把一些文件提交到暂存区</span><br><span class="line"><span class="meta">$</span> git add xxx	把某一个文件或者文件夹提交到暂存区</span><br><span class="line"><span class="meta">$</span> git add .	|| git add A		把当前仓库中所有最新修改的文件都提交到暂存区</span><br><span class="line"><span class="meta">$</span> git status	查看当前文件的状态（红色代表工作区，绿色代表暂存区，看不见东西代表所有东西都已提交到历史区）</span><br><span class="line"></span><br><span class="line">把暂存区内容提交到历史区</span><br><span class="line"><span class="meta">$</span> git commit -m'描述信息'</span><br><span class="line">本地版本库回退</span><br><span class="line"><span class="meta">$</span> git checkout -- 文件名	回到最近的一次add/commit时的状态</span><br><span class="line"><span class="meta">$</span> git reset --hard/mixed/soft HEAD~num</span><br><span class="line">	--hard	回退全部，包括HEAD，index，working tree</span><br><span class="line">	--mixed 回退部分，包括HEAD，index</span><br><span class="line">	--soft	只回退HEAD</span><br><span class="line">查看历史版本信息（历史记录）</span><br><span class="line"><span class="meta">$</span> git log</span><br><span class="line"><span class="meta">$</span> git reflog	包含回滚的信息	可以获得版本号</span><br><span class="line">差异比较</span><br><span class="line"><span class="meta">$</span> git diff	比较工作区和暂存区</span><br><span class="line"><span class="meta">$</span> git diff --cached		比较暂存区和本地库最近一次提交的区别</span><br><span class="line"><span class="meta">$</span> git diff HEAD		比较工作区和本地库最近一次提交的区别</span><br><span class="line">分支操作</span><br><span class="line"><span class="meta">$</span> git branch -d 分支名		删除分支</span><br><span class="line"><span class="meta">$</span> git remote push 分支一：分支二	将分支一推给分支二</span><br><span class="line"><span class="meta">$</span> git branch	查看现在有哪些分支</span><br><span class="line"><span class="meta">$</span> git checkout 分支名	切换到分支</span><br><span class="line"><span class="meta">$</span> git checkout -b 分支名	创建并切换到新分支</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/git7.JPG" alt></p>
-<p>通过移动head指针来改变版本</p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/git8.JPG" alt></p>
-<p>一般多分支同时开发，然后由项目组长来分支合并</p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/git5.jpg" alt></p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/git4.jpg" alt></p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/git3.jpg" alt></p>
-<h4 id><a href="#" class="headerlink" title></a><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/git2.jpg" alt></h4><p><strong>git小技巧</strong></p>
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/git9.JPG" alt></p>
-<p>把一些暂时用不到的修改，暂存起来</p>
-<h4 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h4><p>一个网站（开源的代码管理平台），用户注册号，可以在自己账户下创建仓库，用来管理项目的源代码（源代码基于git传到仓库中）</p>
-<p>我们所熟知的插件，类库，框架等都在这个平台上有托管，我们可以下载观看和研究源码等</p>
-<p><strong>settings用户设置</strong></p>
-<ul>
-<li>profile    修改自己的基本信息</li>
-<li>account    作用修改用户名</li>
-<li>security    可以改自己的密码</li>
-<li>emails    私有仓库作为内部团队协作管理的项目</li>
-<li>……</li>
-</ul>
-<p>new  repository -&gt; 填写信息，公私有都免费 -&gt; create repository</p>
-<ul>
-<li>public    公共开源</li>
-<li>private    私有，作为内部团队项目</li>
-</ul>
-<p>settings -&gt; 删除仓库</p>
-<p>​               -&gt; collaborators 设置协助开发人员，需对方同意邀请</p>
-<p>code可以查看历史版本和分支信息</p>
-<h5 id="3-把本地仓库信息提交到远程仓库"><a href="#3-把本地仓库信息提交到远程仓库" class="headerlink" title="3.把本地仓库信息提交到远程仓库"></a>3.把本地仓库信息提交到远程仓库</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">查看本地仓库和哪些远程仓库保持连接</span><br><span class="line"><span class="meta">$</span> git remote -v</span><br><span class="line">让本地仓库和远程仓库创建一个连接	origin是随便起的一个名字，但一般都用这个</span><br><span class="line"><span class="meta">$</span> git remote add origin [仓库地址]</span><br><span class="line"><span class="meta">$</span> git remote rename old new		重命名</span><br><span class="line">解除关联信息</span><br><span class="line"><span class="meta">$</span> git remote rm origin</span><br><span class="line">提交之前最好先拉取</span><br><span class="line"><span class="meta">$</span> git pull origin master</span><br><span class="line">将本地代码提交到远程仓库（第一次需要输入用户名和密码）</span><br><span class="line"><span class="meta">$</span> git push origin master</span><br><span class="line">将远程仓库代码拉取到本地</span><br><span class="line"><span class="meta">$</span> git clone [远程仓库git地址] [别名，默认为仓库名，也可以起一个作为拉取后的文件夹名]</span><br><span class="line">/*</span><br><span class="line"> *真实项目开发流程：</span><br><span class="line"> *	1.组长或者负责人先创建中央仓库</span><br><span class="line"> *	2.小组成员基于$ git clone 把远程仓库及默认的内容克隆到本地（解决了三个事情：初始化一个</span><br><span class="line"> 本地仓库“git init”，和对应的远程仓库也保持了关联“git remote add”，把远程仓库默认内人拉取到本地</span><br><span class="line"> “git pull”</span><br><span class="line"> *	3.每个组员写自己的程序后，基于“git add/git commit”把自己修改的内容存放到历史区，然后通过</span><br><span class="line"> “git pull/git push”把本地信息和远程仓库信息保持同步即可（可能涉及冲突处理）</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/git1.jpg" alt></p>
-<h4 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h4><p>node package manger:NODE模块管理工具，根据NPM我们可快速安装、卸载所需要的资源文件</p>
-<p>区NODE官网：下载NODE重启支持版，安装NODE后，NPM也跟着安装了</p>
-<p>基于npm是从<a href>npmjs.com</a>平台下下载安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//在终端中检测安装是否成功，出现版本号即成功了</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ npm install xxx	把模块安装在当前项目中（node_modules）</span><br><span class="line">$ npm install xxx -g	把模块安装在全局环境中</span><br><span class="line">$ npm i xxx@<span class="number">1.0</span>.<span class="number">0</span>	安装指定版本号的模块</span><br><span class="line">$ npm view xx version &gt; xxx.version.json	查看某个模块的版本信息（输出到指定json文件中）</span><br><span class="line"></span><br><span class="line">$ npm init -y	初始化当前项目的配置依赖清单</span><br><span class="line">$ npm i xxx -save	把模块保存在清单生产依赖中</span><br><span class="line">$ npm i xxx --save-dev	把模块保存在清单开发依赖中</span><br><span class="line">$ npm install	跑环境，按照清单安装所需模块</span><br><span class="line"></span><br><span class="line">$ npm root -g	查看全局安装模块的目录</span><br><span class="line">$ npm -uninstall xxx</span><br><span class="line">$ npm -uninstall xxx -g		卸载安装过的模块</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-    
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/javaSE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="grandwarm">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="guard warm">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/16/javaSE/" itemprop="url">javaSE</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-16T13:15:33+08:00">
-                2019-08-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  17.4k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  70
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>### </p>
-<h4 id="入门及环境搭建"><a href="#入门及环境搭建" class="headerlink" title="入门及环境搭建"></a>入门及环境搭建</h4><h5 id="下载JDK"><a href="#下载JDK" class="headerlink" title="下载JDK"></a>下载JDK</h5><p>进入Oracle官网，下载相应版本，最近下载好像都得注册个账号</p>
-<p>下完按到所需目录，一般默认，一直下一步即可，完了设置一下环境变量</p>
-<p>此电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;编辑path，把bin目录路径加入</p>
-<p>classpath也可以设置</p>
-<p>在cmd中，输入java -version检查是否安装成功</p>
-<p>javac 文件路径（编译，生成。class文件）</p>
-<p>java 文件名，不加后缀，运行</p>
-<p><strong>IDE选择</strong></p>
-<p>目前比较流行的是eclipse和IDEA，我更喜欢IDEA，熟练了快捷键和各种模板之后会用得很舒服</p>
-<h5 id="语言特点"><a href="#语言特点" class="headerlink" title="语言特点"></a>语言特点</h5><p>通过编译成统一的字节码，不同平台下载对应JVM来实现跨平台</p>
-<p>完全面向对象，简单，高性能，分布式，多线程，健壮</p>
-<p>JDK（用于开发）-&gt;JRE（运行环境）-&gt;JVM(依次包含)</p>
-<p>java SE    标准版，定位于个人计算机用户</p>
-<p>java EE    企业版，定位于服务器端领域</p>
-<p>java ME    微型版，定位于消费电子产品的应用</p>
-<p>越高级语言越容易入门，但要精通还需沉下心来</p>
-<h4 id="数据类型和运算符"><a href="#数据类型和运算符" class="headerlink" title="数据类型和运算符"></a>数据类型和运算符</h4><h5 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h5><p>单行，多行，文档注释</p>
-<h5 id="标识符的命名规则"><a href="#标识符的命名规则" class="headerlink" title="标识符的命名规则"></a>标识符的命名规则</h5><p>虽然不同语言之间会有细微区别，但为了便于编写，感觉大多数语言都推荐采用比较大众的规范</p>
-<p>不可以是java关键字，并且大小写敏感</p>
-<p>类名    大驼峰命名法</p>
-<p>方法和变量    小驼峰命名法</p>
-<p>常量    大写</p>
-<p>数据类型向上隐士转换，向下需要显示加括号强转</p>
-<h5 id="基本数据类型（四类八种）"><a href="#基本数据类型（四类八种）" class="headerlink" title="基本数据类型（四类八种）"></a>基本数据类型（四类八种）</h5><p>byte(1)  boolean(1)  short(2)  char(2)unicode字符集  int()4  float(4)  long(8)  double(8)</p>
-<p><strong>限制double小数点数</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DecimalFormat df = <span class="keyword">new</span> DecimalFormat(<span class="string">"0.00"</span>);</span><br><span class="line">df.format(total);</span><br></pre></td></tr></table></figure>
-
-<p><strong>string与基本类型转换</strong></p>
-<p>包装类的parse和tostring方法</p>
-<h5 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h5><p>string，数组，集合ArrayList，Scanner，Random，自定义类型</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/08/16/javaSE/#more" rel="contents">
+            <a class="btn" href="/2019/09/04/git使用/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -2465,7 +2057,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2546,7 +2138,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">52.7k</span>
+    <span title="Site words total count">52.8k</span>
   
 </div>
 
@@ -2572,7 +2164,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共52.7k字</span>
+  <span class="post-count">博客全站共52.8k字</span>
 </div>
 -->
         

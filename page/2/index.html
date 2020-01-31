@@ -466,6 +466,195 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/16/javaSE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="grandwarm">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="guard warm">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/16/javaSE/" itemprop="url">javaSE</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-16T13:15:33+08:00">
+                2019-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  17.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  70
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>### </p>
+<h4 id="入门及环境搭建"><a href="#入门及环境搭建" class="headerlink" title="入门及环境搭建"></a>入门及环境搭建</h4><h5 id="下载JDK"><a href="#下载JDK" class="headerlink" title="下载JDK"></a>下载JDK</h5><p>进入Oracle官网，下载相应版本，最近下载好像都得注册个账号</p>
+<p>下完按到所需目录，一般默认，一直下一步即可，完了设置一下环境变量</p>
+<p>此电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;编辑path，把bin目录路径加入</p>
+<p>classpath也可以设置</p>
+<p>在cmd中，输入java -version检查是否安装成功</p>
+<p>javac 文件路径（编译，生成。class文件）</p>
+<p>java 文件名，不加后缀，运行</p>
+<p><strong>IDE选择</strong></p>
+<p>目前比较流行的是eclipse和IDEA，我更喜欢IDEA，熟练了快捷键和各种模板之后会用得很舒服</p>
+<h5 id="语言特点"><a href="#语言特点" class="headerlink" title="语言特点"></a>语言特点</h5><p>通过编译成统一的字节码，不同平台下载对应JVM来实现跨平台</p>
+<p>完全面向对象，简单，高性能，分布式，多线程，健壮</p>
+<p>JDK（用于开发）-&gt;JRE（运行环境）-&gt;JVM(依次包含)</p>
+<p>java SE    标准版，定位于个人计算机用户</p>
+<p>java EE    企业版，定位于服务器端领域</p>
+<p>java ME    微型版，定位于消费电子产品的应用</p>
+<p>越高级语言越容易入门，但要精通还需沉下心来</p>
+<h4 id="数据类型和运算符"><a href="#数据类型和运算符" class="headerlink" title="数据类型和运算符"></a>数据类型和运算符</h4><h5 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h5><p>单行，多行，文档注释</p>
+<h5 id="标识符的命名规则"><a href="#标识符的命名规则" class="headerlink" title="标识符的命名规则"></a>标识符的命名规则</h5><p>虽然不同语言之间会有细微区别，但为了便于编写，感觉大多数语言都推荐采用比较大众的规范</p>
+<p>不可以是java关键字，并且大小写敏感</p>
+<p>类名    大驼峰命名法</p>
+<p>方法和变量    小驼峰命名法</p>
+<p>常量    大写</p>
+<p>数据类型向上隐士转换，向下需要显示加括号强转</p>
+<h5 id="基本数据类型（四类八种）"><a href="#基本数据类型（四类八种）" class="headerlink" title="基本数据类型（四类八种）"></a>基本数据类型（四类八种）</h5><p>byte(1)  boolean(1)  short(2)  char(2)unicode字符集  int()4  float(4)  long(8)  double(8)</p>
+<p><strong>限制double小数点数</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DecimalFormat df = <span class="keyword">new</span> DecimalFormat(<span class="string">"0.00"</span>);</span><br><span class="line">df.format(total);</span><br></pre></td></tr></table></figure>
+
+<p><strong>string与基本类型转换</strong></p>
+<p>包装类的parse和tostring方法</p>
+<h5 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h5><p>string，数组，集合ArrayList，Scanner，Random，自定义类型</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/16/javaSE/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+    
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/13/xmind使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1063,8 +1252,7 @@
 
       
         
-          <p>[TOC]</p>
-<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><hr>
+          <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><hr>
 <h5 id="文件和目录管理"><a href="#文件和目录管理" class="headerlink" title="文件和目录管理"></a>文件和目录管理</h5><p><strong>绝对路径与相对路径</strong>：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径</p>
 <p><strong>cd</strong></p>
 <p><code>cd 路径</code>   . 当前目录 .. 上级目录</p>
@@ -1547,7 +1735,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1628,7 +1816,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">52.7k</span>
+    <span title="Site words total count">52.8k</span>
   
 </div>
 
@@ -1654,7 +1842,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共52.7k字</span>
+  <span class="post-count">博客全站共52.8k字</span>
 </div>
 -->
         
