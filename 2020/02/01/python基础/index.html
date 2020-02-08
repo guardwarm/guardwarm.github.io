@@ -108,7 +108,7 @@
 <meta property="og:image" content="https://09.imgmini.eastday.com/mobile/20180405/20180405084648_2eb605762effbc71c9f74d3e6410b761_2.jpeg">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/988316/201904/988316-20190403102640926-1214097574.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/988316/201904/988316-20190403102738018-1420685757.png">
-<meta property="og:updated_time" content="2020-02-08T09:31:48.891Z">
+<meta property="og:updated_time" content="2020-02-08T09:33:54.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础">
 <meta name="twitter:description" content="常识计算机基本组件cpu计算机的运算和计算中心 人类一秒，可以运行10亿条指令，比内存快百度，硬盘快百万倍 内存暂时存储数据，临时加载数据应用程序，分为RAM，ROM 硬盘长期存储数据 操作系统一个软件，连接计算机的硬件与所有软件之间的一个软件 python历史python崇尚优雅，简洁 2和3有较多区别 python的种类 Cpython：官方推荐解释器。可以转化成C语言能识别的字节码。 Jpy">
@@ -358,7 +358,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  7.9k
+                  8k
                 </span>
               
 
@@ -683,6 +683,7 @@
 
 <h5 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h5><p>俗称不可变的列表,又被成为只读列表,也是python的基本数据类型之一,用小括号括起来,里面可以放任何数据类型的数据,查询可以,循环也可以,切片也可以.但就是不能改.</p>
 <p>当元组中包含可变类型时，其仍可变，如包含链表时，该链表仍可修改</p>
+<p>python中元组有一个特性，元组中如果只含有一个元素且没有逗号，则该元组不是元组，与改元素数据类型一致，如果有逗号，那么它是元组</p>
 <p><strong>拆包专用</strong>，虽然链表也可以拆</p>
 <h6 id="拆包-分别赋值"><a href="#拆包-分别赋值" class="headerlink" title="拆包(分别赋值)"></a>拆包(分别赋值)</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">a,b = <span class="number">1</span>,<span class="number">2</span></span><br><span class="line">print(a,b)</span><br><span class="line">结果:</span><br><span class="line"><span class="number">2</span></span><br><span class="line"></span><br><span class="line">a,b = (<span class="string">'你好'</span>,<span class="string">'世界'</span>)  <span class="comment"># 这个用专业名词就叫做元组的拆包</span></span><br><span class="line">print(a,b)</span><br><span class="line">结果:</span><br><span class="line">你好 世界</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a,b = [<span class="string">'你好'</span>,<span class="string">'大飞哥'</span>]</span><br><span class="line">print(a,b)</span><br><span class="line">结果:</span><br><span class="line">你好 世界</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a,b = &#123;<span class="string">'汪峰'</span>:<span class="string">'北京北京'</span>,<span class="string">'王菲'</span>:<span class="string">'天后'</span>&#125;</span><br><span class="line">print(a,b)</span><br><span class="line">结果:</span><br><span class="line">汪峰 王菲</span><br></pre></td></tr></table></figure>
 
