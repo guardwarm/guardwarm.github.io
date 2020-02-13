@@ -81,18 +81,34 @@
 
 
 
-<meta name="description" content="常用命令 文件和目录管理绝对路径与相对路径：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径 cd cd 路径   . 当前目录 .. 上级目录 什么都不加默认跳转到当前用户根目录下只能跳转到目录，不可以跳转到文件，会报错 mkdir -m   指定文件权限，不常用-p    创建一串级联目录，已存在时不报错">
+<meta name="description" content="SecureCRT连接 目录结构 常用命令 辅助   帮助     help 命令 --help   man man 命令   重定向    &amp;gt; ifconfig &amp;gt; a.txt     覆盖   &amp;gt;&amp;gt; ifconfig &amp;gt;&amp;gt; a.txt      追加   系统进程    ps -ef 动态查看当前系统   kill -9 进程号 强制杀死进程   管道 将两">
 <meta name="keywords" content="linux,运维">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux之centos学习笔记">
 <meta property="og:url" content="http://yoursite.com/2019/07/28/linux之centos学习笔记/index.html">
 <meta property="og:site_name" content="guard warm">
-<meta property="og:description" content="常用命令 文件和目录管理绝对路径与相对路径：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径 cd cd 路径   . 当前目录 .. 上级目录 什么都不加默认跳转到当前用户根目录下只能跳转到目录，不可以跳转到文件，会报错 mkdir -m   指定文件权限，不常用-p    创建一串级联目录，已存在时不报错">
+<meta property="og:description" content="SecureCRT连接 目录结构 常用命令 辅助   帮助     help 命令 --help   man man 命令   重定向    &amp;gt; ifconfig &amp;gt; a.txt     覆盖   &amp;gt;&amp;gt; ifconfig &amp;gt;&amp;gt; a.txt      追加   系统进程    ps -ef 动态查看当前系统   kill -9 进程号 强制杀死进程   管道 将两">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-01-31T12:55:37.737Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212135226.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212135405.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212183944.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212184747.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212170004.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212182638.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212212851.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212210718.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212211311.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212212728.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212212630.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212212653.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212213110.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212213816.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212214224.png">
+<meta property="og:updated_time" content="2020-02-13T12:15:06.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux之centos学习笔记">
-<meta name="twitter:description" content="常用命令 文件和目录管理绝对路径与相对路径：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径 cd cd 路径   . 当前目录 .. 上级目录 什么都不加默认跳转到当前用户根目录下只能跳转到目录，不可以跳转到文件，会报错 mkdir -m   指定文件权限，不常用-p    创建一串级联目录，已存在时不报错">
+<meta name="twitter:description" content="SecureCRT连接 目录结构 常用命令 辅助   帮助     help 命令 --help   man man 命令   重定向    &amp;gt; ifconfig &amp;gt; a.txt     覆盖   &amp;gt;&amp;gt; ifconfig &amp;gt;&amp;gt; a.txt      追加   系统进程    ps -ef 动态查看当前系统   kill -9 进程号 强制杀死进程   管道 将两">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212135226.png">
 
 
 
@@ -338,7 +354,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1.3k
+                  2.3k
                 </span>
               
 
@@ -354,7 +370,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4
+                  8
                 </span>
               
             </div>
@@ -375,40 +391,410 @@
       
 
       
-        <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><hr>
-<h5 id="文件和目录管理"><a href="#文件和目录管理" class="headerlink" title="文件和目录管理"></a>文件和目录管理</h5><p><strong>绝对路径与相对路径</strong>：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径</p>
-<p><strong>cd</strong></p>
-<p><code>cd 路径</code>   . 当前目录 .. 上级目录</p>
+        <h3 id="SecureCRT"><a href="#SecureCRT" class="headerlink" title="SecureCRT"></a>SecureCRT</h3><h4 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212135226.png" alt></p>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212135405.png" alt></p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><hr>
+<h4 id="辅助"><a href="#辅助" class="headerlink" title="辅助"></a>辅助</h4><table>
+<thead>
+<tr>
+<th>帮助</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>help</td>
+<td><code>命令 --help</code></td>
+</tr>
+<tr>
+<td>man</td>
+<td><code>man 命令</code></td>
+</tr>
+<tr>
+<td><strong>重定向</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td><code>ifconfig &gt; a.txt</code>     覆盖</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td><code>ifconfig &gt;&gt; a.txt</code>      追加</td>
+</tr>
+<tr>
+<td>系统进程</td>
+<td></td>
+</tr>
+<tr>
+<td>ps -ef</td>
+<td>动态查看当前系统</td>
+</tr>
+<tr>
+<td>kill -9 进程号</td>
+<td>强制杀死进程</td>
+</tr>
+<tr>
+<td><strong>管道</strong></td>
+<td>将两个命令连接起来</td>
+</tr>
+<tr>
+<td></td>
+<td>左侧的输出作为右侧的输入</td>
+</tr>
+</tbody></table>
+<h4 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h4><h5 id="主机名"><a href="#主机名" class="headerlink" title="主机名"></a>主机名</h5><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212183944.png" alt></p>
+<table>
+<thead>
+<tr>
+<th>hostname</th>
+<th>查看当前主机名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hostname ×××</td>
+<td>临时修改主机名，重启后失效</td>
+</tr>
+<tr>
+<td>vim /etc/sysconfig/network</td>
+<td>修改配置文件，永久生效</td>
+</tr>
+</tbody></table>
+<h5 id="修改ip"><a href="#修改ip" class="headerlink" title="修改ip"></a>修改ip</h5><table>
+<thead>
+<tr>
+<th>ifconfig</th>
+<th>查看当前网络状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ifconfig eth0 ip</td>
+<td>临时修改</td>
+</tr>
+<tr>
+<td>vim /etc/sysconfig/network-scripts/ifcfg-eth0</td>
+<td>永久修改</td>
+</tr>
+</tbody></table>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212184747.png" alt></p>
+<h5 id="域名映射"><a href="#域名映射" class="headerlink" title="域名映射"></a>域名映射</h5><p><code>/etc/hosts</code>            相当于windows下的hosts文件</p>
+<h5 id="网络服务"><a href="#网络服务" class="headerlink" title="网络服务"></a>网络服务</h5><table>
+<thead>
+<tr>
+<th>网络服务</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>service network start/restart/stop/status</td>
+<td>开启/重启/停止/状态</td>
+</tr>
+<tr>
+<td>service –status-all</td>
+<td>查看系统中所有后台服务</td>
+</tr>
+<tr>
+<td>netstat -nltp</td>
+<td>网络进程的端口监听情况</td>
+</tr>
+<tr>
+<td><strong>防火墙</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>service iptables start/restart/stop/status</td>
+<td></td>
+</tr>
+<tr>
+<td>chkconfig iptables off</td>
+<td>禁止防火墙自启</td>
+</tr>
+</tbody></table>
+<h4 id="文件和目录管理"><a href="#文件和目录管理" class="headerlink" title="文件和目录管理"></a>文件和目录管理</h4><p><strong>绝对路径与相对路径</strong>：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径</p>
+<h5 id="cd"><a href="#cd" class="headerlink" title="cd"></a><strong>cd</strong></h5><p><code>cd 路径</code>   . 当前目录 .. 上级目录</p>
 <p>什么都不加默认跳转到当前用户根目录下<br>只能跳转到目录，不可以跳转到文件，会报错</p>
-<p><strong>mkdir</strong></p>
-<p>-m   指定文件权限，不常用<br>-p    创建一串级联目录，已存在时不报错 </p>
+<p>使用<code>tab</code>来补全目录</p>
+<h5 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a><strong>mkdir</strong></h5><p>-m   指定文件权限，不常用<br>-p    创建一串级联目录，已存在时不报错 </p>
 <a id="more"></a>
 
-<p><strong>ls</strong></p>
+<h5 id="ls"><a href="#ls" class="headerlink" title="ls"></a><strong>ls</strong></h5><table>
+<thead>
+<tr>
+<th>ls</th>
+<th>查看当前目录下文件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-a</td>
+<td>所有，包括隐藏文件</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>详细信息( <code>ll = ls -l</code> )</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>查看指定目录属性</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>人性化显示大小</td>
+</tr>
+</tbody></table>
+<p>-a    所有，包括隐藏文件</p>
 <p>-l    详细信息<br>-d    查看指定目录属性<br>-h    人性化显示大小</p>
 <p>ll=ls -l</p>
-<p><strong>rmdir</strong>  不常用，仅用于删除目录</p>
+<h5 id="rmdir"><a href="#rmdir" class="headerlink" title="rmdir"></a><strong>rmdir</strong></h5><p>不常用，仅用于删除空目录</p>
 <p>-p    级联删除，如果目录非空时报错</p>
-<p><strong>rm</strong></p>
-<p>-r    删除目录时必须加<br>-f    强制删除，不再询问是否删除</p>
-<p><strong>PATH变量</strong></p>
-<p>一串用：分隔的路径，执行命令时会默认从PATH中找<br>修改:    PATH=$PATH:新路径</p>
-<p><strong>cp 【选项】 【源文件】 【目标文件】</strong></p>
-<p>-r    复制目录时加<br>-i    安全选项，覆盖时会询问，默认alise cp=“cp -i”</p>
-<p><strong>mv 【选项】 【源文件或目录】 【目标文件或目录】</strong></p>
-<p>目标文件是目录，若存在，则将源文件或目录移动到目标目录下；若不存在，则将原目录重命名为给定文件名<br>目标文件是文件，若存在，则询问是否覆盖，若不存在，则将源文件重命名为给定的目标文件</p>
-<p><strong>cat</strong></p>
-<p>-n    显示行号<br>-A    显示所有内容，包括特殊字符</p>
-<p><strong>tac</strong>    与命令tac一样，倒叙查看</p>
-<p><strong>more    文件内容较多时使用</strong></p>
-<p>Ctrl+D    向上翻屏<br>Ctrl+F    向下翻屏，同空格<br>空格    向下翻屏<br>q    退出<br>/字符串    从当前行向下查找字符串，按n定位下一个<br>？字符串    从当前行向上查找字符串，按n定位下一个（可以使用通配符）</p>
-<p><strong>less    作用同more，但命令更多</strong></p>
-<p>j    向上移动一行<br>k    向上移动</p>
-<p><strong>head</strong>    默认显示文件前十行</p>
+<h5 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h5><p>-r    删除目录时必须加<br>-f    强制删除，不再询问是否删除</p>
+<h5 id="PATH变量"><a href="#PATH变量" class="headerlink" title="PATH变量"></a><strong>PATH变量</strong></h5><p>一串用：分隔的路径，执行命令时会默认从PATH中找<br>修改:    PATH=$PATH:新路径</p>
+<h5 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h5><table>
+<thead>
+<tr>
+<th>cp</th>
+<th>cp 【选项】 【源文件】 【目标文件】</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-r</td>
+<td>复制目录时加</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>安全选项，覆盖时会询问，默认alise cp=“cp -i”</td>
+</tr>
+</tbody></table>
+<h5 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h5><table>
+<thead>
+<tr>
+<th>mv</th>
+<th>mv 【选项】 【源文件或目录】 【目标文件或目录】</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>目标文件是目录</td>
+<td>若存在，则将源文件或目录移动到目标目录下</td>
+</tr>
+<tr>
+<td></td>
+<td>若不存在，则将原目录重命名为给定文件名</td>
+</tr>
+<tr>
+<td>目标文件是文件</td>
+<td>若存在，则询问是否覆盖</td>
+</tr>
+<tr>
+<td></td>
+<td>若不存在，则将源文件重命名为给定的目标文件</td>
+</tr>
+</tbody></table>
+<h5 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h5><table>
+<thead>
+<tr>
+<th>cat</th>
+<th>查看少量信息</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-n</td>
+<td>显示行号</td>
+</tr>
+<tr>
+<td>-A</td>
+<td>显示所有内容，包括特殊字符</td>
+</tr>
+</tbody></table>
+<h5 id="tac"><a href="#tac" class="headerlink" title="tac"></a>tac</h5><p>与命令tac一样，倒叙查看</p>
+<h5 id="more"><a href="#more" class="headerlink" title="more"></a>more</h5><table>
+<thead>
+<tr>
+<th>more</th>
+<th>文件内容较多时使用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+D</td>
+<td>向上翻屏</td>
+</tr>
+<tr>
+<td>Ctrl+F</td>
+<td>向下翻屏，同空格</td>
+</tr>
+<tr>
+<td>空格</td>
+<td>向下翻屏</td>
+</tr>
+<tr>
+<td>q/ctrl+c</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>/字符串</td>
+<td>从当前行向下查找字符串，按n定位下一个</td>
+</tr>
+<tr>
+<td>?字符串</td>
+<td>从当前行向上查找字符串，按n定位下一个（可以使用通配符）</td>
+</tr>
+</tbody></table>
+<h5 id="less"><a href="#less" class="headerlink" title="less"></a>less</h5><table>
+<thead>
+<tr>
+<th>less</th>
+<th>对more的争强</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+D</td>
+<td>向上翻屏</td>
+</tr>
+<tr>
+<td>Ctrl+F</td>
+<td>向下翻屏，同空格</td>
+</tr>
+<tr>
+<td>空格</td>
+<td>向下翻屏</td>
+</tr>
+<tr>
+<td>q/ctrl+c</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>/字符串</td>
+<td>从当前行向下查找字符串，按n定位下一个</td>
+</tr>
+<tr>
+<td>?字符串</td>
+<td>从当前行向上查找字符串，按n定位下一个（可以使用通配符）</td>
+</tr>
+<tr>
+<td>J/↑</td>
+<td>向上移动</td>
+</tr>
+<tr>
+<td>k/↓</td>
+<td>向下移动</td>
+</tr>
+</tbody></table>
+<h5 id="head"><a href="#head" class="headerlink" title="head"></a>head</h5><table>
+<thead>
+<tr>
+<th>head</th>
+<th>默认显示文件前十行</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-n 1/-n1/-1</td>
+<td>显示指定行数，三种方式皆可</td>
+</tr>
+</tbody></table>
 <p>-n 1/-n1/-1    显示指定行数，三种方式皆可</p>
-<p><strong>tail</strong>    同head，倒叙查看</p>
-<p><strong>文件属性</strong></p>
-<ul>
+<h5 id="tail"><a href="#tail" class="headerlink" title="tail"></a><strong>tail</strong></h5><table>
+<thead>
+<tr>
+<th>tail</th>
+<th>倒叙查看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-n 1/-n1/-1</td>
+<td>显示指定行数，三种方式皆可</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>动态查看，常用于监视日志文件</td>
+</tr>
+</tbody></table>
+<p>-f 动态查看</p>
+<h5 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h5><table>
+<thead>
+<tr>
+<th>-c</th>
+<th>创建一个新tar文件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-x</td>
+<td>解开tar文件</td>
+</tr>
+<tr>
+<td>-z</td>
+<td>调用gzip压缩</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>显示压缩过程</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>指定文件名</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>查看压缩文件内容</td>
+</tr>
+</tbody></table>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212170004.png" alt></p>
+<table>
+<thead>
+<tr>
+<th>使用示例</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>tar -cvf a.tar ./anaconda-ks.cfg</code></td>
+<td>打成一个tar包</td>
+</tr>
+<tr>
+<td><code>tar -zcvf a.tar.gz ./anaconda-ks.cfg</code></td>
+<td>打包并压缩，后缀名常用tar.gz</td>
+</tr>
+<tr>
+<td><code>tar -zxvf b.tar.gz -C ./cc</code></td>
+<td>加-C ./cc来指定解压目录，不然解压到当前目录</td>
+</tr>
+</tbody></table>
+<h5 id="find"><a href="#find" class="headerlink" title="find"></a>find</h5><table>
+<thead>
+<tr>
+<th>find</th>
+<th>在指定目录下寻找文件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>find / -name “ana*”</td>
+<td>在根目录下按名字查找以ana开头的文件</td>
+</tr>
+<tr>
+<td>find / -user itcast</td>
+<td>用户为itcast</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h5 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h5><table>
+<thead>
+<tr>
+<th>grep</th>
+<th>在文件中查找字符串</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>grep lang catalina.log --color</code></td>
+<td>在catalina.log中查找lang。并高亮显示</td>
+</tr>
+<tr>
+<td>-An -Bm</td>
+<td>包含向上n行，向下m行</td>
+</tr>
+</tbody></table>
+<h5 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h5><p>打印当前目录</p>
+<h5 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h5><p>清屏</p>
+<h5 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h5><p>创建文件</p>
+<h3 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h3><ul>
 <li>第一列<pre><code>第一位
   d    目录
   -    普通文件
@@ -430,10 +816,55 @@
 <p><strong>chattr</strong><br>修改文件特殊属性<br>chattr 【+-=】【Asaci】 【文件或目录名】  分别是增加，减少和设定<br><strong><em>存疑：=还不清楚</em></strong><br>-A    文件或目录的atime将不可修改<br>-s    将数据同步写入磁盘<br>-a    只能追加不能删除，非root不可设定该属性（常用）<br>-c    自动压缩文件，读取时自动解压<br>-i    文件不能删除，重命名，设定链接，以及写入数据（常用）</p>
 <p><strong>lsattr  文件或目录名</strong><br>该命令用于读取文件或者目录的特殊权限<br>-a    列出所有文件，包括隐藏文件<br>-R    连同子目录数据列出</p>
 <p><strong>set uid，set gid，sticky bit</strong><br>权限其实共四位，第一位由这三个决定，分别为4,2,1，具体表现在第三位，若为小写则原本有x，大写则无，例如rwsrwsrwt为7777<br>set uid    针对二进制可执行文件，使文件在执行阶段拥有该文件所有者权限    passwd命令<br>set gid    作用在二进制文件上时，同上，作用在目录上时，任何用户在此目录下创建的文件都具有和该目录所属组相同的组<br>sticky bit    设置该权限后，就算用户拥有写权限，也只可以添加而不可删除文件    /tmp/</p>
-<h5 id="在linux下搜索文件"><a href="#在linux下搜索文件" class="headerlink" title="在linux下搜索文件"></a>在linux下搜索文件</h5><p><strong>which</strong><br>查找可执行文件绝对路径<br>which vi</p>
+<h4 id="在linux下搜索文件"><a href="#在linux下搜索文件" class="headerlink" title="在linux下搜索文件"></a>在linux下搜索文件</h4><p><strong>which</strong><br>查找可执行文件绝对路径<br>which vi</p>
 <p><strong>whereis</strong><br>通过预先生成的文件列表库查找<br>whereis 【-bms】 【文件名称】<br>-b    只查找二级制文件<br>-m    只查找帮助文件<br>-s    只查找源代码文件</p>
 <p><strong>locate</strong>    不常用<br>类似于whereis，包含所搜索关键词的目录和文件都会列出，所以不适合精确搜索</p>
 <p><strong>find    重要</strong><br>find 【路径】 【参数】<br>-atime +n/-n    访问或执行时间大于或小于n天<br>-ctime +n/-n    写入、更改inode属性的时间大于或小于n天<br>-mtime +n/-n    写入时间大于或小于n天        <strong>用得最多</strong></p>
+<h3 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h3><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212182638.png" alt></p>
+<p><a href="https://www.runoob.com/linux/linux-vim.html" target="_blank" rel="noopener">菜鸟教程-Vim</a></p>
+<h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><h4 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h4><ol>
+<li><p>二进制发布包</p>
+<p>软件已经针对具体平台编译打包发布，只要解压，修改配置即可        <strong>不通用</strong></p>
+</li>
+<li><p>RPM包</p>
+<p>软件已经按照redhat的包管理工具规范RPM进行打包发布，需要获取到相应的软件RPM发布包，然后用RPM命令进行安装        <strong>没法自动安装依赖</strong></p>
+</li>
+<li><p>Yum在线安装</p>
+<p>软件已经以RPM规范打包，但发布在了网络上的一些服务器上，可用yum在线安装服务器上的rpm软件，并且会自动解决软件安装过程中的库依赖问题        <strong>需要联网</strong></p>
+</li>
+<li><p>源码编译安装</p>
+<p>软件以源码工程的形式发布，需要获取到源码工程后用相应开发工具进行编译打包部署       <strong>略麻烦</strong></p>
+</li>
+</ol>
+<h4 id="ftp方式"><a href="#ftp方式" class="headerlink" title="ftp方式"></a>ftp方式</h4><h5 id="FileZilla"><a href="#FileZilla" class="headerlink" title="FileZilla"></a>FileZilla</h5><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212212851.png" alt></p>
+<h5 id="lrzsz"><a href="#lrzsz" class="headerlink" title="lrzsz"></a>lrzsz</h5><p><code>yum install lrzsz</code></p>
+<p>CRT中设置上传和下载文件夹</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212210718.png" alt></p>
+<p>rz    上传</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212211311.png" alt></p>
+<p>sz 文件名</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212212728.png" alt></p>
+<h5 id="sftp"><a href="#sftp" class="headerlink" title="sftp"></a>sftp</h5><p>CRT中内置的，用alt+p打开</p>
+<p><strong>下载</strong></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212212630.png" alt></p>
+<p><strong>上传</strong>                传到电脑文档目录下</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212212653.png" alt></p>
+<h4 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h4><p>判断服务器位数</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212213110.png" alt></p>
+<p>一般在/usr/local目录下安装</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212213816.png" alt></p>
+<p>卸载原jdk</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212214224.png" alt></p>
+<p>解压压缩包</p>
+<p>配置环境变量</p>
+<p><code>vim /etc/profile</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#set java environment</span><br><span class="line">JAVA_HOME=/usr/local/jdk/jdk1.7.0_71	# 安装目录</span><br><span class="line">CLASSPATH=.:$JAVA_HOME/lib.tools.jar</span><br><span class="line">PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line">export JAVA_HOME CLASSPATH PATH</span><br></pre></td></tr></table></figure>
+
+<p><code>source /etc/profile</code>            重新加载</p>
+<h4 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h4><p>步骤：百度找最新的吧</p>
+<p>记得完了开放3306端口，不然别处无法访问</p>
+<p><a href="https://blog.csdn.net/weiyangdong/article/details/79540217" target="_blank" rel="noopener">centos7防火墙开放端口</a></p>
+<p>如果购买的云服务器还需修改安全组</p>
 
       
     </div>
@@ -567,7 +998,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -589,7 +1020,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -629,7 +1060,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#文件和目录管理"><span class="nav-number">1.1.</span> <span class="nav-text">文件和目录管理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在linux下搜索文件"><span class="nav-number">1.2.</span> <span class="nav-text">在linux下搜索文件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#SecureCRT"><span class="nav-number">1.</span> <span class="nav-text">SecureCRT</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#连接"><span class="nav-number">1.1.</span> <span class="nav-text">连接</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number">2.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">3.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#辅助"><span class="nav-number">3.1.</span> <span class="nav-text">辅助</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络"><span class="nav-number">3.2.</span> <span class="nav-text">网络</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#主机名"><span class="nav-number">3.2.1.</span> <span class="nav-text">主机名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#修改ip"><span class="nav-number">3.2.2.</span> <span class="nav-text">修改ip</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#域名映射"><span class="nav-number">3.2.3.</span> <span class="nav-text">域名映射</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#网络服务"><span class="nav-number">3.2.4.</span> <span class="nav-text">网络服务</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文件和目录管理"><span class="nav-number">3.3.</span> <span class="nav-text">文件和目录管理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#cd"><span class="nav-number">3.3.1.</span> <span class="nav-text">cd</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mkdir"><span class="nav-number">3.3.2.</span> <span class="nav-text">mkdir</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#ls"><span class="nav-number">3.3.3.</span> <span class="nav-text">ls</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#rmdir"><span class="nav-number">3.3.4.</span> <span class="nav-text">rmdir</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#rm"><span class="nav-number">3.3.5.</span> <span class="nav-text">rm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#PATH变量"><span class="nav-number">3.3.6.</span> <span class="nav-text">PATH变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cp"><span class="nav-number">3.3.7.</span> <span class="nav-text">cp</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#mv"><span class="nav-number">3.3.8.</span> <span class="nav-text">mv</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cat"><span class="nav-number">3.3.9.</span> <span class="nav-text">cat</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tac"><span class="nav-number">3.3.10.</span> <span class="nav-text">tac</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#more"><span class="nav-number">3.3.11.</span> <span class="nav-text">more</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#less"><span class="nav-number">3.3.12.</span> <span class="nav-text">less</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#head"><span class="nav-number">3.3.13.</span> <span class="nav-text">head</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tail"><span class="nav-number">3.3.14.</span> <span class="nav-text">tail</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#tar"><span class="nav-number">3.3.15.</span> <span class="nav-text">tar</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#find"><span class="nav-number">3.3.16.</span> <span class="nav-text">find</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#grep"><span class="nav-number">3.3.17.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pwd"><span class="nav-number">3.3.18.</span> <span class="nav-text">pwd</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#clear"><span class="nav-number">3.3.19.</span> <span class="nav-text">clear</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#touch"><span class="nav-number">3.3.20.</span> <span class="nav-text">touch</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件属性"><span class="nav-number">4.</span> <span class="nav-text">文件属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在linux下搜索文件"><span class="nav-number">4.1.</span> <span class="nav-text">在linux下搜索文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim"><span class="nav-number">5.</span> <span class="nav-text">vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件安装"><span class="nav-number">6.</span> <span class="nav-text">软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装方式"><span class="nav-number">6.1.</span> <span class="nav-text">安装方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ftp方式"><span class="nav-number">6.2.</span> <span class="nav-text">ftp方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#FileZilla"><span class="nav-number">6.2.1.</span> <span class="nav-text">FileZilla</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#lrzsz"><span class="nav-number">6.2.2.</span> <span class="nav-text">lrzsz</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sftp"><span class="nav-number">6.2.3.</span> <span class="nav-text">sftp</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装JDK"><span class="nav-number">6.3.</span> <span class="nav-text">安装JDK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装MySQL"><span class="nav-number">6.4.</span> <span class="nav-text">安装MySQL</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -664,7 +1095,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">74k</span>
+    <span title="Site words total count">75.8k</span>
   
 </div>
 
@@ -690,7 +1121,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共74k字</span>
+  <span class="post-count">博客全站共75.8k字</span>
 </div>
 -->
         

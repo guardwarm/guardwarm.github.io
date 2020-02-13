@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="python,习题,">
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="这些年学习路上踩得坑">
+<meta name="description" content="函数12345678func_list = []for i in range(10):    func_list.append(lambda x:x+i)for i in range(0,len(func_list)):    result = func_list[i](i)    print(result)  lambda返回的是个函数地址，且里面各变量在真正执行前都是保存着地址 通过闭包保存传">
+<meta name="keywords" content="python,习题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python例题">
 <meta property="og:url" content="http://yoursite.com/2020/02/10/python例题/index.html">
 <meta property="og:site_name" content="guard warm">
-<meta property="og:description" content="这些年学习路上踩得坑">
+<meta property="og:description" content="函数12345678func_list = []for i in range(10):    func_list.append(lambda x:x+i)for i in range(0,len(func_list)):    result = func_list[i](i)    print(result)  lambda返回的是个函数地址，且里面各变量在真正执行前都是保存着地址 通过闭包保存传">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-10T09:46:39.019Z">
+<meta property="og:updated_time" content="2020-02-10T10:00:29.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python例题">
-<meta name="twitter:description" content="这些年学习路上踩得坑">
+<meta name="twitter:description" content="函数12345678func_list = []for i in range(10):    func_list.append(lambda x:x+i)for i in range(0,len(func_list)):    result = func_list[i](i)    print(result)  lambda返回的是个函数地址，且里面各变量在真正执行前都是保存着地址 通过闭包保存传">
 
 
 
@@ -337,7 +338,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  0
+                  109
                 </span>
               
 
@@ -374,7 +375,13 @@
       
 
       
-        
+        <h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">func_list = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    func_list.append(<span class="keyword">lambda</span> x:x+i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(func_list)):</span><br><span class="line">    result = func_list[i](i)</span><br><span class="line">    print(result)</span><br></pre></td></tr></table></figure>
+
+<p>lambda返回的是个函数地址，且里面各变量在真正执行前都是保存着地址</p>
+<p>通过闭包保存传入的参数，其余变量则在命名空间中寻找</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(name)</span>:</span></span><br><span class="line">    v = <span class="keyword">lambda</span> x: x + name</span><br><span class="line">    <span class="keyword">return</span> v</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">v1 = func(<span class="string">'太白'</span>)</span><br><span class="line">v2 = func(<span class="string">'alex'</span>)</span><br><span class="line">v3 = v1(<span class="string">'银角'</span>)</span><br><span class="line">v4 = v2(<span class="string">'金角'</span>)</span><br><span class="line">print(v1, v2, v3, v4)</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -399,6 +406,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          
+            <a href="/tags/习题/" rel="tag"><i class="fa fa-tag"></i> 习题</a>
+          
+        </div>
+      
 
       
       
@@ -417,6 +432,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/11/maven使用/" rel="prev" title="maven使用">
+                maven使用 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -468,8 +487,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -486,7 +514,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -508,7 +536,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -539,6 +567,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -567,7 +611,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">74k</span>
+    <span title="Site words total count">75.8k</span>
   
 </div>
 
@@ -593,7 +637,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共74k字</span>
+  <span class="post-count">博客全站共75.8k字</span>
 </div>
 -->
         
