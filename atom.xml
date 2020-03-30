@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-26T06:34:28.976Z</updated>
+  <updated>2020-03-30T00:09:32.708Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,9 +17,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>IDEA</title>
+    <link href="http://yoursite.com/2020/03/30/%E6%A1%86%E6%9E%B6/IDEA/"/>
+    <id>http://yoursite.com/2020/03/30/框架/IDEA/</id>
+    <published>2020-03-30T00:06:05.000Z</published>
+    <updated>2020-03-30T00:09:32.708Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>强大的整合能力，比如git，Maven，Spring等</p><p>提示功能的快速，便捷，范围广</p><p>好用的快捷键和代码模板</p><p>精确搜索</p><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><ul><li>.idea    IDEA自己用的</li><li>src    源码</li><li>out    生成的class文件</li></ul><h2 id="管理结构"><a href="#管理结构" class="headerlink" title="管理结构"></a>管理结构</h2><p>项目&gt;模块&gt;包&gt;java文件</p><h2 id="下载与安装"><a href="#下载与安装" class="headerlink" title="下载与安装"></a>下载与安装</h2><p><a href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank" rel="noopener">下载地址</a></p><p>安装目录</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95.JPG" alt></p><p>第一个目录存的是配置信息，比如字体，快捷键设置，插件</p><p>第二个存的是索引，缓存等（刚启动时会自动生成索引，这段时间最好安静等待，不然可能会报一些莫名其妙的错）</p><p>如果出了什么问题，可以把第二个目录干掉，一般重启一下就好了</p><p>程序主体安装在自己安装时选择的目录下</p><a id="more"></a><h1 id="Debug追踪"><a href="#Debug追踪" class="headerlink" title="Debug追踪"></a>Debug追踪</h1><table><thead><tr><th>按键</th><th>效果</th></tr></thead><tbody><tr><td>shift+F9</td><td>开始调试</td></tr><tr><td>F7</td><td>进入方法</td></tr><tr><td>ctrl+shift+F8</td><td>查看所有断点</td></tr><tr><td>shift+F8</td><td>跳出方法</td></tr><tr><td>F8</td><td>逐行执行</td></tr><tr><td>F9</td><td>跳到下一断点</td></tr><tr><td>Ctrl+F2</td><td>停止调试</td></tr></tbody></table><p>循环中的断点在跳到下一断点时，相当于循环内就有多个断点</p><p>行号旁边单击可以添加断点，右击断点可以改为条件断点</p><h1 id="源码阅读"><a href="#源码阅读" class="headerlink" title="源码阅读"></a>源码阅读</h1><p><a href="https://www.bilibili.com/video/BV1V7411U78L" target="_blank" rel="noopener">codesheep链接</a></p><h1 id="常用设置"><a href="#常用设置" class="headerlink" title="常用设置"></a>常用设置</h1><h2 id="取消自动更新"><a href="#取消自动更新" class="headerlink" title="取消自动更新"></a>取消自动更新</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E5%8F%96%E6%B6%88%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%96%B0.JPG" alt></p><h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>可以直接在设置中查找插件    Plugins</p><p>热门插件自行百度</p><h2 id="生成javadoc"><a href="#生成javadoc" class="headerlink" title="生成javadoc"></a>生成javadoc</h2><p>tool -&gt; generate javadoc</p><p>选择要生成的文件，位置</p><p>locate     zh_CN</p><p>other command line arguments: -encoding UTF-8 -charset UTF-8</p><h2 id="文件双开"><a href="#文件双开" class="headerlink" title="文件双开"></a>文件双开</h2><p>右击别的文件标签可以设置显示方式，同时打开多个文件</p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><h3 id="窗口快捷键"><a href="#窗口快捷键" class="headerlink" title="窗口快捷键"></a>窗口快捷键</h3><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328214241-259.png" alt="image-20200328214231289"></p><h3 id="代码快捷键"><a href="#代码快捷键" class="headerlink" title="代码快捷键"></a>代码快捷键</h3><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328214508-430991.png" alt="image-20200328214506775"></p><p><code>alt+shift</code>再用鼠标点击，做到多光标</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328214620-615214.png" alt="image-20200328214616124"></p><h3 id="代码定位"><a href="#代码定位" class="headerlink" title="代码定位"></a>代码定位</h3><p><code>Ctrl+g</code>        跳转到指定行</p><p>jar包中标签只能加在文件第一行</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328214831-761652.png" alt="image-20200328214829740"></p><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><table><thead><tr><th>命令</th><th>作用·</th></tr></thead><tbody><tr><td>双击shift</td><td>查询一切</td></tr><tr><td>setting -&gt;keymap</td><td>设置快捷键</td></tr><tr><td>shift+f10</td><td>运行</td></tr><tr><td>Ctrl+Alt+空格</td><td>提示补全</td></tr><tr><td>Ctrl+/</td><td>单行注释</td></tr><tr><td>Ctrl+shift+/</td><td>多行注释</td></tr><tr><td>Ctrl+d</td><td>向下复制一行</td></tr><tr><td>Ctrl+y</td><td>删除选中行</td></tr><tr><td><code>Ctrl+shift+↑/↓</code></td><td>移动选中行</td></tr><tr><td>Ctrl+enter</td><td>向下开始新的一行</td></tr><tr><td>Ctrl+shift+enter</td><td>向上开始新的一行</td></tr><tr><td>Ctrl</td><td>查看源码</td></tr><tr><td>alt+enter</td><td>万能解错</td></tr><tr><td><code>alt+←/→</code></td><td>返回到前/后一个编辑的页面</td></tr><tr><td>ctrl+h</td><td>查看继承关系</td></tr><tr><td>Ctrl+alt+L</td><td>格式化代码</td></tr><tr><td>Ctrl+p</td><td>提示方法参数</td></tr><tr><td>Ctrl+z</td><td>撤销</td></tr><tr><td>ctrl+shift+z</td><td>反撤销</td></tr><tr><td>tab</td><td>选中数行，整体后移</td></tr><tr><td>shift+tab</td><td>选中数行，整体前移</td></tr><tr><td>ctrl+o</td><td>查看类的结构</td></tr><tr><td>shift+f6</td><td>重命名</td></tr><tr><td>Ctrl+shift+u</td><td>大小写转化</td></tr><tr><td>alt+fn+insert</td><td>生成构造函数</td></tr><tr><td>Ctrl+q</td><td>查看文档说明</td></tr><tr><td>Ctrl+shift+减号</td><td>收起所有方法</td></tr><tr><td>Ctrl+shift+等号</td><td>打开所有方法</td></tr><tr><td>Ctrl+shift+x(自己设置的)</td><td>打开代码所在硬盘文件夹</td></tr><tr><td>alt+ctrl+T</td><td>生成try—catch等</td></tr><tr><td>ctrl+空格</td><td>代码提示</td></tr></tbody></table><h2 id="live-template"><a href="#live-template" class="headerlink" title="live template"></a>live template</h2><h3 id="内置"><a href="#内置" class="headerlink" title="内置"></a>内置</h3><table><thead><tr><th>命令</th><th>效果</th></tr></thead><tbody><tr><td>syso</td><td>输出</td></tr><tr><td>psvm</td><td>生成main函数</td></tr><tr><td>fori    (eg:5.fori)</td><td>生成for函数</td></tr><tr><td>forr</td><td>生成逆序的for函数</td></tr><tr><td>iter</td><td>增强for循环</td></tr></tbody></table><h3 id="自定义"><a href="#自定义" class="headerlink" title="自定义"></a>自定义</h3><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328215649-185202.png" alt="image-20200328215646682"></p><p>先加个组，然后再添加代码并配置用于那些文件</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328215826-293346.png" alt="image-20200328215826412"></p><h1 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h1><h2 id="jar包"><a href="#jar包" class="headerlink" title="jar包"></a>jar包</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328233916-865530.png" alt="image-20200328233915109"></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328233947-624007.png" alt="image-20200328233944941"></p><h2 id="war包"><a href="#war包" class="headerlink" title="war包"></a>war包</h2><p>web项目只有在debug模式下才可以实现热部署</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328234243-812830.png" alt="image-20200328234242028"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;强大的整合能力，比如git，Maven，Spring等&lt;/p&gt;
+&lt;p&gt;提示功能的快速，便捷，范围广&lt;/p&gt;
+&lt;p&gt;好用的快捷键和代码模板&lt;/p&gt;
+&lt;p&gt;精确搜索&lt;/p&gt;
+&lt;h2 id=&quot;目录结构&quot;&gt;&lt;a href=&quot;#目录结构&quot; class=&quot;headerlink&quot; title=&quot;目录结构&quot;&gt;&lt;/a&gt;目录结构&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;.idea    IDEA自己用的&lt;/li&gt;
+&lt;li&gt;src    源码&lt;/li&gt;
+&lt;li&gt;out    生成的class文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;管理结构&quot;&gt;&lt;a href=&quot;#管理结构&quot; class=&quot;headerlink&quot; title=&quot;管理结构&quot;&gt;&lt;/a&gt;管理结构&lt;/h2&gt;&lt;p&gt;项目&amp;gt;模块&amp;gt;包&amp;gt;java文件&lt;/p&gt;
+&lt;h2 id=&quot;下载与安装&quot;&gt;&lt;a href=&quot;#下载与安装&quot; class=&quot;headerlink&quot; title=&quot;下载与安装&quot;&gt;&lt;/a&gt;下载与安装&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/idea/download/#section=windows&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安装目录&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/guardwarm/imageBed/master/%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95.JPG&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;第一个目录存的是配置信息，比如字体，快捷键设置，插件&lt;/p&gt;
+&lt;p&gt;第二个存的是索引，缓存等（刚启动时会自动生成索引，这段时间最好安静等待，不然可能会报一些莫名其妙的错）&lt;/p&gt;
+&lt;p&gt;如果出了什么问题，可以把第二个目录干掉，一般重启一下就好了&lt;/p&gt;
+&lt;p&gt;程序主体安装在自己安装时选择的目录下&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="开发工具" scheme="http://yoursite.com/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端进阶</title>
-    <link href="http://yoursite.com/2020/03/26/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6/"/>
-    <id>http://yoursite.com/2020/03/26/前端进阶/</id>
+    <link href="http://yoursite.com/2020/03/26/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E8%BF%9B%E9%98%B6/"/>
+    <id>http://yoursite.com/2020/03/26/前端/前端进阶/</id>
     <published>2020-03-26T03:59:13.000Z</published>
     <updated>2020-03-26T06:34:28.976Z</updated>
     
@@ -118,8 +154,8 @@
   
   <entry>
     <title>Spring</title>
-    <link href="http://yoursite.com/2020/02/18/Spring/"/>
-    <id>http://yoursite.com/2020/02/18/Spring/</id>
+    <link href="http://yoursite.com/2020/02/18/%E6%A1%86%E6%9E%B6/Spring/"/>
+    <id>http://yoursite.com/2020/02/18/框架/Spring/</id>
     <published>2020-02-18T09:19:50.000Z</published>
     <updated>2020-02-18T09:19:50.986Z</updated>
     
@@ -132,8 +168,8 @@
   
   <entry>
     <title>Mybatis</title>
-    <link href="http://yoursite.com/2020/02/18/heima57/Mybatis/"/>
-    <id>http://yoursite.com/2020/02/18/heima57/Mybatis/</id>
+    <link href="http://yoursite.com/2020/02/18/%E6%A1%86%E6%9E%B6/Mybatis/"/>
+    <id>http://yoursite.com/2020/02/18/框架/Mybatis/</id>
     <published>2020-02-18T09:19:32.000Z</published>
     <updated>2020-02-18T09:19:32.987Z</updated>
     
@@ -260,21 +296,16 @@
     <link href="http://yoursite.com/2020/02/11/heima57/maven%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2020/02/11/heima57/maven使用/</id>
     <published>2020-02-11T11:31:35.000Z</published>
-    <updated>2020-02-14T02:47:28.036Z</updated>
+    <updated>2020-03-30T00:07:37.754Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h4><ul><li>jar包管理</li><li>一键编译</li><li>一键测试</li><li>一键部署</li></ul><h4 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h4><p>maven工程对jar包的管理过程，实现了jar包的重用</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211193637.png" alt></p><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>去官网解压到一个路径下即可</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200213221931.png" alt></p><p>添加环境变量</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211194608.png" alt></p><p>path中添加</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211194717.png" alt></p><p>maven运行依赖于JAVA_HOME变量</p><h4 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211195150.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211200548.png" alt></p><h4 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211201920.png" alt></p><h4 id="pom文件结构"><a href="#pom文件结构" class="headerlink" title="pom文件结构"></a>pom文件结构</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212095810.png" alt></p><h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211204554.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214103350.png" alt></p><h4 id="idea集成maven"><a href="#idea集成maven" class="headerlink" title="idea集成maven"></a>idea集成maven</h4><p>确认下电脑上是否安装好了maven</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211204851.png" alt></p><p>setting中配置如下信息</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211205521.png" alt></p><p><strong>-DarchetypeCatalog=internal</strong></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211221827.png" alt></p><h4 id="创建java项目"><a href="#创建java项目" class="headerlink" title="创建java项目"></a>创建java项目</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104452.png" alt></p><p><strong>web项目所用的骨架</strong></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211222427.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104602.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211205917.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211210002.png" alt></p><p>把没有提供全的目录自己添加一下，一般java项目不需要用骨架</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104621.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211223115.png" alt></p><h4 id="jar包添加"><a href="#jar包添加" class="headerlink" title="jar包添加"></a>jar包添加</h4><h5 id="本地添加"><a href="#本地添加" class="headerlink" title="本地添加"></a>本地添加</h5><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212101244.png" alt></p><h6 id="scope标签"><a href="#scope标签" class="headerlink" title="scope标签"></a>scope标签</h6><p>作用：有些jar包仅在编译时需要</p><table><thead><tr><th>包名</th><th>作用域</th></tr></thead><tbody><tr><td>servlet</td><td>provided</td></tr><tr><td>jsp</td><td>provided</td></tr><tr><td>junit</td><td>test</td></tr><tr><td>mysql</td><td>runtime</td></tr></tbody></table><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212121126.png" alt></p><h5 id="中央仓库添加"><a href="#中央仓库添加" class="headerlink" title="中央仓库添加"></a>中央仓库添加</h5><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212100834.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212100951.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212101030.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104708.png" alt></p><h4 id="运行环境修改"><a href="#运行环境修改" class="headerlink" title="运行环境修改"></a>运行环境修改</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212114251.png" alt></p><p>可以将常用的添加为模板</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212114521.png" alt></p><p>先添加一个组</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212114610.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212115735.png" alt></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h2><ul><li>jar包管理</li><li>一键编译</li><li>一键测试</li><li>一键部署</li></ul><h2 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h2><p>maven工程对jar包的管理过程，实现了jar包的重用</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211193637.png" alt></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>去官网解压到一个路径下即可</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200213221931.png" alt></p><p>添加环境变量</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211194608.png" alt></p><p>path中添加</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211194717.png" alt></p><p>maven运行依赖于JAVA_HOME变量</p><h2 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211195150.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211200548.png" alt></p><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211201920.png" alt></p><h2 id="pom文件结构"><a href="#pom文件结构" class="headerlink" title="pom文件结构"></a>pom文件结构</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212095810.png" alt></p><h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211204554.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214103350.png" alt></p><h4 id="idea集成maven"><a href="#idea集成maven" class="headerlink" title="idea集成maven"></a>idea集成maven</h4><p>确认下电脑上是否安装好了maven</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211204851.png" alt></p><p>setting中配置如下信息</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211205521.png" alt></p><p><strong>-DarchetypeCatalog=internal</strong></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211221827.png" alt></p><h4 id="创建java项目"><a href="#创建java项目" class="headerlink" title="创建java项目"></a>创建java项目</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104452.png" alt></p><p><strong>web项目所用的骨架</strong></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211222427.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104602.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211205917.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211210002.png" alt></p><p>把没有提供全的目录自己添加一下，一般java项目不需要用骨架</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104621.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211223115.png" alt></p><h4 id="jar包添加"><a href="#jar包添加" class="headerlink" title="jar包添加"></a>jar包添加</h4><h5 id="本地添加"><a href="#本地添加" class="headerlink" title="本地添加"></a>本地添加</h5><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212101244.png" alt></p><h6 id="scope标签"><a href="#scope标签" class="headerlink" title="scope标签"></a>scope标签</h6><p>作用：有些jar包仅在编译时需要</p><table><thead><tr><th>包名</th><th>作用域</th></tr></thead><tbody><tr><td>servlet</td><td>provided</td></tr><tr><td>jsp</td><td>provided</td></tr><tr><td>junit</td><td>test</td></tr><tr><td>mysql</td><td>runtime</td></tr></tbody></table><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212121126.png" alt></p><h5 id="中央仓库添加"><a href="#中央仓库添加" class="headerlink" title="中央仓库添加"></a>中央仓库添加</h5><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212100834.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212100951.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212101030.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104708.png" alt></p><h4 id="运行环境修改"><a href="#运行环境修改" class="headerlink" title="运行环境修改"></a>运行环境修改</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212114251.png" alt></p><p>可以将常用的添加为模板</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212114521.png" alt></p><p>先添加一个组</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212114610.png" alt></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212115735.png" alt></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h4 id=&quot;用处&quot;&gt;&lt;a href=&quot;#用处&quot; class=&quot;headerlink&quot; title=&quot;用处&quot;&gt;&lt;/a&gt;用处&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;jar包管理&lt;/li&gt;
-&lt;li&gt;一键编译&lt;/li&gt;
-&lt;li&gt;一键测试&lt;/li&gt;
-&lt;li&gt;一键部署&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 
+        &lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;h2 id=&quot;用处&quot;&gt;&lt;a href=&quot;#用处&quot; class=&quot;headerlink&quot; title=&quot;用处&quot;&gt;&lt;/a&gt;用处&lt;/h2&gt;&lt;ul&gt;
+&lt;
       
     
     </summary>
@@ -288,8 +319,8 @@
   
   <entry>
     <title>python例题</title>
-    <link href="http://yoursite.com/2020/02/10/python%E4%BE%8B%E9%A2%98/"/>
-    <id>http://yoursite.com/2020/02/10/python例题/</id>
+    <link href="http://yoursite.com/2020/02/10/python/python%E4%BE%8B%E9%A2%98/"/>
+    <id>http://yoursite.com/2020/02/10/python/python例题/</id>
     <published>2020-02-10T09:46:38.000Z</published>
     <updated>2020-02-10T10:00:29.745Z</updated>
     
@@ -313,8 +344,8 @@
   
   <entry>
     <title>python基础</title>
-    <link href="http://yoursite.com/2020/02/01/python%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2020/02/01/python基础/</id>
+    <link href="http://yoursite.com/2020/02/01/python/python%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2020/02/01/python/python基础/</id>
     <published>2020-02-01T12:07:42.000Z</published>
     <updated>2020-02-15T09:34:06.465Z</updated>
     
@@ -380,9 +411,9 @@
     </summary>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
@@ -404,16 +435,16 @@
       <category term="python爬虫" scheme="http://yoursite.com/categories/python%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>前端基础</title>
-    <link href="http://yoursite.com/2020/01/30/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2020/01/30/前端基础/</id>
+    <link href="http://yoursite.com/2020/01/30/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2020/01/30/前端/前端基础/</id>
     <published>2020-01-30T09:06:22.000Z</published>
     <updated>2020-03-28T01:31:07.209Z</updated>
     
@@ -459,45 +490,6 @@
       <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XML</title>
-    <link href="http://yoursite.com/2019/09/21/XML/"/>
-    <id>http://yoursite.com/2019/09/21/XML/</id>
-    <published>2019-09-21T06:35:31.000Z</published>
-    <updated>2020-01-31T12:55:23.328Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="XML介绍"><a href="#XML介绍" class="headerlink" title="XML介绍"></a>XML介绍</h5><p>XML:可扩展的标记语言。</p><p>可扩展的:扩展性特别强,语法上比较松</p><p>标记: <dog> </dog></p><p>我们用的是1.0的版本</p><p>用于存放数据或配置文件</p><h5 id="XML的语法"><a href="#XML的语法" class="headerlink" title="XML的语法:"></a>XML的语法:</h5><p>a.文档声明</p><blockquote><p>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p><p>版本一般选1.0，编码默认是utf8</p></blockquote><p>b.注释:</p><blockquote><p>开始：&lt;!– </p><p>结束    –&gt;</p></blockquote><p>c.元素(Element)/标签(Tag)</p><blockquote><p>必须有开始和结束标签组成  &lt;dan&gt; &lt;/dan&gt;</p><p>一般只有一个跟标签，可以相互嵌套</p></blockquote><a id="more"></a><p>d.属性:attribute</p><blockquote><p>属性名=“属性值”</p><p>必须写在开始标签中</p><p>必须以字母开头</p></blockquote><p>e.转义字符</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt; <span class="attr">---</span> &amp;<span class="attr">lt</span>;</span></span><br><span class="line"><span class="tag">&gt;</span> --- &amp;gt;</span><br><span class="line">" --- &amp;quot;</span><br><span class="line">' --- &amp;apos;</span><br><span class="line">&amp; --- &amp;amp</span><br></pre></td></tr></table></figure><p>f.CDATA区</p><p>当内容中出现大量的需要转译的字符<br>    XML提供了CDATA区</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">abc</span>&gt;</span></span><br><span class="line">&lt;![CDATA[</span><br><span class="line">String s = "abc";</span><br><span class="line">int count = 0;</span><br><span class="line">for(int i = 0;i &lt; s.length() ; i++)&#123;</span><br><span class="line">char c = s.charAt(i);</span><br><span class="line">if(c &gt;= 'a' &amp;&amp; c &lt;= 'z')&#123;</span><br><span class="line">count++;]]&gt;</span><br><span class="line"><span class="comment">&lt;!--  特例：里面还包含了]]&gt;,需要分开成两个CDATA区 --&gt;</span></span><br><span class="line">    ]]&amp;gt;</span><br><span class="line">&lt;![CDATA[</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println("count = " + count);</span><br><span class="line">]]&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">abc</span>&gt;</span></span><br></pre></td></tr></table></figure><h5 id="XML约束"><a href="#XML约束" class="headerlink" title="XML约束"></a>XML约束</h5><ul><li>DTD约束</li></ul><p>文档开始注释会提示在xml文档前添加&lt;!DOCTYPE beans SYSTEM “bean.dtd”&gt;</p><p>第一个值为跟标签名字</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/javase31.JPG" alt></p><p>根据智能提示编写即可</p><p>三种引入方式</p><blockquote><p>内部DTD</p><p>外部DTD</p><blockquote><p>SYSTEM    本地DTD,后面一般跟个文件名</p><p>PUBLIC    公共DTD，后面一般跟个网址</p></blockquote></blockquote><ul><li>Schema约束</li></ul><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/javase32.JPG" alt></p><p>文档开头注释会提示应在xml中1导入的信息</p><p>&lt;beans xmlns=”<a href="http://www.itcast.cn/bean&quot;" target="_blank" rel="noopener">http://www.itcast.cn/bean&quot;</a>   xmlns:xsi=”<a href="http://www.w3.org/2001/XMLSchema-instance&quot;" target="_blank" rel="noopener">http://www.w3.org/2001/XMLSchema-instance&quot;</a>   xsi:schemaLocation=”<a href="http://www.itcast.cn/bean" target="_blank" rel="noopener">http://www.itcast.cn/bean</a> bean-schema.xsd”&gt;</p><p>注意这是一个开始标签，添加一下结束标签即可，其余使用方法和DTD差不多</p><p>如果有多个schema约束文件名字冲突时，需使用targetname来指定，但显得很冗长，可以给其起个别名</p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/javase33.JPG" alt></p><h5 id="XML解析"><a href="#XML解析" class="headerlink" title="XML解析"></a>XML解析</h5><p>用io流来解析太过繁琐，一般使用第三方提供的解析开发包</p><p><strong>三种解析方式</strong></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/javase34.JPG" alt></p><p><strong>常用解析开发包</strong></p><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/javase35.JPG" alt></p><h5 id="dom4j"><a href="#dom4j" class="headerlink" title="dom4j"></a>dom4j</h5><p>1.核心类 SAXReader:加载XML文件</p><p>2.Document对象,表示整个XML文件对象</p><p>3.元素:Element</p><p>获取根元素: document.getRootElement();</p><p>获取属性: element.attributeValue(“属性名”)</p><p>获取子元素:List<element> element.elements();//好几个重载</element></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//被解析文件</span></span><br><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</span><br><span class="line">&lt;beans&gt;</span><br><span class="line">&lt;bean id=<span class="string">"001"</span> className=<span class="string">"cn.itcast.demo.User"</span>&gt;</span><br><span class="line">&lt;property name="username" value="jack"&gt;&lt;/property&gt;</span><br><span class="line">&lt;property name="password" value="123"&gt;&lt;/property&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line"></span><br><span class="line">&lt;bean id=<span class="string">"002"</span> className=<span class="string">"cn.itcast.demo.Admin"</span>&gt;</span><br><span class="line">&lt;property name="username" value="admin"&gt;&lt;/property&gt;</span><br><span class="line">&lt;property name="password" value="123321"&gt;&lt;/property&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line">&lt;/beans&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Dom4JDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> DocumentException </span>&#123;</span><br><span class="line"><span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line"><span class="comment">//1.把整个要解析的XML文件加载到内存</span></span><br><span class="line">SAXReader reader = <span class="keyword">new</span> SAXReader();</span><br><span class="line"><span class="comment">//2.会生产一个Documnet对象</span></span><br><span class="line">Document document =reader.read(<span class="keyword">new</span> File(<span class="string">"beans.xml"</span>));</span><br><span class="line"><span class="comment">//3.获取根标签</span></span><br><span class="line">Element rootEle = document.getRootElement();</span><br><span class="line"><span class="comment">//4.获取根标签的子标签</span></span><br><span class="line">List&lt;Element&gt; beanElements = rootEle.elements();</span><br><span class="line"><span class="comment">//5.遍历elements集合</span></span><br><span class="line"><span class="keyword">for</span> (Element beanElement : beanElements) &#123;</span><br><span class="line"><span class="comment">//6.获取子标签bean的属性</span></span><br><span class="line">String idValue = beanElement.attributeValue(<span class="string">"id"</span>);</span><br><span class="line">String classNameValue = beanElement.attributeValue(<span class="string">"className"</span>);</span><br><span class="line">System.out.println(idValue+<span class="string">".."</span>+classNameValue);</span><br><span class="line"><span class="comment">//获取bean的子标签</span></span><br><span class="line">List&lt;Element&gt; propertyElements = beanElement.elements();</span><br><span class="line"><span class="comment">//遍历property标签</span></span><br><span class="line"><span class="keyword">for</span> (Element propertyElement : propertyElements) &#123;</span><br><span class="line"><span class="comment">//propertyElement Property标签</span></span><br><span class="line"><span class="comment">//获取Property的属性</span></span><br><span class="line">String nameValue = propertyElement.attributeValue(<span class="string">"name"</span>);</span><br><span class="line">String valuevalue = propertyElement.attributeValue(<span class="string">"value"</span>);</span><br><span class="line">System.out.println(nameValue+<span class="string">"==="</span>+valuevalue);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h5 id=&quot;XML介绍&quot;&gt;&lt;a href=&quot;#XML介绍&quot; class=&quot;headerlink&quot; title=&quot;XML介绍&quot;&gt;&lt;/a&gt;XML介绍&lt;/h5&gt;&lt;p&gt;XML:可扩展的标记语言。&lt;/p&gt;
-&lt;p&gt;可扩展的:扩展性特别强,语法上比较松&lt;/p&gt;
-&lt;p&gt;标记: &lt;dog&gt; &lt;/dog&gt;&lt;/p&gt;
-&lt;p&gt;我们用的是1.0的版本&lt;/p&gt;
-&lt;p&gt;用于存放数据或配置文件&lt;/p&gt;
-&lt;h5 id=&quot;XML的语法&quot;&gt;&lt;a href=&quot;#XML的语法&quot; class=&quot;headerlink&quot; title=&quot;XML的语法:&quot;&gt;&lt;/a&gt;XML的语法:&lt;/h5&gt;&lt;p&gt;a.文档声明&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&amp;lt;?xml version=”1.0” encoding=”UTF-8”?&amp;gt;&lt;/p&gt;
-&lt;p&gt;版本一般选1.0，编码默认是utf8&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;b.注释:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;开始：&amp;lt;!– &lt;/p&gt;
-&lt;p&gt;结束    –&amp;gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;c.元素(Element)/标签(Tag)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;必须有开始和结束标签组成  &amp;lt;dan&amp;gt; &amp;lt;/dan&amp;gt;&lt;/p&gt;
-&lt;p&gt;一般只有一个跟标签，可以相互嵌套&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="xml" scheme="http://yoursite.com/tags/xml/"/>
     
   </entry>
   

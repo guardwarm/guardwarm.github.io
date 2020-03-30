@@ -276,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/10/python例题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/11/heima57/maven使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="grandwarm">
@@ -295,7 +295,234 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/02/10/python例题/" itemprop="url">python例题</a></h1>
+                <a class="post-title-link" href="/2020/02/11/heima57/maven使用/" itemprop="url">maven使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-11T19:31:35+08:00">
+                2020-02-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  222
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h2><ul>
+<li>jar包管理</li>
+<li>一键编译</li>
+<li>一键测试</li>
+<li>一键部署</li>
+</ul>
+<h2 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h2><p>maven工程对jar包的管理过程，实现了jar包的重用</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211193637.png" alt></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>去官网解压到一个路径下即可</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200213221931.png" alt></p>
+<p>添加环境变量</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211194608.png" alt></p>
+<p>path中添加</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211194717.png" alt></p>
+<p>maven运行依赖于JAVA_HOME变量</p>
+<h2 id="本地仓库"><a href="#本地仓库" class="headerlink" title="本地仓库"></a>本地仓库</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211195150.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211200548.png" alt></p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211201920.png" alt></p>
+<h2 id="pom文件结构"><a href="#pom文件结构" class="headerlink" title="pom文件结构"></a>pom文件结构</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212095810.png" alt></p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211204554.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214103350.png" alt></p>
+<h4 id="idea集成maven"><a href="#idea集成maven" class="headerlink" title="idea集成maven"></a>idea集成maven</h4><p>确认下电脑上是否安装好了maven</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211204851.png" alt></p>
+<p>setting中配置如下信息</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211205521.png" alt></p>
+<p><strong>-DarchetypeCatalog=internal</strong></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211221827.png" alt></p>
+<h4 id="创建java项目"><a href="#创建java项目" class="headerlink" title="创建java项目"></a>创建java项目</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104452.png" alt></p>
+<p><strong>web项目所用的骨架</strong></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211222427.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104602.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211205917.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211210002.png" alt></p>
+<p>把没有提供全的目录自己添加一下，一般java项目不需要用骨架</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104621.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200211223115.png" alt></p>
+<h4 id="jar包添加"><a href="#jar包添加" class="headerlink" title="jar包添加"></a>jar包添加</h4><h5 id="本地添加"><a href="#本地添加" class="headerlink" title="本地添加"></a>本地添加</h5><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212101244.png" alt></p>
+<h6 id="scope标签"><a href="#scope标签" class="headerlink" title="scope标签"></a>scope标签</h6><p>作用：有些jar包仅在编译时需要</p>
+<table>
+<thead>
+<tr>
+<th>包名</th>
+<th>作用域</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>servlet</td>
+<td>provided</td>
+</tr>
+<tr>
+<td>jsp</td>
+<td>provided</td>
+</tr>
+<tr>
+<td>junit</td>
+<td>test</td>
+</tr>
+<tr>
+<td>mysql</td>
+<td>runtime</td>
+</tr>
+</tbody></table>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212121126.png" alt></p>
+<h5 id="中央仓库添加"><a href="#中央仓库添加" class="headerlink" title="中央仓库添加"></a>中央仓库添加</h5><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212100834.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212100951.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212101030.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200214104708.png" alt></p>
+<h4 id="运行环境修改"><a href="#运行环境修改" class="headerlink" title="运行环境修改"></a>运行环境修改</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212114251.png" alt></p>
+<p>可以将常用的添加为模板</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212114521.png" alt></p>
+<p>先添加一个组</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212114610.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/pythonBasic/20200212115735.png" alt></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+    
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/10/python/python例题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="grandwarm">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="guard warm">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/10/python/python例题/" itemprop="url">python例题</a></h1>
         
 
         <div class="post-meta">
@@ -436,7 +663,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/01/python基础/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/01/python/python基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="grandwarm">
@@ -455,7 +682,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/02/01/python基础/" itemprop="url">python基础</a></h1>
+                <a class="post-title-link" href="/2020/02/01/python/python基础/" itemprop="url">python基础</a></h1>
         
 
         <div class="post-meta">
@@ -552,7 +779,7 @@
 </ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/02/01/python基础/#more" rel="contents">
+            <a class="btn" href="/2020/02/01/python/python基础/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1124,7 +1351,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/30/前端基础/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/30/前端/前端基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="grandwarm">
@@ -1143,7 +1370,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/01/30/前端基础/" itemprop="url">前端基础</a></h1>
+                <a class="post-title-link" href="/2020/01/30/前端/前端基础/" itemprop="url">前端基础</a></h1>
         
 
         <div class="post-meta">
@@ -1763,184 +1990,6 @@
 </ul>
 <h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4>
           
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-    
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/21/XML/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="grandwarm">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="guard warm">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/21/XML/" itemprop="url">XML</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-21T14:35:31+08:00">
-                2019-09-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  831
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h5 id="XML介绍"><a href="#XML介绍" class="headerlink" title="XML介绍"></a>XML介绍</h5><p>XML:可扩展的标记语言。</p>
-<p>可扩展的:扩展性特别强,语法上比较松</p>
-<p>标记: <dog> </dog></p>
-<p>我们用的是1.0的版本</p>
-<p>用于存放数据或配置文件</p>
-<h5 id="XML的语法"><a href="#XML的语法" class="headerlink" title="XML的语法:"></a>XML的语法:</h5><p>a.文档声明</p>
-<blockquote>
-<p>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
-<p>版本一般选1.0，编码默认是utf8</p>
-</blockquote>
-<p>b.注释:</p>
-<blockquote>
-<p>开始：&lt;!– </p>
-<p>结束    –&gt;</p>
-</blockquote>
-<p>c.元素(Element)/标签(Tag)</p>
-<blockquote>
-<p>必须有开始和结束标签组成  &lt;dan&gt; &lt;/dan&gt;</p>
-<p>一般只有一个跟标签，可以相互嵌套</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/09/21/XML/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
         
       
     </div>
