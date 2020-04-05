@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="算法,数据结构,">
+  <meta name="keywords" content="正则表达式,">
 
 
 
@@ -81,18 +81,24 @@
 
 
 
-<meta name="description" content="前提须知用处 写出性能更高的程序 更快更深的掌握一门技术 数据结构+算法=程序  数组 定义 数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。  链表适合插入、删除，时间复杂度O(1)；数组支持随机访问，根据下标随机访问的时间复杂度为O(1)  警惕数组的访问越界问题  我们可以先记录下已经删除的数据。每次的删除操作并不是真正地搬移数据，只是记录数据已">
-<meta name="keywords" content="算法,数据结构">
+<meta name="description" content="正则表达式概述正则表达式（regular expression，简称regex）：是一些用来匹配和处理文本的字符串 正则表达式通常被简称为模式，其实是一些由字符构成的字符串 这些字符可以是普通字符（纯文本）或元字符（有特殊含义的特殊字符） 在线测试网站 字符范围匹配">
+<meta name="keywords" content="正则表达式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构和算法">
-<meta property="og:url" content="http://yoursite.com/2019/10/01/数据结构和算法之美/index.html">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://yoursite.com/2019/09/17/工具/正则表达式/index.html">
 <meta property="og:site_name" content="guard warm">
-<meta property="og:description" content="前提须知用处 写出性能更高的程序 更快更深的掌握一门技术 数据结构+算法=程序  数组 定义 数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。  链表适合插入、删除，时间复杂度O(1)；数组支持随机访问，根据下标随机访问的时间复杂度为O(1)  警惕数组的访问越界问题  我们可以先记录下已经删除的数据。每次的删除操作并不是真正地搬移数据，只是记录数据已">
+<meta property="og:description" content="正则表达式概述正则表达式（regular expression，简称regex）：是一些用来匹配和处理文本的字符串 正则表达式通常被简称为模式，其实是一些由字符构成的字符串 这些字符可以是普通字符（纯文本）或元字符（有特殊含义的特殊字符） 在线测试网站 字符范围匹配">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-18T01:58:53.260Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091526-141326.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091622-154755.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091655-33652.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091744-831223.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328092139-373491.png">
+<meta property="og:updated_time" content="2020-03-28T01:41:25.947Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构和算法">
-<meta name="twitter:description" content="前提须知用处 写出性能更高的程序 更快更深的掌握一门技术 数据结构+算法=程序  数组 定义 数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。  链表适合插入、删除，时间复杂度O(1)；数组支持随机访问，根据下标随机访问的时间复杂度为O(1)  警惕数组的访问越界问题  我们可以先记录下已经删除的数据。每次的删除操作并不是真正地搬移数据，只是记录数据已">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="正则表达式概述正则表达式（regular expression，简称regex）：是一些用来匹配和处理文本的字符串 正则表达式通常被简称为模式，其实是一些由字符构成的字符串 这些字符可以是普通字符（纯文本）或元字符（有特殊含义的特殊字符） 在线测试网站 字符范围匹配">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091526-141326.png">
 
 
 
@@ -122,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/10/01/数据结构和算法之美/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/17/工具/正则表达式/">
 
 
 
 
 
-  <title>数据结构和算法 | guard warm</title>
+  <title>正则表达式 | guard warm</title>
   
 
 
@@ -277,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/01/数据结构和算法之美/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/17/工具/正则表达式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="grandwarm">
@@ -294,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构和算法</h1>
+          <h1 class="post-title" itemprop="name headline">正则表达式</h1>
         
 
         <div class="post-meta">
@@ -306,8 +312,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-01T21:20:26+08:00">
-                2019-10-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-17T22:47:12+08:00">
+                2019-09-17
               </time>
             
 
@@ -316,28 +322,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/极客时间/" itemprop="url" rel="index">
-                    <span itemprop="name">极客时间</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -360,7 +344,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  967
+                  774
                 </span>
               
 
@@ -376,7 +360,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  3
+                  2
                 </span>
               
             </div>
@@ -397,51 +381,82 @@
       
 
       
-        <h3 id="前提须知"><a href="#前提须知" class="headerlink" title="前提须知"></a>前提须知</h3><h4 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h4><ul>
-<li>写出性能更高的程序</li>
-<li>更快更深的掌握一门技术</li>
-<li>数据结构+算法=程序</li>
-</ul>
-<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><ol>
-<li><p>定义<br> 数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。</p>
-</li>
-<li><p>链表适合插入、删除，时间复杂度O(1)；数组支持随机访问，根据下标随机访问的时间复杂度为O(1)</p>
-</li>
-<li><p>警惕数组的访问越界问题</p>
-</li>
-<li><p>我们可以先记录下已经删除的数据。每次的删除操作并不是真正地搬移数据，只是记录数据已经被删除。当数组没有更多空间存储数据时，我们再触发执行一次真正的删除操作，这样就大大减少了删除操作导致的数据搬移。</p>
-</li>
-<li><p>如果数组中存储的数据并没有任何规律，数组只是被当作一个存储数据的集合。在这种情况下，如果要将某个数组插入到第k个位置，为了避免大规模的数据搬移，直接将第k位的数据搬移到数组元素的最后，把新的元素直接放入第k个位置。</p>
-</li>
-<li><p>容器可否完全替代数组</p>
+        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>正则表达式（regular expression，简称regex）：是一些用来匹配和处理文本的字符串</p>
+<p>正则表达式通常被简称为模式，其实是一些由字符构成的字符串</p>
+<p>这些字符可以是普通字符（纯文本）或元字符（有特殊含义的特殊字符）</p>
+<p><a href="https://tool.oschina.net/regex" target="_blank" rel="noopener">在线测试网站</a></p>
+<h2 id="字符范围匹配"><a href="#字符范围匹配" class="headerlink" title="字符范围匹配"></a>字符范围匹配</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091526-141326.png" alt="image-20200328091523680"></p>
+<a id="more"></a>
+
+<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091622-154755.png" alt="image-20200328091621116"></p>
+<p>[\b]    回退（删除）一个字符</p>
+<p>\f    换页符</p>
+<p>\n    换行符</p>
+<p>\r    回车符</p>
+<p>\t    制表符（tab）</p>
+<p>\v    垂直制表符</p>
+<p>\s    任何一个空白字符    [\f\n\r\t\v]</p>
+<p>\S    任何一个非空白字符</p>
+<p>\x    十六进制</p>
+<p>\0    八进制</p>
+<h2 id="多次重复匹配"><a href="#多次重复匹配" class="headerlink" title="多次重复匹配"></a>多次重复匹配</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091655-33652.png" alt="image-20200328091654061"></p>
+<h2 id="定位匹配"><a href="#定位匹配" class="headerlink" title="定位匹配"></a>定位匹配</h2><p>将字符串作为一个整体</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091744-831223.png" alt="image-20200328091743323"></p>
+<p>\b    用来匹配单词的开始或结束（\w与非\w之间）    只匹配一个位置，而不匹配任何字符</p>
+<p>\B    匹配一个前后都不是单词边界</p>
+<p>\&lt;    单词开始    \&gt;    单词结束</p>
+<p>(?m)    分行匹配模式，必须写在模式最前面</p>
+<h2 id="非贪婪模式"><a href="#非贪婪模式" class="headerlink" title="非贪婪模式"></a>非贪婪模式</h2><p>默认为贪婪模式，尽可能多的匹配</p>
+<p>模式后面加个？转换为非贪婪</p>
+<h2 id="表达式分组"><a href="#表达式分组" class="headerlink" title="表达式分组"></a>表达式分组</h2><p>可读性更高</p>
+<p>在java中可通过group方法来分别获取一个个分组</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328092139-373491.png" alt="image-20200328092137819"></p>
+<h2 id="POSIX字符串"><a href="#POSIX字符串" class="headerlink" title="POSIX字符串"></a>POSIX字符串</h2><p>[[:alnum:]]                 数字字符</p>
+<p>[[:alpha:]]                  字母字符</p>
+<p>[[:lower:]]                  小写字母字符</p>
+<p>[[:print:]]                    可显示的字符</p>
+<p>[[:blank:]]                   空格(space)与定位字符</p>
+<p>[[:punct:]]                   除[[:cntrl:]]和[[:alnum:]]外</p>
+<p>[[:cntrl:]]                     ASCII控制字符(0-31和127)</p>
+<p>[[:space:]]                   空白(whitespace)字符</p>
+<p>[[:upper:]]                   大写字母字符</p>
+<p>[[:digit:]]                      数字字符</p>
+<p>[[:graph:]]                   非空格(nonspace)字符</p>
+<p>[[:xdigit:]]                    十六进制数字字符</p>
+<h2 id="回溯引用"><a href="#回溯引用" class="headerlink" title="回溯引用"></a>回溯引用</h2><p>前后一致匹配</p>
+<p>\n    匹配前面第n个子表达式</p>
+<p>$n    替换时使用，匹配上一条查询中的第n个子表达式匹配到的内容</p>
 <ul>
-<li>.Java ArrayList无法存储基本类型，比如int、long，需要封装为Integer、Long类，而Autoboxing、Unboxing则有一定的性能消耗，所以如果特别关注性能，或者希望使用基本类型，就可以选用数组。</li>
-<li>如果数据大小事先已知，并且对数据的操作非常简单，用不到ArrayList提供的大部分方法，也可以直接使用数组。</li>
-<li>.还有一个是我个人的喜好，当要表示多维数组时，用数组往往会更加直观。比如Object[][] array；而用容器的话则需要这样定义：ArrayList&lt;ArrayList &gt; array。</li>
-<li>总结一下，对于业务开发，直接使用容器就足够了，省时省力。毕竟损耗一丢丢性能，完全不会影响到系统整体的性能。但如果你是做一些非常底层的开发，比如开发网络框架，性能的优化需要做到极致，这个时候数组就会优于容器，成为首选。</li>
+<li>大小写转换（替换时使用）</li>
 </ul>
+<p>\E    结束\L或\U转换</p>
+<p>\I    把下一个字符转换为小写</p>
+<p>\L    把后面的字符转换为小写</p>
+<p>\u    把下一个字符转换为大写</p>
+<p>\U    把后面的字符转换为大写</p>
+<h2 id="前后查找"><a href="#前后查找" class="headerlink" title="前后查找"></a>前后查找</h2><p>都是只匹配但不消费</p>
+<p>(?=字符)    正向前查找，匹配到指定字符，停止匹配</p>
+<p>(?!字符)    正向前查找，匹配到不是指定字符的，停止匹配</p>
+<p>(?&lt;=字符)    正向后查找，匹配到指定字符，停止匹配</p>
+<p>(&lt;=字符)    负向后查找，匹配到不是指定字符，停止匹配</p>
+<h2 id="嵌入条件"><a href="#嵌入条件" class="headerlink" title="嵌入条件"></a>嵌入条件</h2><p>(?(n)regex)    如果前一个子表达式匹配到了则执行该正则</p>
+<p>(?(前后查找)regex)    如果前后查找成功了则执行该正则</p>
+<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><ol>
+<li>创建<ol>
+<li>var reg = new RegExp(“正则表达式”);</li>
+<li>var reg = /正则表达式/;</li>
+</ol>
 </li>
-<li><p>数组下标为何从零开始<br> 从数组存储的内存模型上来看，“下标”最确切的定义应该是“偏移（offset）”。前面也讲到，如果用a来表示数组的首地址，a[0]就是偏移为0的位置，也就是首地址，a[k]就表示偏移k个type_size的位置，所以计算a[k]的内存地址只需要用这个公式：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[k]_address = base_address + k * type_size</span><br></pre></td></tr></table></figure>
-
-
+<li>方法    <ol>
+<li>test(参数):验证指定的字符串是否符合正则定义的规范    </li>
+</ol>
 </li>
 </ol>
-<pre><code>但是，如果数组从1开始计数，那我们计算数组元素a[k]的内存地址就会变为：
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[k]_address = base_address + (k-1)*type_size</span><br></pre></td></tr></table></figure>
-
-
-对比两个公式，我们不难发现，从1开始编号，每次随机访问数组元素都多了一次减法运算，对于CPU来说，就是多了一次减法指令。
-
-数组作为非常基础的数据结构，通过下标随机访问数组元素又是其非常基础的编程操作，效率的优化就要尽可能做到极致。所以为了减少一次减法操作，数组选择了从0开始编号，而不是从1开始。
+<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>​    <code>Pattern p = Pattern.compile(&quot;&lt;li&gt;([\\u4e00-\\u9fa5]{2,10})([a-zA-Z]+)&lt;/li&gt;&quot;);</code></p>
+<h2 id="匹配"><a href="#匹配" class="headerlink" title="匹配"></a>匹配</h2><p>​    <code>Matcher m = p.matcher(content);</code></p>
+<h2 id="查找匹配结果"><a href="#查找匹配结果" class="headerlink" title="查找匹配结果"></a>查找匹配结果</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(m.find()) &#123;</span><br><span class="line">    <span class="comment">// group(0)匹配整个正则</span></span><br><span class="line">	System.out.println(m.group(<span class="number">0</span>));</span><br><span class="line">    <span class="comment">// 1，2，...按分组匹配</span></span><br><span class="line">	String chs = m.group(<span class="number">1</span>);</span><br><span class="line">	String eng = m.group(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-
-不过我认为，上面解释得再多其实都算不上压倒性的证明，说数组起始编号非0开始不可。所以我觉得最主要的原因可能是历史原因。</code></pre><h4 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h4><ul>
-<li>常见的缓存淘汰策略有三种：先进先出策略FIFO（First In，First Out）、最少使用策略LFU（Least Frequently Used）、最近最少使用策略LRU（Least Recently Used）。</li>
-</ul>
-<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4>
       
     </div>
     
@@ -468,9 +483,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
-          
-            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+            <a href="/tags/正则表达式/" rel="tag"><i class="fa fa-tag"></i> 正则表达式</a>
           
         </div>
       
@@ -483,8 +496,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/09/20/heima57/MySQL/" rel="next" title="MySQL">
-                <i class="fa fa-chevron-left"></i> MySQL
+              <a href="/2019/09/04/工具/git使用/" rel="next" title="git使用">
+                <i class="fa fa-chevron-left"></i> git使用
               </a>
             
           </div>
@@ -493,8 +506,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/01/30/前端/前端基础/" rel="prev" title="前端基础">
-                前端基础 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/20/heima57/MySQL/" rel="prev" title="MySQL">
+                MySQL <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -574,7 +587,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -596,7 +609,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -636,7 +649,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前提须知"><span class="nav-number">1.</span> <span class="nav-text">前提须知</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用处"><span class="nav-number">1.1.</span> <span class="nav-text">用处</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组"><span class="nav-number">1.2.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链表"><span class="nav-number">1.3.</span> <span class="nav-text">链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">1.4.</span> <span class="nav-text">排序</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#正则表达式"><span class="nav-number">1.</span> <span class="nav-text">正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符范围匹配"><span class="nav-number">1.2.</span> <span class="nav-text">字符范围匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元字符"><span class="nav-number">1.3.</span> <span class="nav-text">元字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多次重复匹配"><span class="nav-number">1.4.</span> <span class="nav-text">多次重复匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定位匹配"><span class="nav-number">1.5.</span> <span class="nav-text">定位匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非贪婪模式"><span class="nav-number">1.6.</span> <span class="nav-text">非贪婪模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表达式分组"><span class="nav-number">1.7.</span> <span class="nav-text">表达式分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POSIX字符串"><span class="nav-number">1.8.</span> <span class="nav-text">POSIX字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回溯引用"><span class="nav-number">1.9.</span> <span class="nav-text">回溯引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前后查找"><span class="nav-number">1.10.</span> <span class="nav-text">前后查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#嵌入条件"><span class="nav-number">1.11.</span> <span class="nav-text">嵌入条件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript"><span class="nav-number">2.</span> <span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java"><span class="nav-number">3.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建"><span class="nav-number">3.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匹配"><span class="nav-number">3.2.</span> <span class="nav-text">匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找匹配结果"><span class="nav-number">3.3.</span> <span class="nav-text">查找匹配结果</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -671,7 +684,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">101.5k</span>
+    <span title="Site words total count">105.3k</span>
   
 </div>
 
@@ -697,7 +710,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共101.5k字</span>
+  <span class="post-count">博客全站共105.3k字</span>
 </div>
 -->
         
