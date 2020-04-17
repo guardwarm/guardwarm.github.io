@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="HTTP">
+<meta name="keywords" content="爬虫,python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="爬虫入门">
+<meta property="og:url" content="http://yoursite.com/2020/01/31/python/爬虫入门/index.html">
+<meta property="og:site_name" content="guard warm">
+<meta property="og:description" content="HTTP">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/http.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E7%88%AC%E8%99%AB%E7%9A%84%E7%AE%80%E4%BB%8B1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/python3(urlib.request).png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/handler%E5%A4%84%E7%90%86%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89.png">
+<meta property="og:updated_time" content="2020-02-01T11:01:40.954Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="爬虫入门">
+<meta name="twitter:description" content="HTTP">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/http.png">
+
+<link rel="canonical" href="http://yoursite.com/2020/01/31/python/爬虫入门/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>爬虫入门 | guard warm</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">guard warm</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">编程学习之路</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/31/python/爬虫入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="grandwarm">
+      <meta itemprop="description" content="这些年编程路上踩得坑">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="guard warm">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          爬虫入门
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-30 17:26:18" itemprop="dateCreated datePublished" datetime="2020-01-30T17:26:18Z">2020-01-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-01 11:01:40" itemprop="dateModified" datetime="2020-02-01T11:01:40Z">2020-02-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python爬虫/" itemprop="url" rel="index"><span itemprop="name">python爬虫</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/http.png" alt></p>
+<a id="more"></a>
+
+<h3 id="爬虫入门"><a href="#爬虫入门" class="headerlink" title="爬虫入门"></a>爬虫入门</h3><h4 id="爬虫简介"><a href="#爬虫简介" class="headerlink" title="爬虫简介"></a>爬虫简介</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/%E7%88%AC%E8%99%AB%E7%9A%84%E7%AE%80%E4%BB%8B1.png" alt></p>
+<p>&lt;</p>
+<h4 id="urllib-request"><a href="#urllib-request" class="headerlink" title="urllib.request"></a>urllib.request</h4><p>python3内置的包</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_data</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 用https时拿不到数据</span></span><br><span class="line">    url = <span class="string">"http://www.baidu.com/"</span></span><br><span class="line">    response = urllib.request.urlopen(url)</span><br><span class="line">    <span class="comment"># print(response)</span></span><br><span class="line">    data = response.read().decode(<span class="string">"utf-8"</span>)</span><br><span class="line">    <span class="comment"># print(data)</span></span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"baidu.html"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data)</span><br><span class="line">    <span class="comment"># python爬取到的多为str,bytes</span></span><br><span class="line">    <span class="comment"># str通过对应encode("编码")转为bytes，同理bytes通过decode转为str</span></span><br><span class="line">    <span class="comment"># 具体编码格式见html页面head头信息中</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">load_data()</span><br></pre></td></tr></table></figure>
+
+<p><strong>get传参要注意转成url编码</strong></p>
+<p>由于百度更新，以下过不了安检，实际上拿不到数据了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line"><span class="keyword">import</span> string</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_param</span><span class="params">()</span>:</span></span><br><span class="line">    url = <span class="string">"http://www.baidu.com/s?wd="</span></span><br><span class="line">    param = <span class="string">"美女"</span></span><br><span class="line">    final_url = url + param</span><br><span class="line">    <span class="comment"># python解释器只支持ASCII码，所以必须转码</span></span><br><span class="line">    final_url = urllib.parse.quote(final_url, safe=string.printable)</span><br><span class="line">    response = urllib.request.urlopen(final_url)</span><br><span class="line">    data_str = response.read().decode(<span class="string">"utf-8"</span>)</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"meinv.html"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data_str)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">get_param()</span><br></pre></td></tr></table></figure>
+
+<p>字典传参时,这样得到字符串参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">params = &#123;</span><br><span class="line">    <span class="string">"wd"</span>: <span class="string">"中文"</span>,</span><br><span class="line">    <span class="string">"key"</span>: <span class="string">"zhang"</span>,</span><br><span class="line">    <span class="string">"value"</span>: <span class="string">"san"</span></span><br><span class="line">&#125;</span><br><span class="line">params_str = urllib.parse.urlencode(params)</span><br></pre></td></tr></table></figure>
+
+<p>绑定请求头</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">"https://www.baidu.com/s?wd=%E7%BE%8E%E5%A5%B3"</span></span><br><span class="line">header = &#123;</span><br><span class="line">    <span class="comment"># 浏览器版本</span></span><br><span class="line">    <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 创建时绑定请求头，也可以requset.add_header()来动态绑定</span></span><br><span class="line">request = urllib.request.Request(url, headers=header)</span><br><span class="line">response = urllib.request.urlopen(request)</span><br></pre></td></tr></table></figure>
+
+<p>获取随机的User-Agent(第三方包)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> fake_useragent <span class="keyword">import</span> UserAgent</span><br><span class="line">    print(UserAgent().chrome)</span><br><span class="line">    print(UserAgent().ie)</span><br><span class="line">    print(UserAgent().firefox)</span><br><span class="line">    print(UserAgent().opera)</span><br><span class="line">    print(UserAgent().safari)</span><br><span class="line">    print(UserAgent().random)</span><br></pre></td></tr></table></figure>
+
+<h5 id="Handler"><a href="#Handler" class="headerlink" title="Handler"></a>Handler</h5><p>对urlopen进行扩展</p>
+<p>urlopen源码如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">global</span> _opener</span><br><span class="line"><span class="keyword">if</span> cafile <span class="keyword">or</span> capath <span class="keyword">or</span> cadefault:</span><br><span class="line">    <span class="keyword">import</span> warnings</span><br><span class="line">    warnings.warn(<span class="string">"cafile, capath and cadefault are deprecated, use a "</span></span><br><span class="line">                  <span class="string">"custom context instead."</span>, DeprecationWarning, <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">if</span> context <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(</span><br><span class="line">            <span class="string">"You can't pass both context and any of cafile, capath, and "</span></span><br><span class="line">            <span class="string">"cadefault"</span></span><br><span class="line">        )</span><br><span class="line">  <span class="comment"># 安全套阶层，第三方CA数字证书</span></span><br><span class="line">	<span class="keyword">if</span> <span class="keyword">not</span> _have_ssl:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">'SSL support not available'</span>)</span><br><span class="line">    context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH,</span><br><span class="line">                                         cafile=cafile,</span><br><span class="line">                                         capath=capath)</span><br><span class="line">    <span class="comment"># 默认用HTTPSHandler，可以用别的Handler来实现功能扩展</span></span><br><span class="line">    https_handler = HTTPSHandler(context=context)</span><br><span class="line">    opener = build_opener(https_handler)</span><br><span class="line"><span class="keyword">elif</span> context:</span><br><span class="line">    https_handler = HTTPSHandler(context=context)</span><br><span class="line">    opener = build_opener(https_handler)</span><br><span class="line"><span class="keyword">elif</span> _opener <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">    _opener = opener = build_opener()</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    opener = _opener</span><br><span class="line"><span class="keyword">return</span> opener.open(url, data, timeout)</span><br></pre></td></tr></table></figure>
+
+<h6 id="HTTPHandler演示"><a href="#HTTPHandler演示" class="headerlink" title="HTTPHandler演示"></a>HTTPHandler演示</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">"https://www.baidu.com/"</span></span><br><span class="line">header = &#123;</span><br><span class="line">    <span class="comment"># 浏览器版本</span></span><br><span class="line">    <span class="string">"User-Agent"</span>: UserAgent().random</span><br><span class="line">&#125;</span><br><span class="line">request = urllib.request.Request(url, headers=header)</span><br><span class="line">handler = urllib.request.HTTPHandler()</span><br><span class="line">opener = urllib.request.build_opener(handler)</span><br><span class="line">response = opener.open(request)</span><br><span class="line">data = response.read().decode(<span class="string">"utf-8"</span>)</span><br></pre></td></tr></table></figure>
+
+<h6 id="ProxyHandler"><a href="#ProxyHandler" class="headerlink" title="ProxyHandler"></a>ProxyHandler</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">from</span> fake_useragent <span class="keyword">import</span> UserAgent</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_proxy_handler</span><span class="params">()</span>:</span></span><br><span class="line">    url = <span class="string">"https://blog.csdn.net/willsnowdev/article/details/90140266"</span></span><br><span class="line">    header = &#123;</span><br><span class="line">        <span class="comment"># 浏览器版本</span></span><br><span class="line">        <span class="string">"User-Agent"</span>: UserAgent().random</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># 可以用多个IP，到时候随机选取</span></span><br><span class="line">    <span class="comment"># "http": "163.204.247.20:9999"也可</span></span><br><span class="line">    proxy = &#123;</span><br><span class="line">        <span class="string">"http"</span>: <span class="string">"http://163.204.247.20:9999"</span></span><br><span class="line">    &#125;</span><br><span class="line">    request = urllib.request.Request(url, headers=header)</span><br><span class="line">    proxy_handler = urllib.request.ProxyHandler(proxy)</span><br><span class="line">    opener = urllib.request.build_opener(proxy_handler)</span><br><span class="line">    response = opener.open(request)</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"requset_header.html"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(response.read().decode())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">create_proxy_handler()</span><br></pre></td></tr></table></figure>
+
+<p>多个免费代理</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">proxy_list = [</span><br><span class="line">        &#123;<span class="string">"https"</span>:<span class="string">"106.75.226.36:808"</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"https"</span>:<span class="string">"61.135.217.7:80"</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"https"</span>:<span class="string">"125.70.13.77:8080"</span>&#125;,</span><br><span class="line">        &#123;<span class="string">"https"</span>:<span class="string">"118.190.95.35:9001"</span>&#125;</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+
+<p>付费代理</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一种方式</span></span><br><span class="line">proxy = &#123;</span><br><span class="line">    <span class="string">"http"</span>: <span class="string">"username:pwd@163.204.247.20:9999"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 第二种方式</span></span><br><span class="line">username = <span class="string">"xunzhao"</span></span><br><span class="line">pwd = <span class="string">"173hjgew8"</span></span><br><span class="line">money_proxy1 = <span class="string">"163.204.247.20:9999"</span></span><br><span class="line"><span class="comment"># 创建密码管理器</span></span><br><span class="line">password_manger = urllib.request.HTTPPasswordMgr()</span><br><span class="line">password_manger.add_password(<span class="literal">None</span>, money_proxy1, username, pwd)</span><br><span class="line">handle_auth = urllib.request.ProxyBasicAuthHandler(password_manger)</span><br><span class="line">opener_auth = urllib.request.build_opener(handle_auth)</span><br><span class="line">response = opener_auth.open(url)</span><br></pre></td></tr></table></figure>
+
+<p>用公司内网爬数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">auth_nei_wang</span><span class="params">()</span>:</span></span><br><span class="line">    nei_url = <span class="string">"https://www.jianshu.com/p/325bdc0ae92f"</span></span><br><span class="line">    header = &#123;</span><br><span class="line">        <span class="string">"User-Agent"</span>: UserAgent().random</span><br><span class="line">    &#125;</span><br><span class="line">    username = <span class="string">"admin"</span></span><br><span class="line">    pwd = <span class="string">"admin007"</span></span><br><span class="line">    password_manger = urllib.request.HTTPPasswordMgrWithDefaultRealm()</span><br><span class="line">    password_manger.add_password(<span class="literal">None</span>, nei_url, username, pwd)</span><br><span class="line">    <span class="comment"># handle不同，其他和付费代理很像</span></span><br><span class="line">    handle_nei = urllib.request.HTTPBasicAuthHandler(password_manger)</span><br><span class="line">    opener_nei = urllib.request.build_opener(handle_nei)</span><br><span class="line">    response = opener_nei.open(nei_url)</span><br><span class="line">    print(response.read().decode(<span class="string">"utf-8"</span>))</span><br></pre></td></tr></table></figure>
+
+<h5 id="cookie认证"><a href="#cookie认证" class="headerlink" title="cookie认证"></a>cookie认证</h5><p>手动获取cookie，添加到header中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">header = &#123;</span><br><span class="line">    <span class="string">"User-Agent"</span>: UserAgent().random,</span><br><span class="line">    <span class="string">"Cookie"</span>: <span class="string">"__yadk_uid=e2gl8vcNK8DLVH2eQd6vHpvH1QvuStkO; web_login_version=MTU4MDA5MDc3OQ%3D%3D--366eb244926d0d504aa444afc85df5e80948cee6; remember_user_token=W1syMTAxNzY3NV0sIiQyYSQxMSRUVGNQenhyZjFtMzdiN3Mxc0xzT25lIiwiMTU4MDQ2MzkzNy42MjQ5NjA0Il0%3D--2fd8938f7291d2405e0c23b0f267c631fad3fd9b; read_mode=day; default_font=font2; locale=zh-CN; _m7e_session_core=ad86ea9fddf5bd5d6969bc414a322298; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%2221017675%22%2C%22%24device_id%22%3A%2216bea6ca2e9365-067bb910973608-e343166-1049088-16bea6ca2ea5c2%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E8%87%AA%E7%84%B6%E6%90%9C%E7%B4%A2%E6%B5%81%E9%87%8F%22%2C%22%24latest_referrer%22%3A%22https%3A%2F%2Fwww.baidu.com%2Fs%22%2C%22%24latest_search_keyword%22%3A%22%E7%AE%80%E4%B9%A6%22%2C%22%24latest_utm_source%22%3A%22desktop%22%2C%22%24latest_utm_medium%22%3A%22not-signed-in-like-note-btn-in-bottom%22%2C%22%24latest_referrer_host%22%3A%22www.baidu.com%22%7D%2C%22first_id%22%3A%2216bea6ca2e9365-067bb910973608-e343166-1049088-16bea6ca2ea5c2%22%7D; Hm_lvt_0c0e9d9b1e7d617b3e6842e85b9fb068=1580090858,1580277385,1580463938,1580466286; Hm_lpvt_0c0e9d9b1e7d617b3e6842e85b9fb068=1580466310"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>自动获取，用cookiejar来保存cookie</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">获取 个人中心的页面</span><br><span class="line"></span><br><span class="line">1. 代码登录  登录成功 cookie(有效)</span><br><span class="line">2. 自动带着cookie 去请求个人中心</span><br><span class="line"></span><br><span class="line">cookiejar 自动保存这个cookie</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">header = &#123;</span><br><span class="line">        <span class="string">"User-Agent"</span>: UserAgent().random,</span><br><span class="line">    &#125;</span><br><span class="line">    url = <span class="string">'https://www.yaozh.com/login'</span></span><br><span class="line">    <span class="comment"># 1.2 登录的参数</span></span><br><span class="line">    login_form_data = &#123;</span><br><span class="line">        <span class="string">"username"</span>: <span class="string">"xiaomaoera12"</span>,</span><br><span class="line">        <span class="string">"pwd"</span>: <span class="string">"lina081012"</span>,</span><br><span class="line">        <span class="string">"formhash"</span>: <span class="string">"CE3ADF28C5"</span>,</span><br><span class="line">        <span class="string">"backurl"</span>: <span class="string">"https%3A%2F%2Fwww.yaozh.com%2F"</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    login_form_data_str = urllib.parse.urlencode(login_form_data).encode(<span class="string">"utf-8"</span>)</span><br><span class="line">    cookie_jar = cookiejar.CookieJar()</span><br><span class="line">    cookie_handle = urllib.request.HTTPCookieProcessor(cookie_jar)</span><br><span class="line">    cookie_opener = urllib.request.build_opener(cookie_handle)</span><br><span class="line">    requset = urllib.request.Request(url, headers=header, data=login_form_data_str)</span><br><span class="line">    cookie_opener.open(requset)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 2. 代码带着cooke去访问 个人中心</span></span><br><span class="line">    center_url = <span class="string">'https://www.yaozh.com/member/'</span></span><br><span class="line">    center_request = urllib.request.Request(center_url, headers=header)</span><br><span class="line">    response = cookie_opener.open(center_url)</span><br><span class="line">    data = response.read().decode(<span class="string">"utf-8"</span>)</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">"jianshu.html"</span>, <span class="string">"w"</span>, encoding=<span class="string">"utf-8"</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data)</span><br></pre></td></tr></table></figure>
+
+<h6 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h6><p>cookiejar原理和urlencode中safe=string.printable作用</p>
+<h5 id="常见报错"><a href="#常见报错" class="headerlink" title="常见报错"></a>常见报错</h5><h6 id="URLError"><a href="#URLError" class="headerlink" title="URLError"></a>URLError</h6><p>url不存在</p>
+<h6 id="HTTPError"><a href="#HTTPError" class="headerlink" title="HTTPError"></a>HTTPError</h6><p>4××，5××，可通过catch到error后，error.code来打印状态码</p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/python3(urlib.request).png" alt></p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/handler%E5%A4%84%E7%90%86%E5%99%A8%E8%87%AA%E5%AE%9A%E4%B9%89.png" alt></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/爬虫/" rel="tag"># 爬虫</a>
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/31/前端/前端基础/" rel="prev" title="前端基础">
+      <i class="fa fa-chevron-left"></i> 前端基础
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/31/python/爬虫踩得坑/" rel="next" title="爬虫踩得坑">
+      爬虫踩得坑 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP"><span class="nav-number">1.</span> <span class="nav-text">HTTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#爬虫入门"><span class="nav-number">2.</span> <span class="nav-text">爬虫入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#爬虫简介"><span class="nav-number">2.1.</span> <span class="nav-text">爬虫简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#urllib-request"><span class="nav-number">2.2.</span> <span class="nav-text">urllib.request</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Handler"><span class="nav-number">2.2.1.</span> <span class="nav-text">Handler</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#HTTPHandler演示"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">HTTPHandler演示</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#ProxyHandler"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">ProxyHandler</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cookie认证"><span class="nav-number">2.2.2.</span> <span class="nav-text">cookie认证</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#疑问"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">疑问</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常见报错"><span class="nav-number">2.2.3.</span> <span class="nav-text">常见报错</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#URLError"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">URLError</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#HTTPError"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">HTTPError</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结"><span class="nav-number">2.3.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">grandwarm</p>
+  <div class="site-description" itemprop="description">这些年编程路上踩得坑</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">grandwarm</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

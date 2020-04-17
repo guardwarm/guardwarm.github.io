@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="正则表达式概述正则表达式（regular expression，简称regex）：是一些用来匹配和处理文本的字符串 正则表达式通常被简称为模式，其实是一些由字符构成的字符串 这些字符可以是普通字符（纯文本）或元字符（有特殊含义的特殊字符） 在线测试网站 字符范围匹配">
+<meta name="keywords" content="正则表达式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://yoursite.com/2019/09/18/工具/正则表达式/index.html">
+<meta property="og:site_name" content="guard warm">
+<meta property="og:description" content="正则表达式概述正则表达式（regular expression，简称regex）：是一些用来匹配和处理文本的字符串 正则表达式通常被简称为模式，其实是一些由字符构成的字符串 这些字符可以是普通字符（纯文本）或元字符（有特殊含义的特殊字符） 在线测试网站 字符范围匹配">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091526-141326.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091622-154755.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091655-33652.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091744-831223.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328092139-373491.png">
+<meta property="og:updated_time" content="2020-03-28T01:41:25.947Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="正则表达式概述正则表达式（regular expression，简称regex）：是一些用来匹配和处理文本的字符串 正则表达式通常被简称为模式，其实是一些由字符构成的字符串 这些字符可以是普通字符（纯文本）或元字符（有特殊含义的特殊字符） 在线测试网站 字符范围匹配">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091526-141326.png">
+
+<link rel="canonical" href="http://yoursite.com/2019/09/18/工具/正则表达式/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>正则表达式 | guard warm</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">guard warm</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">编程学习之路</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/18/工具/正则表达式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="grandwarm">
+      <meta itemprop="description" content="这些年编程路上踩得坑">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="guard warm">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          正则表达式
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-17 22:47:12" itemprop="dateCreated datePublished" datetime="2019-09-17T22:47:12Z">2019-09-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-28 01:41:25" itemprop="dateModified" datetime="2020-03-28T01:41:25Z">2020-03-28</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>正则表达式（regular expression，简称regex）：是一些用来匹配和处理文本的字符串</p>
+<p>正则表达式通常被简称为模式，其实是一些由字符构成的字符串</p>
+<p>这些字符可以是普通字符（纯文本）或元字符（有特殊含义的特殊字符）</p>
+<p><a href="https://tool.oschina.net/regex" target="_blank" rel="noopener">在线测试网站</a></p>
+<h2 id="字符范围匹配"><a href="#字符范围匹配" class="headerlink" title="字符范围匹配"></a>字符范围匹配</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091526-141326.png" alt="image-20200328091523680"></p>
+<a id="more"></a>
+
+<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091622-154755.png" alt="image-20200328091621116"></p>
+<p>[\b]    回退（删除）一个字符</p>
+<p>\f    换页符</p>
+<p>\n    换行符</p>
+<p>\r    回车符</p>
+<p>\t    制表符（tab）</p>
+<p>\v    垂直制表符</p>
+<p>\s    任何一个空白字符    [\f\n\r\t\v]</p>
+<p>\S    任何一个非空白字符</p>
+<p>\x    十六进制</p>
+<p>\0    八进制</p>
+<h2 id="多次重复匹配"><a href="#多次重复匹配" class="headerlink" title="多次重复匹配"></a>多次重复匹配</h2><p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091655-33652.png" alt="image-20200328091654061"></p>
+<h2 id="定位匹配"><a href="#定位匹配" class="headerlink" title="定位匹配"></a>定位匹配</h2><p>将字符串作为一个整体</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328091744-831223.png" alt="image-20200328091743323"></p>
+<p>\b    用来匹配单词的开始或结束（\w与非\w之间）    只匹配一个位置，而不匹配任何字符</p>
+<p>\B    匹配一个前后都不是单词边界</p>
+<p>\&lt;    单词开始    \&gt;    单词结束</p>
+<p>(?m)    分行匹配模式，必须写在模式最前面</p>
+<h2 id="非贪婪模式"><a href="#非贪婪模式" class="headerlink" title="非贪婪模式"></a>非贪婪模式</h2><p>默认为贪婪模式，尽可能多的匹配</p>
+<p>模式后面加个？转换为非贪婪</p>
+<h2 id="表达式分组"><a href="#表达式分组" class="headerlink" title="表达式分组"></a>表达式分组</h2><p>可读性更高</p>
+<p>在java中可通过group方法来分别获取一个个分组</p>
+<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200328092139-373491.png" alt="image-20200328092137819"></p>
+<h2 id="POSIX字符串"><a href="#POSIX字符串" class="headerlink" title="POSIX字符串"></a>POSIX字符串</h2><p>[[:alnum:]]                 数字字符</p>
+<p>[[:alpha:]]                  字母字符</p>
+<p>[[:lower:]]                  小写字母字符</p>
+<p>[[:print:]]                    可显示的字符</p>
+<p>[[:blank:]]                   空格(space)与定位字符</p>
+<p>[[:punct:]]                   除[[:cntrl:]]和[[:alnum:]]外</p>
+<p>[[:cntrl:]]                     ASCII控制字符(0-31和127)</p>
+<p>[[:space:]]                   空白(whitespace)字符</p>
+<p>[[:upper:]]                   大写字母字符</p>
+<p>[[:digit:]]                      数字字符</p>
+<p>[[:graph:]]                   非空格(nonspace)字符</p>
+<p>[[:xdigit:]]                    十六进制数字字符</p>
+<h2 id="回溯引用"><a href="#回溯引用" class="headerlink" title="回溯引用"></a>回溯引用</h2><p>前后一致匹配</p>
+<p>\n    匹配前面第n个子表达式</p>
+<p>$n    替换时使用，匹配上一条查询中的第n个子表达式匹配到的内容</p>
+<ul>
+<li>大小写转换（替换时使用）</li>
+</ul>
+<p>\E    结束\L或\U转换</p>
+<p>\I    把下一个字符转换为小写</p>
+<p>\L    把后面的字符转换为小写</p>
+<p>\u    把下一个字符转换为大写</p>
+<p>\U    把后面的字符转换为大写</p>
+<h2 id="前后查找"><a href="#前后查找" class="headerlink" title="前后查找"></a>前后查找</h2><p>都是只匹配但不消费</p>
+<p>(?=字符)    正向前查找，匹配到指定字符，停止匹配</p>
+<p>(?!字符)    正向前查找，匹配到不是指定字符的，停止匹配</p>
+<p>(?&lt;=字符)    正向后查找，匹配到指定字符，停止匹配</p>
+<p>(&lt;=字符)    负向后查找，匹配到不是指定字符，停止匹配</p>
+<h2 id="嵌入条件"><a href="#嵌入条件" class="headerlink" title="嵌入条件"></a>嵌入条件</h2><p>(?(n)regex)    如果前一个子表达式匹配到了则执行该正则</p>
+<p>(?(前后查找)regex)    如果前后查找成功了则执行该正则</p>
+<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><ol>
+<li>创建<ol>
+<li>var reg = new RegExp(“正则表达式”);</li>
+<li>var reg = /正则表达式/;</li>
+</ol>
+</li>
+<li>方法    <ol>
+<li>test(参数):验证指定的字符串是否符合正则定义的规范    </li>
+</ol>
+</li>
+</ol>
+<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>​    <code>Pattern p = Pattern.compile(&quot;&lt;li&gt;([\\u4e00-\\u9fa5]{2,10})([a-zA-Z]+)&lt;/li&gt;&quot;);</code></p>
+<h2 id="匹配"><a href="#匹配" class="headerlink" title="匹配"></a>匹配</h2><p>​    <code>Matcher m = p.matcher(content);</code></p>
+<h2 id="查找匹配结果"><a href="#查找匹配结果" class="headerlink" title="查找匹配结果"></a>查找匹配结果</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(m.find()) &#123;</span><br><span class="line">    <span class="comment">// group(0)匹配整个正则</span></span><br><span class="line">	System.out.println(m.group(<span class="number">0</span>));</span><br><span class="line">    <span class="comment">// 1，2，...按分组匹配</span></span><br><span class="line">	String chs = m.group(<span class="number">1</span>);</span><br><span class="line">	String eng = m.group(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/正则表达式/" rel="tag"># 正则表达式</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/09/05/工具/git使用/" rel="prev" title="git使用">
+      <i class="fa fa-chevron-left"></i> git使用
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/09/21/heima57/MySQL/" rel="next" title="MySQL">
+      MySQL <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#正则表达式"><span class="nav-number">1.</span> <span class="nav-text">正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符范围匹配"><span class="nav-number">1.2.</span> <span class="nav-text">字符范围匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元字符"><span class="nav-number">1.3.</span> <span class="nav-text">元字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多次重复匹配"><span class="nav-number">1.4.</span> <span class="nav-text">多次重复匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定位匹配"><span class="nav-number">1.5.</span> <span class="nav-text">定位匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非贪婪模式"><span class="nav-number">1.6.</span> <span class="nav-text">非贪婪模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表达式分组"><span class="nav-number">1.7.</span> <span class="nav-text">表达式分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POSIX字符串"><span class="nav-number">1.8.</span> <span class="nav-text">POSIX字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回溯引用"><span class="nav-number">1.9.</span> <span class="nav-text">回溯引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前后查找"><span class="nav-number">1.10.</span> <span class="nav-text">前后查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#嵌入条件"><span class="nav-number">1.11.</span> <span class="nav-text">嵌入条件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript"><span class="nav-number">2.</span> <span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java"><span class="nav-number">3.</span> <span class="nav-text">Java</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建"><span class="nav-number">3.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匹配"><span class="nav-number">3.2.</span> <span class="nav-text">匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找匹配结果"><span class="nav-number">3.3.</span> <span class="nav-text">查找匹配结果</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">grandwarm</p>
+  <div class="site-description" itemprop="description">这些年编程路上踩得坑</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">grandwarm</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
