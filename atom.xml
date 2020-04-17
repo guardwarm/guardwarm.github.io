@@ -464,9 +464,9 @@
     </summary>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
@@ -488,9 +488,9 @@
       <category term="python爬虫" scheme="http://yoursite.com/categories/python%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
