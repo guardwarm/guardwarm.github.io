@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="概述操作系统 linux选择特点：安全，免费稳定，可靠，多平台 发行版选择：生命周期，软件包更新   远程连接SecureCRT XShellftp方式FlashFXPlinux配置ftp  lrzszyum install lrzsz 有些慢 CRT中设置上传和下载文件夹  rz    上传  sz 文件名  sftpCRT中内置的，用alt+p打开 下载  上传">
+<meta name="keywords" content="linux,运维">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos">
+<meta property="og:url" content="http://yoursite.com/2020/04/18/centos/index.html">
+<meta property="og:site_name" content="guard warm">
+<meta property="og:description" content="概述操作系统 linux选择特点：安全，免费稳定，可靠，多平台 发行版选择：生命周期，软件包更新   远程连接SecureCRT XShellftp方式FlashFXPlinux配置ftp  lrzszyum install lrzsz 有些慢 CRT中设置上传和下载文件夹  rz    上传  sz 文件名  sftpCRT中内置的，用alt+p打开 下载  上传">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404194640-362215.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404194859-155070.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404194925-825518.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212135226.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404205158-991725.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212210718.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212211311.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212212728.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212212630.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212212653.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404205241-643520.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404205357-913033.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404205412-15136.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212183944.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212184747.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212170004.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404225300-386276.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404225318-521550.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404225429-245391.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404225553-969974.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404225616-736442.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404230832-325800.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404230012-312570.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404211133-606703.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212182638.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404232807-846695.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404232847-671756.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404232930-318078.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404232652-465972.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212213110.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212213816.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212214224.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200214102353.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200214102847.png">
+<meta property="og:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200405082058-873078.png">
+<meta property="og:updated_time" content="2020-04-18T01:40:39.579Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="centos">
+<meta name="twitter:description" content="概述操作系统 linux选择特点：安全，免费稳定，可靠，多平台 发行版选择：生命周期，软件包更新   远程连接SecureCRT XShellftp方式FlashFXPlinux配置ftp  lrzszyum install lrzsz 有些慢 CRT中设置上传和下载文件夹  rz    上传  sz 文件名  sftpCRT中内置的，用alt+p打开 下载  上传">
+<meta name="twitter:image" content="http://yoursite.com/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404194640-362215.png">
+
+<link rel="canonical" href="http://yoursite.com/2020/04/18/centos/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>centos | guard warm</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">guard warm</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">编程学习之路</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404.html" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/18/centos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Author">
+      <meta itemprop="description" content="这些年编程路上踩得坑">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="guard warm">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          centos
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-18 09:38:20 / 修改时间：01:40:39" itemprop="dateCreated datePublished" datetime="2020-04-18T09:38:20Z">2020-04-18</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2020/04/18/centos/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/18/centos/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404194640-362215.png" alt="image-20200404194639197"></p>
+<h2 id="linux选择"><a href="#linux选择" class="headerlink" title="linux选择"></a>linux选择</h2><p>特点：安全，免费稳定，可靠，多平台</p>
+<p>发行版选择：生命周期，软件包更新</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404194859-155070.png" alt="image-20200404194859435"></p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404194925-825518.png" alt="image-20200404194924288"></p>
+<h1 id="远程连接"><a href="#远程连接" class="headerlink" title="远程连接"></a>远程连接</h1><h2 id="SecureCRT"><a href="#SecureCRT" class="headerlink" title="SecureCRT"></a>SecureCRT</h2><p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212135226.png" alt></p>
+<h2 id="XShell"><a href="#XShell" class="headerlink" title="XShell"></a>XShell</h2><h1 id="ftp方式"><a href="#ftp方式" class="headerlink" title="ftp方式"></a>ftp方式</h1><h2 id="FlashFXP"><a href="#FlashFXP" class="headerlink" title="FlashFXP"></a>FlashFXP</h2><p><a href="https://blog.csdn.net/qq_29150765/article/details/87860388" target="_blank" rel="noopener">linux配置ftp</a></p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404205158-991725.png" alt="image-20200404205157274"></p>
+<h2 id="lrzsz"><a href="#lrzsz" class="headerlink" title="lrzsz"></a>lrzsz</h2><p><code>yum install lrzsz</code></p>
+<p>有些慢</p>
+<p>CRT中设置上传和下载文件夹</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212210718.png" alt></p>
+<p>rz    上传</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212211311.png" alt></p>
+<p>sz 文件名</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212212728.png" alt></p>
+<h2 id="sftp"><a href="#sftp" class="headerlink" title="sftp"></a>sftp</h2><p>CRT中内置的，用alt+p打开</p>
+<p><strong>下载</strong></p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212212630.png" alt></p>
+<p><strong>上传</strong>                传到电脑文档目录下</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212212653.png" alt></p>
+<a id="more"></a>
+
+<h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404205241-643520.png" alt="image-20200404205240172"></p>
+<h1 id="分区及目录挂载"><a href="#分区及目录挂载" class="headerlink" title="分区及目录挂载"></a>分区及目录挂载</h1><p>这样挂掉只需处理那一部分即可</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404205357-913033.png" alt="image-20200404205356464"></p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404205412-15136.png" alt="image-20200404205410984"></p>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="辅助"><a href="#辅助" class="headerlink" title="辅助"></a>辅助</h2><table>
+<thead>
+<tr>
+<th>帮助</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>help</td>
+<td><code>命令 --help</code></td>
+</tr>
+<tr>
+<td>man</td>
+<td><code>man 命令</code></td>
+</tr>
+<tr>
+<td><strong>开关机</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>shotdown -h now</td>
+<td>关机</td>
+</tr>
+<tr>
+<td>showdown -r now</td>
+<td>重启</td>
+</tr>
+<tr>
+<td>reboot</td>
+<td>重启</td>
+</tr>
+<tr>
+<td><strong>重定向</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td><code>ifconfig &gt; a.txt</code>     覆盖</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td><code>ifconfig &gt;&gt; a.txt</code>      追加</td>
+</tr>
+<tr>
+<td><strong>系统进程</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>ps -ef</td>
+<td>动态查看当前系统</td>
+</tr>
+<tr>
+<td>kill -9 进程号</td>
+<td>强制杀死进程</td>
+</tr>
+<tr>
+<td><strong>管道</strong></td>
+<td>将两个命令连接起来</td>
+</tr>
+<tr>
+<td></td>
+<td>左侧的输出作为右侧的输入</td>
+</tr>
+</tbody></table>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="主机名"><a href="#主机名" class="headerlink" title="主机名"></a>主机名</h3><p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212183944.png" alt></p>
+<table>
+<thead>
+<tr>
+<th>hostname</th>
+<th>查看当前主机名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hostname ×××</td>
+<td>临时修改主机名，重启后失效</td>
+</tr>
+<tr>
+<td>vim /etc/sysconfig/network</td>
+<td>修改配置文件，永久生效</td>
+</tr>
+</tbody></table>
+<h3 id="修改ip"><a href="#修改ip" class="headerlink" title="修改ip"></a>修改ip</h3><table>
+<thead>
+<tr>
+<th>ifconfig</th>
+<th>查看当前网络状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ifconfig eth0 ip</td>
+<td>临时修改</td>
+</tr>
+<tr>
+<td>vim /etc/sysconfig/network-scripts/ifcfg-eth0</td>
+<td>永久修改</td>
+</tr>
+</tbody></table>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212184747.png" alt></p>
+<h3 id="域名映射"><a href="#域名映射" class="headerlink" title="域名映射"></a>域名映射</h3><p><code>/etc/hosts</code>            相当于windows下的hosts文件</p>
+<h3 id="网络服务"><a href="#网络服务" class="headerlink" title="网络服务"></a>网络服务</h3><table>
+<thead>
+<tr>
+<th>网络服务</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>systemctl network start/restart/stop/status</td>
+<td>开启/重启/停止/状态</td>
+</tr>
+<tr>
+<td>systemctl –status-all</td>
+<td>查看系统中所有后台服务</td>
+</tr>
+<tr>
+<td>netstat -nltp</td>
+<td>网络进程的端口监听情况</td>
+</tr>
+<tr>
+<td><strong>防火墙</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>systemctl start/restart/stop firewalld.service</td>
+<td>开启/重启/关闭防火墙</td>
+</tr>
+<tr>
+<td>chkconfig iptables off</td>
+<td>禁止防火墙自启</td>
+</tr>
+<tr>
+<td>firewall-cmd –state</td>
+<td>防火墙状态</td>
+</tr>
+<tr>
+<td><strong>端口</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>firewall-cmd –zone=public –add-port=5672/tcp –permanent</td>
+<td>永久在全局开放5672端口</td>
+</tr>
+<tr>
+<td>firewall-cmd –zone=public –remove-port=5672/tcp –permanent</td>
+<td>永久在全局关闭5672端口</td>
+</tr>
+<tr>
+<td>firewall-cmd –reload</td>
+<td>重启防火墙，使修改生效</td>
+</tr>
+<tr>
+<td>firewall-cmd –zone=public –list-ports</td>
+<td>查看所有开放的端口</td>
+</tr>
+</tbody></table>
+<h2 id="文件和目录管理"><a href="#文件和目录管理" class="headerlink" title="文件和目录管理"></a>文件和目录管理</h2><p><strong>绝对路径与相对路径</strong>：区别在于是否从根目录开始，本地绝对路径更稳定，服务器端用相对路径</p>
+<h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a><strong>cd</strong></h3><p><code>cd 路径</code>   . 当前目录 .. 上级目录</p>
+<p>什么都不加默认跳转到当前用户根目录下</p>
+<p>只能跳转到目录，不可以跳转到文件，会报错</p>
+<p>使用<code>tab</code>来补全目录</p>
+<h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><p>打印当前目录</p>
+<h3 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h3><p>清屏</p>
+<h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>创建文件</p>
+<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><p>-m   指定文件权限，不常用<br>-p    创建一串级联目录，已存在时不报错 </p>
+<h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a><strong>ls</strong></h3><table>
+<thead>
+<tr>
+<th>ls</th>
+<th>查看当前目录下文件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-a</td>
+<td>所有，包括隐藏文件</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>详细信息( <code>ll = ls -l</code> )</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>查看指定目录属性</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>人性化显示大小</td>
+</tr>
+</tbody></table>
+<p>-a    所有，包括隐藏文件</p>
+<p>-l    详细信息<br>-d    查看指定目录属性<br>-h    人性化显示大小</p>
+<p>ll=ls -l</p>
+<h3 id="rmdir"><a href="#rmdir" class="headerlink" title="rmdir"></a><strong>rmdir</strong></h3><p>不常用，仅用于删除空目录</p>
+<p>-p    级联删除，如果目录非空时报错</p>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p>-r    删除目录时必须加<br>-f    强制删除，不再询问是否删除</p>
+<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><table>
+<thead>
+<tr>
+<th>cp</th>
+<th>cp 【选项】 【源文件】 【目标文件】</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-r</td>
+<td>复制目录时加</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>安全选项，覆盖时会询问，默认alise cp=“cp -i”</td>
+</tr>
+</tbody></table>
+<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><p>在同级目录下可以实现重命名</p>
+<table>
+<thead>
+<tr>
+<th>mv</th>
+<th>mv 【选项】 【源文件或目录】 【目标文件或目录】</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>目标文件是目录</td>
+<td>若存在，则将源文件或目录移动到目标目录下</td>
+</tr>
+<tr>
+<td></td>
+<td>若不存在，则将原目录重命名为给定文件名</td>
+</tr>
+<tr>
+<td>目标文件是文件</td>
+<td>若存在，则询问是否覆盖</td>
+</tr>
+<tr>
+<td></td>
+<td>若不存在，则将源文件重命名为给定的目标文件</td>
+</tr>
+</tbody></table>
+<h3 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h3><table>
+<thead>
+<tr>
+<th>-c</th>
+<th>创建一个新tar文件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-x</td>
+<td>解开tar文件</td>
+</tr>
+<tr>
+<td>-z</td>
+<td>调用gzip压缩</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>显示压缩过程</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>指定文件名</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>查看压缩文件内容</td>
+</tr>
+</tbody></table>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212170004.png" alt></p>
+<table>
+<thead>
+<tr>
+<th>使用示例</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>tar -cvf a.tar ./anaconda-ks.cfg</code></td>
+<td>打成一个tar包</td>
+</tr>
+<tr>
+<td><code>tar -zcvf a.tar.gz ./anaconda-ks.cfg</code></td>
+<td>打包并压缩，后缀名常用tar.gz</td>
+</tr>
+<tr>
+<td><code>tar -zxvf b.tar.gz -C ./cc</code></td>
+<td>加-C ./cc来指定解压目录，不然解压到当前目录</td>
+</tr>
+</tbody></table>
+<h3 id="PATH变量"><a href="#PATH变量" class="headerlink" title="PATH变量"></a><strong>PATH变量</strong></h3><p>一串用：分隔的路径，执行命令时会默认从PATH中找<br>修改:    PATH=$PATH:新路径</p>
+<h2 id="查看文件"><a href="#查看文件" class="headerlink" title="查看文件"></a>查看文件</h2><h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><table>
+<thead>
+<tr>
+<th>cat</th>
+<th>查看少量信息</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-n</td>
+<td>显示行号</td>
+</tr>
+<tr>
+<td>-A</td>
+<td>显示所有内容，包括特殊字符</td>
+</tr>
+</tbody></table>
+<h3 id="tac"><a href="#tac" class="headerlink" title="tac"></a>tac</h3><p>与命令tac一样，倒叙查看</p>
+<h3 id="more"><a href="#more" class="headerlink" title="more"></a>more</h3><table>
+<thead>
+<tr>
+<th>more</th>
+<th>文件内容较多时使用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+D</td>
+<td>向上翻屏</td>
+</tr>
+<tr>
+<td>Ctrl+F</td>
+<td>向下翻屏，同空格</td>
+</tr>
+<tr>
+<td>空格</td>
+<td>向下翻屏</td>
+</tr>
+<tr>
+<td>q/ctrl+c</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>/字符串</td>
+<td>从当前行向下查找字符串，按n定位下一个</td>
+</tr>
+<tr>
+<td>?字符串</td>
+<td>从当前行向上查找字符串，按n定位下一个（可以使用通配符）</td>
+</tr>
+</tbody></table>
+<h3 id="less"><a href="#less" class="headerlink" title="less"></a>less</h3><table>
+<thead>
+<tr>
+<th>less</th>
+<th>对more的争强</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+D</td>
+<td>向上翻屏</td>
+</tr>
+<tr>
+<td>Ctrl+F</td>
+<td>向下翻屏，同空格</td>
+</tr>
+<tr>
+<td>空格</td>
+<td>向下翻屏</td>
+</tr>
+<tr>
+<td>q/ctrl+c</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>/字符串</td>
+<td>从当前行向下查找字符串，按n定位下一个</td>
+</tr>
+<tr>
+<td>?字符串</td>
+<td>从当前行向上查找字符串，按n定位下一个（可以使用通配符）</td>
+</tr>
+<tr>
+<td>J/↑</td>
+<td>向上移动</td>
+</tr>
+<tr>
+<td>k/↓</td>
+<td>向下移动</td>
+</tr>
+</tbody></table>
+<h3 id="head"><a href="#head" class="headerlink" title="head"></a>head</h3><table>
+<thead>
+<tr>
+<th>head</th>
+<th>默认显示文件前十行</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-n 1/-n1/-1</td>
+<td>显示指定行数，三种方式皆可</td>
+</tr>
+</tbody></table>
+<p>-n 1/-n1/-1    显示指定行数，三种方式皆可</p>
+<h3 id="tail"><a href="#tail" class="headerlink" title="tail"></a><strong>tail</strong></h3><table>
+<thead>
+<tr>
+<th>tail</th>
+<th>倒叙查看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-n 1/-n1/-1</td>
+<td>显示指定行数，三种方式皆可</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>动态查看，常用于监视日志文件</td>
+</tr>
+</tbody></table>
+<p>-f 动态查看</p>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><h3 id="which"><a href="#which" class="headerlink" title="which"></a><strong>which</strong></h3><p>查找可执行文件绝对路径<br>which vi</p>
+<h3 id="whereis"><a href="#whereis" class="headerlink" title="whereis"></a><strong>whereis</strong></h3><p>通过预先生成的文件列表库查找<br>whereis 【-bms】 【文件名称】<br>-b    只查找二级制文件<br>-m    只查找帮助文件<br>-s    只查找源代码文件</p>
+<h3 id="locate"><a href="#locate" class="headerlink" title="locate"></a><strong>locate</strong></h3><p>不常用<br>类似于whereis，包含所搜索关键词的目录和文件都会列出，所以不适合精确搜索</p>
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><table>
+<thead>
+<tr>
+<th>find 路径 参数 文件名</th>
+<th>在指定目录下寻找文件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>find / -name “ana*”</td>
+<td>在根目录下按名字查找以ana开头的文件</td>
+</tr>
+<tr>
+<td>find / -user itcast</td>
+<td>用户为itcast</td>
+</tr>
+<tr>
+<td>-atime +n/-n</td>
+<td>访问或执行时间大于或小于n天</td>
+</tr>
+<tr>
+<td>-ctime +n/-n</td>
+<td>写入、更改inode属性的时间大于或小于n天</td>
+</tr>
+<tr>
+<td>-mtime +n/-n</td>
+<td>写入时间大于或小于n天        <strong>用得最多</strong></td>
+</tr>
+</tbody></table>
+<h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><table>
+<thead>
+<tr>
+<th>grep</th>
+<th>在文件中查找字符串</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>grep lang catalina.log --color</code></td>
+<td>在catalina.log中查找lang。并高亮显示</td>
+</tr>
+<tr>
+<td>-An -Bm</td>
+<td>包含向上n行，向下m行</td>
+</tr>
+</tbody></table>
+<h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404225300-386276.png" alt="image-20200404225240184"></p>
+<h2 id="群组管理"><a href="#群组管理" class="headerlink" title="群组管理"></a>群组管理</h2><p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404225318-521550.png" alt="image-20200404225315897"></p>
+<h2 id="角色设置"><a href="#角色设置" class="headerlink" title="角色设置"></a>角色设置</h2><p>-R递归修改目录下的所有文件</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404225429-245391.png" alt="image-20200404225426846"></p>
+<h2 id="权限设置"><a href="#权限设置" class="headerlink" title="权限设置"></a>权限设置</h2><p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404225553-969974.png" alt="image-20200404225551585"></p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404225616-736442.png" alt="image-20200404225615701"></p>
+<h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404230832-325800.png" alt="image-20200404230037045"></p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404230012-312570.png" alt="image-20200404230010714"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 单文件用deflation压缩的包才可以用gzip解压，unzip则方便的多 -d用于指定解压目录</span><br><span class="line">unzip 20131030.zip -d /home/2/</span><br></pre></td></tr></table></figure>
+
+<h1 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h1><ul>
+<li>第一列<br>第一位<pre><code>d    目录
+-    普通文件
+    l    链接文件
+    b    块设备
+    c    串行端口设备文件
+    s    套接字文件，socket</code></pre> 后九位<br> 每三位为一组，分别为user，group，others权限<br> 最后一位<br> 使用了SElinux context为点<br> 设置了acl属性为+号</li>
+<li>第二列<br>该文件占用的节点（inode），有几种访问方式</li>
+<li>第三列<br>所有者</li>
+<li>第四列<br>所属组</li>
+<li>第五列<br>该文件大小    </li>
+<li>第六七八列<br>分别为月日及时间</li>
+<li>第九列<br>文件名</li>
+</ul>
+<p><strong>chgrp</strong>    不常用<br>更改文件所属组<br>chgrp 【组名】 【文件名】<br>-R    级联更改子目录名或文件名</p>
+<p><strong>chown</strong><br>更改文件所有者<br>chown 【-R】 账户名：组名    文件名<br>-R    仅用于目录，作用是级联更改</p>
+<p><strong>chmod</strong><br>更改用户权限，目录默认为755，文件默认为644<br>chmod  750  文件或目录名<br>chmod  u=rwx，og=rw  文件或目录名   u，g，o，a（all）<br>chmod  a-x  文件或目录名</p>
+<p><strong>umask</strong><br>修改文件默认权限<br>umask  xxx    xxx=默认值-所需默认值（文件默认为666，目录默认为777）<br>特例：666-333=444（333代表去了可写和可执行权限，但本来就没有可执行）</p>
+<p><strong>chattr</strong><br>修改文件特殊属性<br>chattr 【+-=】【Asaci】 【文件或目录名】  分别是增加，减少和设定<br><strong><em>存疑：=还不清楚</em></strong><br>-A    文件或目录的atime将不可修改<br>-s    将数据同步写入磁盘<br>-a    只能追加不能删除，非root不可设定该属性（常用）<br>-c    自动压缩文件，读取时自动解压<br>-i    文件不能删除，重命名，设定链接，以及写入数据（常用）</p>
+<p><strong>lsattr  文件或目录名</strong><br>该命令用于读取文件或者目录的特殊权限<br>-a    列出所有文件，包括隐藏文件<br>-R    连同子目录数据列出</p>
+<p><strong>set uid，set gid，sticky bit</strong><br>权限其实共四位，第一位由这三个决定，分别为4,2,1，具体表现在第三位，若为小写则原本有x，大写则无，例如rwsrwsrwt为7777<br>set uid    针对二进制可执行文件，使文件在执行阶段拥有该文件所有者权限    passwd命令<br>set gid    作用在二进制文件上时，同上，作用在目录上时，任何用户在此目录下创建的文件都具有和该目录所属组相同的组<br>sticky bit    设置该权限后，就算用户拥有写权限，也只可以添加而不可删除文件    /tmp/</p>
+<h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1><p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404211133-606703.png" alt="image-20200404211132783"></p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212182638.png" alt></p>
+<p><a href="https://www.runoob.com/linux/linux-vim.html" target="_blank" rel="noopener">菜鸟教程-Vim</a></p>
+<h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><p>h  j  k  l<br>左 下 上 右</p>
+<p>dd 剪切当前行<br>yy 复制<br>p 下一行黏贴  P 上一行黏贴</p>
+<p>a在光标后插入   A在当行末插入<br>i在光标前插入    I在当行首插入<br>o在当前行之下插入 O在上一行插入</p>
+<h2 id="最末行模式"><a href="#最末行模式" class="headerlink" title="最末行模式"></a>最末行模式</h2><p>:set nu 显示行号<br>:w 保存<br>:wq 保存并退出<br>:q! 不保存退出</p>
+<h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><h2 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h2><ol>
+<li><p>二进制发布包</p>
+<p>软件已经针对具体平台编译打包发布，只要解压，修改配置即可        <strong>不通用</strong></p>
+</li>
+<li><p>RPM包</p>
+<p>软件已经按照redhat的包管理工具规范RPM进行打包发布，需要获取到相应的软件RPM发布包，然后用RPM命令进行安装        <strong>没法自动安装依赖</strong>    <strong>红帽系列</strong></p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404232807-846695.png" alt="image-20200404232805607"></p>
+</li>
+<li><p>Yum在线安装</p>
+<p>软件已经以RPM规范打包，但发布在了网络上的一些服务器上，可用yum在线安装服务器上的rpm软件，并且会自动解决软件安装过程中的库依赖问题        <strong>需要联网</strong>    <strong>红帽系列</strong></p>
+<p>可以配置yum源来提高速度</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404232847-671756.png" alt="image-20200404232846611"></p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404232930-318078.png" alt="image-20200404232928938"></p>
+</li>
+<li><p>源码编译安装</p>
+<p>软件以源码工程的形式发布，需要获取到源码工程后用相应开发工具进行编译打包部署       <strong>略麻烦</strong></p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200404232652-465972.png" alt="image-20200404232650744"></p>
+</li>
+</ol>
+<h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><p>判断服务器位数</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212213110.png" alt></p>
+<p>一般在/usr/local目录下安装</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212213816.png" alt></p>
+<p>卸载原jdk</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200212214224.png" alt></p>
+<p>解压压缩包</p>
+<p>配置环境变量</p>
+<p><code>vim /etc/profile</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#set java environment</span><br><span class="line">JAVA_HOME=/opt/jdk1.8.0_241</span><br><span class="line">CLASSPATH=.:$JAVA_HOME/lib.tools.jar</span><br><span class="line">PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line"></span><br><span class="line"># 导入这俩变量</span><br><span class="line">export JAVA_HOME CLASSPATH PATH</span><br></pre></td></tr></table></figure>
+
+<p><code>source /etc/profile</code>            重新加载</p>
+<h2 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h2><p>步骤：百度找最新的吧</p>
+<p>记得完了开放3306端口，不然别处无法访问</p>
+<p><a href="https://blog.csdn.net/weiyangdong/article/details/79540217" target="_blank" rel="noopener">centos7防火墙开放端口</a></p>
+<p>如果购买的云服务器还需修改安全组</p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200214102353.png" alt></p>
+<p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/20200214102847.png" alt></p>
+<h2 id="tomcat安装"><a href="#tomcat安装" class="headerlink" title="tomcat安装"></a>tomcat安装</h2><p>下载压缩文件，解压到指定文件夹</p>
+<p>记得开放端口</p>
+<p>远程试下<code>ip:8080</code>是否可以访问</p>
+<h1 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h1><p><img src="/images/centos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/typora20200405082058-873078.png" alt="image-20200405082051543"></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>坚持技术分享，如有帮助，请多支持！</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/pay/to/wechat.png" alt="Author 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/运维/" rel="tag"># 运维</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/17/nginx/" rel="prev" title="nginx">
+      <i class="fa fa-chevron-left"></i> nginx
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作系统"><span class="nav-number">1.1.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux选择"><span class="nav-number">1.2.</span> <span class="nav-text">linux选择</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#远程连接"><span class="nav-number">2.</span> <span class="nav-text">远程连接</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SecureCRT"><span class="nav-number">2.1.</span> <span class="nav-text">SecureCRT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XShell"><span class="nav-number">2.2.</span> <span class="nav-text">XShell</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ftp方式"><span class="nav-number">3.</span> <span class="nav-text">ftp方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#FlashFXP"><span class="nav-number">3.1.</span> <span class="nav-text">FlashFXP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lrzsz"><span class="nav-number">3.2.</span> <span class="nav-text">lrzsz</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sftp"><span class="nav-number">3.3.</span> <span class="nav-text">sftp</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录结构"><span class="nav-number">4.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分区及目录挂载"><span class="nav-number">5.</span> <span class="nav-text">分区及目录挂载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用命令"><span class="nav-number">6.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#辅助"><span class="nav-number">6.1.</span> <span class="nav-text">辅助</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络"><span class="nav-number">6.2.</span> <span class="nav-text">网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主机名"><span class="nav-number">6.2.1.</span> <span class="nav-text">主机名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改ip"><span class="nav-number">6.2.2.</span> <span class="nav-text">修改ip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#域名映射"><span class="nav-number">6.2.3.</span> <span class="nav-text">域名映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络服务"><span class="nav-number">6.2.4.</span> <span class="nav-text">网络服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件和目录管理"><span class="nav-number">6.3.</span> <span class="nav-text">文件和目录管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cd"><span class="nav-number">6.3.1.</span> <span class="nav-text">cd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pwd"><span class="nav-number">6.3.2.</span> <span class="nav-text">pwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clear"><span class="nav-number">6.3.3.</span> <span class="nav-text">clear</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#touch"><span class="nav-number">6.3.4.</span> <span class="nav-text">touch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir"><span class="nav-number">6.3.5.</span> <span class="nav-text">mkdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ls"><span class="nav-number">6.3.6.</span> <span class="nav-text">ls</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rmdir"><span class="nav-number">6.3.7.</span> <span class="nav-text">rmdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm"><span class="nav-number">6.3.8.</span> <span class="nav-text">rm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp"><span class="nav-number">6.3.9.</span> <span class="nav-text">cp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mv"><span class="nav-number">6.3.10.</span> <span class="nav-text">mv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tar"><span class="nav-number">6.3.11.</span> <span class="nav-text">tar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PATH变量"><span class="nav-number">6.3.12.</span> <span class="nav-text">PATH变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看文件"><span class="nav-number">6.4.</span> <span class="nav-text">查看文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cat"><span class="nav-number">6.4.1.</span> <span class="nav-text">cat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tac"><span class="nav-number">6.4.2.</span> <span class="nav-text">tac</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#more"><span class="nav-number">6.4.3.</span> <span class="nav-text">more</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#less"><span class="nav-number">6.4.4.</span> <span class="nav-text">less</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#head"><span class="nav-number">6.4.5.</span> <span class="nav-text">head</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tail"><span class="nav-number">6.4.6.</span> <span class="nav-text">tail</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找"><span class="nav-number">6.5.</span> <span class="nav-text">查找</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#which"><span class="nav-number">6.5.1.</span> <span class="nav-text">which</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#whereis"><span class="nav-number">6.5.2.</span> <span class="nav-text">whereis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#locate"><span class="nav-number">6.5.3.</span> <span class="nav-text">locate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find"><span class="nav-number">6.5.4.</span> <span class="nav-text">find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grep"><span class="nav-number">6.5.5.</span> <span class="nav-text">grep</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户管理"><span class="nav-number">6.6.</span> <span class="nav-text">用户管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#群组管理"><span class="nav-number">6.7.</span> <span class="nav-text">群组管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#角色设置"><span class="nav-number">6.8.</span> <span class="nav-text">角色设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#权限设置"><span class="nav-number">6.9.</span> <span class="nav-text">权限设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩"><span class="nav-number">6.10.</span> <span class="nav-text">压缩</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件属性"><span class="nav-number">7.</span> <span class="nav-text">文件属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim"><span class="nav-number">8.</span> <span class="nav-text">vim</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#命令模式"><span class="nav-number">8.1.</span> <span class="nav-text">命令模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最末行模式"><span class="nav-number">8.2.</span> <span class="nav-text">最末行模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#软件安装"><span class="nav-number">9.</span> <span class="nav-text">软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装方式"><span class="nav-number">9.1.</span> <span class="nav-text">安装方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装JDK"><span class="nav-number">9.2.</span> <span class="nav-text">安装JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装MySQL"><span class="nav-number">9.3.</span> <span class="nav-text">安装MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tomcat安装"><span class="nav-number">9.4.</span> <span class="nav-text">tomcat安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目部署"><span class="nav-number">10.</span> <span class="nav-text">项目部署</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Author"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Author</p>
+  <div class="site-description" itemprop="description">这些年编程路上踩得坑</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/guardwarm" title="GitHub → https://github.com/guardwarm" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:xunzhaoshouhu@gmail.com" title="E-Mail → mailto:xunzhaoshouhu@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Author</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-guardwarm-github-io-1.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://yoursite.com/2020/04/18/centos/";
+    this.page.identifier = "2020/04/18/centos/";
+    this.page.title = "centos";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-guardwarm-github-io-1.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
