@@ -149,8 +149,8 @@
     <url>%2F2020%2F01%2F31%2Fpython%2F%E7%88%AC%E8%99%AB%E8%B8%A9%E5%BE%97%E5%9D%91%2F</url>
     <content type="text"><![CDATA[百度最近更新，需要过安检默认情况 下先请求一次百度获取这些参数，然后每次请求带上即可 1234567item.Header.Add(&quot;Bdpagetype&quot;, &quot; 3&quot;);//设置请求头信息（Header） item.Header.Add(&quot;Bdqid&quot;, &quot; 0xd30b86920004fb3f&quot;);//设置请求头信息（Header） item.Header.Add(&quot;Cache-Control&quot;, &quot; private&quot;);//设置请求头信息（Header） item.Header.Add(&quot;Ckpacknum&quot;, &quot; 2&quot;);//设置请求头信息（Header） item.Header.Add(&quot;Ckrndstr&quot;, &quot; 20004fb3f&quot;);//设置请求头信息（Header） item.Header.Add(&quot;Strict-Transport-Security&quot;, &quot; max-age=172800&quot;);//设置请求头信息（Header） item.Header.Add(&quot;Traceid&quot;, &quot; 1574759518274850689015207396528370285375&quot;);//设置请求头信息（Header） 抓取简书登录cookie登录发现post需要包含参数 检查页面，发现在这儿，但不知如何取值 authenticity_token应该每个页面动态生成]]></content>
       <tags>
-        <tag>爬虫</tag>
         <tag>python</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
@@ -161,8 +161,8 @@
         <category>python爬虫</category>
       </categories>
       <tags>
-        <tag>爬虫</tag>
         <tag>python</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
