@@ -28,12 +28,12 @@
 <meta property="og:site_name" content="guard warm">
 <meta property="og:description" content="BeanUtils简化数据封装，用于封装JavaBean  JavaBean：标准的Java类 要求： 类必须被public修饰 必须提供空参的构造器 成员变量必须使用private修饰 提供公共setter和getter方法   功能：封装数据   概念： 成员变量： 属性：setter和getter方法截取后的产物 例如：getUsername() –&amp;gt; Username–&amp;gt; us">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200411105957-380091.png">
-<meta property="og:updated_time" content="2020-04-11T03:01:11.022Z">
+<meta property="og:image" content="http://yoursite.com/images/%E5%B7%A5%E5%85%B7%E7%B1%BB/typora20200411105957-380091.png">
+<meta property="og:updated_time" content="2020-04-24T05:03:14.866Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工具类">
 <meta name="twitter:description" content="BeanUtils简化数据封装，用于封装JavaBean  JavaBean：标准的Java类 要求： 类必须被public修饰 必须提供空参的构造器 成员变量必须使用private修饰 提供公共setter和getter方法   功能：封装数据   概念： 成员变量： 属性：setter和getter方法截取后的产物 例如：getUsername() –&amp;gt; Username–&amp;gt; us">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200411105957-380091.png">
+<meta name="twitter:image" content="http://yoursite.com/images/%E5%B7%A5%E5%85%B7%E7%B1%BB/typora20200411105957-380091.png">
 
 <link rel="canonical" href="http://yoursite.com/2020/03/21/工具/工具类/">
 
@@ -230,7 +230,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-11 03:01:11" itemprop="dateModified" datetime="2020-04-11T03:01:11Z">2020-04-11</time>
+                <time title="修改时间：2020-04-24 05:03:14" itemprop="dateModified" datetime="2020-04-24T05:03:14Z">2020-04-24</time>
               </span>
 
           
@@ -288,7 +288,7 @@
 </ol>
 <h1 id="Logback"><a href="#Logback" class="headerlink" title="Logback"></a>Logback</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--输出格式--&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">appender</span> <span class="attr">name</span>=<span class="string">"console"</span> <span class="attr">class</span>=<span class="string">"ch.qos.logback.core.ConsoleAppender"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">encoder</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">pattern</span>&gt;</span>[%thread] %d&#123;HH:mm:ss.SSS&#125; %-5level %logger&#123;36&#125; - %msg%n<span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">encoder</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">appender</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">        日志输出级别(优先级高到低):</span></span><br><span class="line"><span class="comment">        error: 错误 - 系统的故障日志</span></span><br><span class="line"><span class="comment">        warn: 警告 - 存在风险或使用不当的日志</span></span><br><span class="line"><span class="comment">        info: 一般性消息</span></span><br><span class="line"><span class="comment">        de<span class="doctag">bug:</span> 程序内部用于调试信息</span></span><br><span class="line"><span class="comment">        trace: 程序运行的跟踪信息</span></span><br><span class="line"><span class="comment">     --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">root</span> <span class="attr">level</span>=<span class="string">"debug"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">appender-ref</span> <span class="attr">ref</span>=<span class="string">"console"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">root</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://raw.githubusercontent.com/guardwarm/imageBed/master/typora20200411105957-380091.png" alt="image-20200411105957687"></p>
+<p><img src="/images/%E5%B7%A5%E5%85%B7%E7%B1%BB/typora20200411105957-380091.png" alt="image-20200411105957687"></p>
 
     </div>
 
