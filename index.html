@@ -557,7 +557,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-22 12:36:03" itemprop="dateModified" datetime="2020-05-22T12:36:03Z">2020-05-22</time>
+                <time title="修改时间：2020-06-06 09:25:39" itemprop="dateModified" datetime="2020-06-06T09:25:39Z">2020-06-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -596,34 +596,17 @@
       
           <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>解决特定问题的一系列执行步骤</p>
 <p>使用不同算法，解决同一个问题，效率相差可能很大</p>
-<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><p>按排序结果分为升序和降序</p>
-<p><img src="/images/%E7%AE%97%E6%B3%95/image-20200522192134903.png" alt="image-20200522192134903"></p>
+<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h2><p>按排序结果分为升序和降序</p>
+<p><img src="/images/%E7%AE%97%E6%B3%95/image-20200522192134903.png" alt="image-20200603085912173"></p>
 <p><img src="/images/%E7%AE%97%E6%B3%95/image-20200522192305811.png" alt="image-20200522192305811"></p>
-<p><img src="/images/%E7%AE%97%E6%B3%95/image-20200522192421244.png" alt="image-20200522192421244"></p>
-<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><p><img src="/images/%E7%AE%97%E6%B3%95/image-20200522192532043.png" alt="image-20200522192532043"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> end = array.length - <span class="number">1</span>; end &gt; <span class="number">0</span>; end--) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> begin = <span class="number">1</span>; begin &lt;= end; begin++) &#123;</span><br><span class="line">		<span class="comment">// if (array[begin] &lt; array[begin - 1]) &#123;</span></span><br><span class="line">		<span class="keyword">if</span> (cmp(begin, begin - <span class="number">1</span>) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">			swap(begin, begin - <span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>是稳定的原地排序算法</p>
-<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><ul>
-<li>如果序列已完全有序（即遍历一次而没有发生交换），可以提前终止</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> end = array.length - <span class="number">1</span>; end &gt; <span class="number">0</span>; end--) &#123;</span><br><span class="line">	<span class="keyword">boolean</span> sorted = <span class="keyword">true</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> begin = <span class="number">1</span>; begin &lt;= end; begin++) &#123;</span><br><span class="line">		<span class="comment">// if (array[begin] &lt; array[begin - 1]) &#123;</span></span><br><span class="line">		<span class="keyword">if</span> (cmp(begin, begin - <span class="number">1</span>) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">			swap(begin, begin - <span class="number">1</span>);</span><br><span class="line">			sorted = <span class="keyword">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (sorted) <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>如果序列尾部已经局部有序，可以记录最后一次交换位置，减少比较次数</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> end = array.length - <span class="number">1</span>; end &gt; <span class="number">0</span>; end--) &#123;</span><br><span class="line">    <span class="comment">// 初始值在数组完全有序时使用，设为1，end--后正好为0</span></span><br><span class="line">	<span class="keyword">int</span> sortedIndex = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> begin = <span class="number">1</span>; begin &lt;= end; begin++) &#123;</span><br><span class="line">		<span class="comment">// if (array[begin] &lt; array[begin - 1]) &#123;</span></span><br><span class="line">		<span class="keyword">if</span> (cmp(begin, begin - <span class="number">1</span>) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">			swap(begin, begin - <span class="number">1</span>);</span><br><span class="line">			sortedIndex = begin;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	end = sortedIndex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>最坏、平均时间复杂度为O（n2）</p>
-<p>最好时间复杂度为O（n）    即完全有序的情况下，只遍历一次</p>
-<p>空间复杂度为O（1）</p>
-</blockquote>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><h3 id="概述-2"><a href="#概述-2" class="headerlink" title="概述"></a>概述</h3><p><img src="/images/%E7%AE%97%E6%B3%95/image-20200522193521328.png" alt="image-20200522193521328"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> end = array.length - <span class="number">1</span>; end &gt; <span class="number">0</span>; end--) &#123;</span><br><span class="line">    <span class="comment">// 感觉可以将初值设为end</span></span><br><span class="line">	<span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> begin = <span class="number">1</span>; begin &lt;= end; begin++) &#123;</span><br><span class="line">        <span class="comment">// 此处 &lt;= 是为了稳定性，确保最大的那个优先选后面的</span></span><br><span class="line">		<span class="keyword">if</span> (cmp(max, begin) &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">			max = begin;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="comment">// 可以改为在max不等于end是再交换</span></span><br><span class="line">	swap(max, end);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="优化-1"><a href="#优化-1" class="headerlink" title="优化"></a>优化</h3><p>使用堆来选择最大值，实际就是<strong>堆排序</strong></p>
-<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/29/算法和数据结构/算法/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
