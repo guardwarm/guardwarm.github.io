@@ -20,23 +20,61 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="设计模式是基于场景的解决方案 是前辈经验的总结，使代码更易理解，更易维护，更可靠 创建型模式单例模式优缺点优点  在内存中只有唯一对象，节省内存空间 避免频繁的创建和销毁对象，提升性能 避免对对象资源的多重占用  缺点 扩展较为困难 若实例化后长期不使用，会被垃圾回收，造成对象状态丢失 使用场景 创建对象占用资源较多，但又需要创建 对系统内资源要求统一读写，如读写配置文件信息 当多个实例存在可能">
+  <meta name="description" content="概述 设计模式是基于场景的解决方案 是前辈经验的总结，使代码更易理解，更易维护，更可靠 UML 统一建模语言——Unified Modeling Language  非专利的第三代建模和规约语言  用于说明、可视化、构建和编写一个正在开发的面向对象的、软件密集系统的制品的开放方法  展现了一系列最佳工程实践   分类14种图示  结构式图形：强调系统式的建模   行为式图形：强调系统模型中触发的事">
 <meta name="keywords" content="java,设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式">
 <meta property="og:url" content="http://yoursite.com/2020/03/05/工具/设计模式/index.html">
 <meta property="og:site_name" content="guard warm">
-<meta property="og:description" content="设计模式是基于场景的解决方案 是前辈经验的总结，使代码更易理解，更易维护，更可靠 创建型模式单例模式优缺点优点  在内存中只有唯一对象，节省内存空间 避免频繁的创建和销毁对象，提升性能 避免对对象资源的多重占用  缺点 扩展较为困难 若实例化后长期不使用，会被垃圾回收，造成对象状态丢失 使用场景 创建对象占用资源较多，但又需要创建 对系统内资源要求统一读写，如读写配置文件信息 当多个实例存在可能">
+<meta property="og:description" content="概述 设计模式是基于场景的解决方案 是前辈经验的总结，使代码更易理解，更易维护，更可靠 UML 统一建模语言——Unified Modeling Language  非专利的第三代建模和规约语言  用于说明、可视化、构建和编写一个正在开发的面向对象的、软件密集系统的制品的开放方法  展现了一系列最佳工程实践   分类14种图示  结构式图形：强调系统式的建模   行为式图形：强调系统模型中触发的事">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200310131759-241588.png">
-<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200310132717-901759.png">
-<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200310132907-564034.png">
-<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200330114602-34883.png">
-<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200330114958-219426.png">
-<meta property="og:updated_time" content="2020-04-24T05:04:42.294Z">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707114939589.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707114953420.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707115015430.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707133027470.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707133129664.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707115933352.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707120407065.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707120352897.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707131636885.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707131654435.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707131721538.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707120831872.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707120921265.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707135018719.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707135621211.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707135749545.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707140647581.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707141020004.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707141801568.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707141905833.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708210334322.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708210715695.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708211208857.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708212335796.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708212820260.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708213240796.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708163455386.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708163734245.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708170204983.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708170759913.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708170720227.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708172151907.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708172640152.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708173119320.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708173632613.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708202033099.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708202139396.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708202401425.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708202221168.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708222538934.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708223026941.png">
+<meta property="og:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708223332149.png">
+<meta property="og:updated_time" content="2020-07-08T14:34:58.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式">
-<meta name="twitter:description" content="设计模式是基于场景的解决方案 是前辈经验的总结，使代码更易理解，更易维护，更可靠 创建型模式单例模式优缺点优点  在内存中只有唯一对象，节省内存空间 避免频繁的创建和销毁对象，提升性能 避免对对象资源的多重占用  缺点 扩展较为困难 若实例化后长期不使用，会被垃圾回收，造成对象状态丢失 使用场景 创建对象占用资源较多，但又需要创建 对系统内资源要求统一读写，如读写配置文件信息 当多个实例存在可能">
+<meta name="twitter:description" content="概述 设计模式是基于场景的解决方案 是前辈经验的总结，使代码更易理解，更易维护，更可靠 UML 统一建模语言——Unified Modeling Language  非专利的第三代建模和规约语言  用于说明、可视化、构建和编写一个正在开发的面向对象的、软件密集系统的制品的开放方法  展现了一系列最佳工程实践   分类14种图示  结构式图形：强调系统式的建模   行为式图形：强调系统模型中触发的事">
 <meta name="twitter:image" content="http://yoursite.com/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200310131759-241588.png">
 
 <link rel="canonical" href="http://yoursite.com/2020/03/05/工具/设计模式/">
@@ -234,7 +272,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-24 05:04:42" itemprop="dateModified" datetime="2020-04-24T05:04:42Z">2020-04-24</time>
+                <time title="修改时间：2020-07-08 14:34:58" itemprop="dateModified" datetime="2020-07-08T14:34:58Z">2020-07-08</time>
               </span>
 
           
@@ -269,39 +307,248 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200310131759-241588.png" alt="image-20200304232456504"></p>
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200310131759-241588.png" alt="image-20200304232456504"></p>
 <p>设计模式是基于场景的解决方案</p>
 <p>是前辈经验的总结，使代码更易理解，更易维护，更可靠</p>
-<h1 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h1><h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><p><strong>优点</strong></p>
-<ul>
-<li>在内存中只有唯一对象，节省内存空间</li>
-<li>避免频繁的创建和销毁对象，提升性能</li>
-<li>避免对对象资源的多重占用</li>
+<h1 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h1><ul>
+<li><p>统一建模语言——Unified Modeling Language</p>
+</li>
+<li><p>非专利的第三代建模和规约语言</p>
+</li>
+<li><p>用于说明、可视化、构建和编写一个正在开发的面向对象的、软件密集系统的制品的开放方法</p>
+</li>
+<li><p>展现了一系列最佳工程实践</p>
+</li>
 </ul>
-<p><strong>缺点</strong></p>
-<p>扩展较为困难</p>
-<p>若实例化后长期不使用，会被垃圾回收，造成对象状态丢失</p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>14种图示</p>
+<ul>
+<li><p>结构式图形：强调系统式的建模</p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707114939589.png" alt="image-20200707114939589"></p>
+</li>
+<li><p>行为式图形：强调系统模型中触发的事件</p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707114953420.png" alt="image-20200707114953420"></p>
+</li>
+<li><p>交互式图形：属于行为式图形的子集，强调系统模型中的资料流程</p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707115015430.png" alt="image-20200707115015430"></p>
+</li>
+</ul>
+<h2 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h2><ul>
+<li>Class Diagram：用于表示类、接口、实例等之间相互静态的关系</li>
+</ul>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707133027470.png" alt="image-20200707133027470"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707133129664.png" alt="image-20200707133129664"></p>
+<p><strong>tips：</strong></p>
+<ul>
+<li><p>箭头方向：子类指向父类</p>
+<ul>
+<li>只有子类才能明确知道自己继承了谁，父类是不清楚这些的</li>
+</ul>
+</li>
+<li><p>空心三角箭头：继承或实现</p>
+<ul>
+<li><p>实现–继承：is a关系，真真实实的父类，用实线</p>
+</li>
+<li><p>虚线–实现：接口是一个虚无的概念，用虚线</p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707115933352.png" alt="image-20200707115933352"></p>
+</li>
+</ul>
+</li>
+<li><p>关联或依赖</p>
+<ul>
+<li>实线–关联：关联是平级的，无整体与部分的关系，如朋友关系，通常是一个类中有另一个对象作为属性</li>
+</ul>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707120407065.png" alt="image-20200707120407065"></p>
+<ul>
+<li>虚线–依赖：通常是一个类中有另一个对象作为参数、返回值等</li>
+</ul>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707120352897.png" alt="image-20200707120352897"></p>
+</li>
+<li><p>菱形</p>
+<ul>
+<li>空心菱形——聚合：整体与部分的关系，但比较弱，部分不依赖整体的存在而存在，二者有着独立的生命周期  has a</li>
+</ul>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707131636885.png" alt="image-20200707131636885"></p>
+<ul>
+<li><p>实心菱形——组合：整体与部分的关系比较强，部分的生命周期依赖与整体的存在，二者生命周期相同  contains a</p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707131654435.png" alt="image-20200707131654435"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707131721538.png" alt="image-20200707131721538"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="UML时序图"><a href="#UML时序图" class="headerlink" title="UML时序图"></a>UML时序图</h2><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707120831872.png" alt="image-20200707120831872"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707120921265.png" alt="image-20200707120921265"></p>
+<h1 id="七大原则"><a href="#七大原则" class="headerlink" title="七大原则"></a>七大原则</h1><h2 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h2><ul>
+<li>一个软件实体（类、函数、模块等）应对扩展开放，对修改关闭</li>
+<li>用抽象构建框架，用实现扩展细节</li>
+<li>提高软件系统的可复用性及可维护性</li>
+</ul>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707135018719.png" alt="image-20200707135018719"></p>
+<h2 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h2><ul>
+<li>高层不应该依赖低层模块，二者都应该依赖其抽象</li>
+<li>抽象不应该依赖细节，细节应该依赖抽象</li>
+<li><strong>针对接口编程</strong>，不要针对实现编程（类比IOC）</li>
+<li>抽象要比实现稳定的多</li>
+<li>减少类间耦合，提高系统稳定性</li>
+</ul>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707135621211.png" alt="image-20200707135621211"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707135749545.png" alt="image-20200707135749545"></p>
+<h2 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h2><ul>
+<li>单个接口或类不应该有多个职责，应该尽可能的划分职责，通过组合的方式，完成更为复杂的业务</li>
+<li>降低类的复杂度，减少变更时的风险</li>
+</ul>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707140647581.png" alt="image-20200707140647581"></p>
+<p>也可以加个参数表示不同职责来减少拆分</p>
+<h2 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h2><ul>
+<li>用多个专门的接口，而不要使用一个总接口，客户端不应该依赖他不需要的接口</li>
+<li>一个类对一个类的依赖应建立在最小的接口上</li>
+<li>一个接口不要包含过多的职责，应合理划分，跟单一职责原则相辅相成</li>
+<li><strong>一定要把握适度原则</strong></li>
+</ul>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707141020004.png" alt="image-20200707141020004"></p>
+<h2 id="迪米特法则"><a href="#迪米特法则" class="headerlink" title="迪米特法则"></a>迪米特法则</h2><ul>
+<li>最少知道原则，一个对象尽量让其它对象保持最少的了解</li>
+<li>尽量降低类与类之间耦合，该封装的都封装起来</li>
+</ul>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707141801568.png" alt="image-20200707141801568"></p>
+<p>典型场景：我点外卖，我只关心外卖员，不关系具体的店。我的类中只依赖外卖员，不会依赖具体的店。是不是静态代理。</p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200707141905833.png" alt="image-20200707141905833"></p>
+<h2 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h2><p>在引用父类的地方，都可以替换为其子类。从而可以实现子类间的动态切换。换句话说就是要有面向接口的编程思维。结合“开闭原则”，完美</p>
+<h2 id="合成复用原则"><a href="#合成复用原则" class="headerlink" title="合成复用原则"></a>合成复用原则</h2><p>多用组合，少用继承</p>
+<h1 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h1><h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><p>保证一个类仅有一个实例，并提供一个全局访问点</p>
 <h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
-<li>创建对象占用资源较多，但又需要创建</li>
+<li>想确保任何情况下都仅有一个实例</li>
 <li>对系统内资源要求统一读写，如读写配置文件信息</li>
 <li>当多个实例存在可能引起逻辑错误，如号码生成器</li>
 </ul>
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h4><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200310132717-901759.png" alt="image-20200310132715175"></p>
-<h4 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h4><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200310132907-564034.png" alt="image-20200310132905732"></p>
-<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><h3 id="使用场景-1"><a href="#使用场景-1" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
-<li>用于隐藏创建对象的细节</li>
-<li>核心：工厂类(Factory)</li>
-<li>可细分为简单工厂、工厂方法，抽象工厂</li>
+<h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><p><strong>优点</strong></p>
+<ul>
+<li>在内存中只有唯一对象，节省内存空间</li>
+<li>设置全局访问点，严格控制访问</li>
+<li>避免对对象资源的多重占用</li>
 </ul>
-<h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><h4 id="简单工厂"><a href="#简单工厂" class="headerlink" title="简单工厂"></a>简单工厂</h4><p>根据不同的参数返回不同的实现类</p>
-<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200330114602-34883.png" alt="image-20200330114602146"></p>
-<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/typora20200330114958-219426.png" alt="image-20200330114907853"></p>
-<p>工厂类</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">I18NFactory</span> </span>&#123;</span><br><span class="line">	<span class="comment">//静态工厂</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> I18N <span class="title">getI18NObject</span><span class="params">(String area)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(area.equals(<span class="string">"china"</span>)) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> Chinese();</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(area.equals(<span class="string">"spain"</span>)) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> Spainish();</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span>(area.equals(<span class="string">"italy"</span>)) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> Italian();</span><br><span class="line">		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>用户</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class Software &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		I18N i18n = I18NFactory.getI18NObject(&quot;spain&quot;);</span><br><span class="line">		System.out.println(i18n.getTitle());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p><strong>缺点</strong></p>
+<p>没有接口，扩展困难</p>
+<p>若实例化后长期不使用，会被垃圾回收，造成对象状态丢失</p>
+<h3 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h3><ul>
+<li>私有构造器</li>
+<li>线程安全</li>
+<li>延迟加载</li>
+<li>序列化和反序列化安全</li>
+<li>反射</li>
+</ul>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p><a href="https://cyc2018.github.io/CS-Notes/#/notes/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20%20-%20%E5%8D%95%E4%BE%8B" target="_blank" rel="noopener">参考</a></p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><h4 id="序列化和反序列化"><a href="#序列化和反序列化" class="headerlink" title="序列化和反序列化"></a>序列化和反序列化</h4><p>enum本来就是安全的，其它情况下需要多实现如下方法</p>
+<p>底层实际上有创建了对象，但由于实现了这个方法，最后又舍弃了创建的那个对象，而序列化了原对象</p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708210334322.png" alt="image-20200708210334322"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708210715695.png" alt="image-20200708210715695"></p>
+<h5 id="反射攻击"><a href="#反射攻击" class="headerlink" title="反射攻击"></a>反射攻击</h5><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708211208857.png" alt="image-20200708211208857"></p>
+<p>可以在构造函数中加以判断，但如果反射发生在单例创建之前的话就没有用了（饿汉式不存在这个问题，反射加载类的过程中单例就初始化好了，所以这样可以防住）</p>
+<ul>
+<li>懒汉式是没办法抵御反射攻击的，因为反射可以任意修改成员变量</li>
+</ul>
+<h4 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h4><p>effective java 中推荐的是用枚举实现</p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708212335796.png" alt="image-20200708212335796"></p>
+<h4 id="容器单例"><a href="#容器单例" class="headerlink" title="容器单例"></a>容器单例</h4><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708212820260.png" alt="image-20200708212820260"></p>
+<p>根据具体业务判断，存在线程安全问题</p>
+<h4 id="ThreadLocal线程单例"><a href="#ThreadLocal线程单例" class="headerlink" title="ThreadLocal线程单例"></a>ThreadLocal线程单例</h4><p>各线程唯一，而不是全局唯一</p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708213240796.png" alt="image-20200708213240796"></p>
+<h2 id="简单工厂"><a href="#简单工厂" class="headerlink" title="简单工厂"></a>简单工厂</h2><p>这个不属于23种设计模式</p>
+<p>由一个工厂对象决定创建出哪一种产品类的实例</p>
+<h3 id="使用场景-1"><a href="#使用场景-1" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
+<li>工厂类负责创建的对象比较少</li>
+<li>应用层只需知道传入的参数，不关心具体的创建细节（逻辑）</li>
+</ul>
+<h3 id="优缺点-1"><a href="#优缺点-1" class="headerlink" title="优缺点"></a>优缺点</h3><p>优点</p>
+<ul>
+<li>只需传入正确参数即可</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>工厂类职责过重</li>
+<li>增加新产品时需要修改工厂类的判断逻辑，不符合开闭原则</li>
+</ul>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p><a href="https://cyc2018.github.io/CS-Notes/#/notes/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%20-%20%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82" target="_blank" rel="noopener">参考</a></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708163455386.png" alt="image-20200708163455386"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708163734245.png" alt="image-20200708163734245"></p>
+<h2 id="工厂方法"><a href="#工厂方法" class="headerlink" title="工厂方法"></a>工厂方法</h2><p>定义一个创建对象的接口但让实现这个接口的类来决定实例化哪个类——让类的实例化推迟到子类中进行</p>
+<h3 id="使用场景-2"><a href="#使用场景-2" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
+<li>创建对象需要大量重复代码</li>
+<li>应用层不依赖于产品实例</li>
+<li>一个类通过其子类来指定创建哪个对象</li>
+</ul>
+<h3 id="优缺点-2"><a href="#优缺点-2" class="headerlink" title="优缺点"></a>优缺点</h3><p>优点</p>
+<ul>
+<li>用户只需要关心所需产品对应工厂</li>
+<li>加入新产品符合开闭原则，提高可扩展性</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>类的个数容易过多</li>
+<li>增加了系统的抽象性和理解难度</li>
+</ul>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708170204983.png" alt="image-20200708170204983"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708170759913.png" alt="image-20200708170759913"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708170720227.png" alt="image-20200708170720227"></p>
+<h2 id="抽象工厂"><a href="#抽象工厂" class="headerlink" title="抽象工厂"></a>抽象工厂</h2><ul>
+<li>创建一系列相关或相互依赖对象的接口</li>
+<li>无需指定他们具体的类</li>
+</ul>
+<h3 id="使用场景-3"><a href="#使用场景-3" class="headerlink" title="使用场景"></a>使用场景</h3><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708172151907.png" alt="image-20200708172151907"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708172640152.png" alt="image-20200708172640152"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708173119320.png" alt="image-20200708173119320"></p>
+<h3 id="优缺点-3"><a href="#优缺点-3" class="headerlink" title="优缺点"></a>优缺点</h3><p>优点</p>
+<ul>
+<li>无需关心创建细节</li>
+<li>将一个系列的产品族统一到一起创建</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>规定了所有可能被创建的产品集合，扩展新产品困难，需要修改抽象工厂接口</li>
+<li>增加了系统的抽象性和理解难度</li>
+</ul>
+<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708173632613.png" alt="image-20200708173632613"></p>
+<h2 id="建造者"><a href="#建造者" class="headerlink" title="建造者"></a>建造者</h2><ul>
+<li>将一个复杂对象的构建和他的表示分离，使得同样的构建过程可以创建不同的表示</li>
+<li>用户只需指定建造类型即可，无需了解建造细节</li>
+</ul>
+<h3 id="使用场景-4"><a href="#使用场景-4" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
+<li>一个对象有很多非常复杂的内部结构（很多属性）</li>
+<li>想把复杂对象的创建和使用分离</li>
+</ul>
+<h3 id="优缺点-4"><a href="#优缺点-4" class="headerlink" title="优缺点"></a>优缺点</h3><p>优点</p>
+<ul>
+<li>封装性好，创建和使用分离</li>
+<li>扩展性好、构建类之间独立、一定程度上解耦</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>产生多余的Builder对象</li>
+<li>产生内部发生变化，建造者都要修改</li>
+</ul>
+<h3 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h3><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708202033099.png" alt="image-20200708202033099"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708202139396.png" alt="image-20200708202139396"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708202401425.png" alt="image-20200708202401425"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708202221168.png" alt="image-20200708202221168"></p>
+<h2 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h2><p>使用原型实例指定要创建对象的类型，通过复制这个原型来创建新对象</p>
+<h3 id="使用场景-5"><a href="#使用场景-5" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
+<li>类初始化消耗较多的资环</li>
+<li>new一个对象过程繁琐（数据准备，访问权限等）</li>
+</ul>
+<h3 id="优缺点-5"><a href="#优缺点-5" class="headerlink" title="优缺点"></a>优缺点</h3><p>优点</p>
+<ul>
+<li>简化创建过程</li>
+<li>比直接new更高效</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>必须配备克隆方法</li>
+<li><strong>深浅拷贝要运用得到</strong></li>
+</ul>
+<h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708222538934.png" alt="image-20200708222538934"></p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708223026941.png" alt="image-20200708223026941"></p>
+<h4 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h4><p>结合单例模式时，单例的克隆要如下实现</p>
+<p><img src="/images/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/image-20200708223332149.png" alt="image-20200708223332149"></p>
 <h1 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h1><h2 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h2><ul>
 <li>概念：<ol>
 <li>真实对象：被代理的对象</li>
@@ -433,7 +680,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#创建型模式"><span class="nav-number">1.</span> <span class="nav-text">创建型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单例模式"><span class="nav-number">1.1.</span> <span class="nav-text">单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优缺点"><span class="nav-number">1.1.1.</span> <span class="nav-text">优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">1.1.2.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">1.1.3.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#饿汉式"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">饿汉式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#懒汉式"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">懒汉式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工厂模式"><span class="nav-number">1.2.</span> <span class="nav-text">工厂模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单工厂"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">简单工厂</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结构型模式"><span class="nav-number">2.</span> <span class="nav-text">结构型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代理模式"><span class="nav-number">2.1.</span> <span class="nav-text">代理模式</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UML"><span class="nav-number">2.</span> <span class="nav-text">UML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分类"><span class="nav-number">2.1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UML类图"><span class="nav-number">2.2.</span> <span class="nav-text">UML类图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UML时序图"><span class="nav-number">2.3.</span> <span class="nav-text">UML时序图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七大原则"><span class="nav-number">3.</span> <span class="nav-text">七大原则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开闭原则"><span class="nav-number">3.1.</span> <span class="nav-text">开闭原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖倒置原则"><span class="nav-number">3.2.</span> <span class="nav-text">依赖倒置原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单一职责原则"><span class="nav-number">3.3.</span> <span class="nav-text">单一职责原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口隔离原则"><span class="nav-number">3.4.</span> <span class="nav-text">接口隔离原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迪米特法则"><span class="nav-number">3.5.</span> <span class="nav-text">迪米特法则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#里氏替换原则"><span class="nav-number">3.6.</span> <span class="nav-text">里氏替换原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合成复用原则"><span class="nav-number">3.7.</span> <span class="nav-text">合成复用原则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建型模式"><span class="nav-number">4.</span> <span class="nav-text">创建型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单例模式"><span class="nav-number">4.1.</span> <span class="nav-text">单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">4.1.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优缺点"><span class="nav-number">4.1.2.</span> <span class="nav-text">优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重点"><span class="nav-number">4.1.3.</span> <span class="nav-text">重点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现"><span class="nav-number">4.1.4.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补充"><span class="nav-number">4.1.5.</span> <span class="nav-text">补充</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#序列化和反序列化"><span class="nav-number">4.1.5.1.</span> <span class="nav-text">序列化和反序列化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#反射攻击"><span class="nav-number">4.1.5.1.1.</span> <span class="nav-text">反射攻击</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最佳实践"><span class="nav-number">4.1.5.2.</span> <span class="nav-text">最佳实践</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#容器单例"><span class="nav-number">4.1.5.3.</span> <span class="nav-text">容器单例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ThreadLocal线程单例"><span class="nav-number">4.1.5.4.</span> <span class="nav-text">ThreadLocal线程单例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单工厂"><span class="nav-number">4.2.</span> <span class="nav-text">简单工厂</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优缺点-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例"><span class="nav-number">4.2.3.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工厂方法"><span class="nav-number">4.3.</span> <span class="nav-text">工厂方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景-2"><span class="nav-number">4.3.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优缺点-2"><span class="nav-number">4.3.2.</span> <span class="nav-text">优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例-1"><span class="nav-number">4.3.3.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象工厂"><span class="nav-number">4.4.</span> <span class="nav-text">抽象工厂</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景-3"><span class="nav-number">4.4.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优缺点-3"><span class="nav-number">4.4.2.</span> <span class="nav-text">优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例-2"><span class="nav-number">4.4.3.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建造者"><span class="nav-number">4.5.</span> <span class="nav-text">建造者</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景-4"><span class="nav-number">4.5.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优缺点-4"><span class="nav-number">4.5.2.</span> <span class="nav-text">优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例-3"><span class="nav-number">4.5.3.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型模式"><span class="nav-number">4.6.</span> <span class="nav-text">原型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景-5"><span class="nav-number">4.6.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优缺点-5"><span class="nav-number">4.6.2.</span> <span class="nav-text">优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现-1"><span class="nav-number">4.6.3.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#坑"><span class="nav-number">4.6.3.1.</span> <span class="nav-text">坑</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结构型模式"><span class="nav-number">5.</span> <span class="nav-text">结构型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代理模式"><span class="nav-number">5.1.</span> <span class="nav-text">代理模式</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -449,7 +696,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
